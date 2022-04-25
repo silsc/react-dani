@@ -1,0 +1,50 @@
+@import './fonts.scss';
+@import './themes.scss';
+@import './mixins.scss';
+
+* {
+  box-sizing: border-box !important;
+  text-align: left;
+}
+
+body {
+  margin: 0;
+  font-family: $roboto;
+}
+
+.hidden {
+  display: none;
+}
+
+.title {
+  font-family: $cairo;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 120px;
+  margin: 0;
+  text-align: left;
+  @include theme() {
+    color: t($text);
+    background: t($bg);
+  }
+}
+
+.section {
+  margin-left: 120px;
+  height: 100vh;
+  position: relative;
+  scroll-snap-align: start;
+  padding: 0 40px;
+  overflow: hidden;
+  @include respond('ipad') {
+    padding: 0 20px;
+    margin-left: 90px;
+    scroll-snap-align: none;
+    height: auto;
+  }
+  @include respond('phone') {
+    padding: 0 10px;
+    margin-left: 70px;
+  }
+}

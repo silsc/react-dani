@@ -1,0 +1,94 @@
+@import '../../styles/index.scss';
+
+.home {
+  &-container {
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &-bg-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &-text {
+    &-container {
+      width: 40%;
+      margin: 30px 0;
+      @include respond('phone') {
+        width: 38%;
+        margin: 0px;
+      }
+    }
+    &-p {
+      text-align: left;
+      font-size: $fsbody;
+      @include respond('phone') {
+        font-size: $fss;
+      }
+      &:last-child {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.home-title {
+  &-container {
+    height: 40vh;
+    @include respond('phone') {
+      height: 20vh;
+    }
+  }
+  &-line1, &-line2 {
+    text-align: right;
+    position: absolute;
+    font-size: 13vw;
+    margin: 0;
+    @include respond('phone') {
+      font-size: 19vw;
+    }
+  }
+  &-line1 {
+    top: 12vh;
+    right: 41vw;
+    @include respond('ipad-pro') {
+      top: 17vh;
+      right: 40vw;
+    }
+    @include respond('ipad') {
+      top: 20vh;
+      right: 39vw;
+    }
+    @include respond('phone') {
+      right: 35vw;
+    }
+    
+  }
+  &-line2 {
+    top: 35vh;
+    right: 19vw;
+    @include respond('ipad-pro') {
+      right: 18vw;
+    }
+    @include respond('ipad') {
+      right: 16vw;
+    }
+    @include respond('phone') {
+      right: 3vw;
+    }
+  }
+  &-year {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 24vh;
+    right: 70vw;
+    font-size: 1.2vw;
+  }
+}

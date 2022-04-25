@@ -1,0 +1,148 @@
+@import '../../styles/index.scss';
+
+.slider {
+  width: 100%;
+  height: 66vh;
+  @include respond('ipad') {
+    height: 500px;
+  }
+  @include respond('phone') {
+    height: 70vh;
+  }
+  input {
+    display: none;
+  }
+}
+
+.testimonials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 50vh;
+  perspective: 1000px;
+  overflow: hidden;
+  height: 100%;
+  @include respond('ipad') {
+    height: 90%;
+    min-height: 500px;
+    margin: 20px 0;
+  }
+}
+.testimonial {
+  top: 0;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: $medium-gray;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  transition: all 0.5s ease;
+  -webkit-transform-style: preserve-3d;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  @include respond('ipad') {
+    width: 85%;
+  }
+  &-img {
+    width: 35%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &-container {
+    padding: 20px 30px;
+    align-self: center;
+  }
+  &-text {
+    font-size: 18px;
+    @include respond('ipad') {
+      font-size: 14px;
+    }
+  }
+  &-name {
+    text-align: right;
+    margin: 10px 0;
+  }
+  &-band {
+    color: #ffff;
+    text-align: right;
+  }
+}
+
+/* First */
+#t-1:checked ~ .testimonials label[for="t-1"] {
+  opacity: 1;
+  z-index: 4;
+}
+#t-1:checked ~ .testimonials label[for="t-2"] {
+  opacity: 0.5;
+  transform: translateX(23vw) translateZ(-20vh);
+  z-index: 3;
+}
+#t-1:checked ~ .testimonials label[for="t-3"] {
+  opacity: 0;
+  z-index: -1;
+}
+#t-1:checked ~ .testimonials label[for="t-4"] {
+  opacity: 0;
+  z-index: -1;
+}
+
+/* Second */
+#t-2:checked ~ .testimonials label[for="t-1"] {
+  opacity: 0.5;
+  transform: translateX(-23vw) translateZ(-20vh);
+}
+#t-2:checked ~ .testimonials label[for="t-2"] {
+  opacity: 1 !important;
+  z-index: 3;
+}
+#t-2:checked ~ .testimonials label[for="t-3"] {
+  opacity: 0.5;
+  transform: translateX(23vw) translateZ(-10vh);
+  z-index: 2;
+}
+#t-2:checked ~ .testimonials label[for="t-4"] {
+  opacity: 0;
+  z-index: -1;
+}
+
+/* Third */
+#t-3:checked ~ .testimonials label[for="t-1"] {
+  opacity: 0;
+  z-index: -1;
+}
+#t-3:checked ~ .testimonials label[for="t-2"] {
+  opacity: 0.5;
+  transform: translateX(-23vw) translateZ(-20vh);
+}
+#t-3:checked ~ .testimonials label[for="t-3"] {
+  opacity: 1;
+  z-index: 3;
+}
+#t-3:checked ~ .testimonials label[for="t-4"] {
+  opacity: 0.5;
+  transform: translateX(23vw) translateZ(-20vh);
+  z-index: 2;
+}
+
+/* Fourth */
+#t-4:checked ~ .testimonials label[for="t-1"] {
+  opacity: 0;
+  z-index: -1;
+}
+#t-4:checked ~ .testimonials label[for="t-2"] {
+  opacity: 0;
+  z-index: -1;
+}
+#t-4:checked ~ .testimonials label[for="t-3"] {
+  opacity: 0.5;
+  transform: translateX(-23vw) translateZ(-20vh);
+  z-index: 2;
+}
+#t-4:checked ~ .testimonials label[for="t-4"] {
+  opacity: 1;
+  z-index: 3;
+}

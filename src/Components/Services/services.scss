@@ -1,0 +1,20 @@
+@import '../../styles/index.scss';
+
+.services {
+  &-title {
+    @include theme() {
+      color: t($text);
+      background: t($bg);
+    }
+  }
+  &-card {
+    margin-bottom: 50px;
+    &--title {
+      font-family: $cairo;
+      font-size: 24px;
+    }
+    &--text {
+      
+    }
+  } 
+}

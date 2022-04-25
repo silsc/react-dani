@@ -1,0 +1,174 @@
+@import '../../styles/index.scss';
+
+.navbar, .navbar-open {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-height: 100vh;
+  width: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom:0;
+  overflow: hidden;
+  z-index: 1;
+  @include theme() {
+    color: t($text);
+    background: t($bg);
+  }
+  @include respond('phone') {
+    width: 60px;
+  }
+}
+
+.navbar {
+  @include theme() {
+    color: t($text);
+    background: t($bg);
+    border-right: 1px solid t($bg-oposite);
+  }
+}
+
+.navbar-open {
+  border-right: none;
+  @include theme() {
+    background: t($bg-oposite);
+    border-right: 1px solid t($text);
+  }
+}
+
+.navbar-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 42px;
+  &-lang {
+    display: flex;
+    margin-top: 10px;
+    @include respond('phone') {
+      flex-direction: column;
+    }
+    .lang-btn {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      @include theme() {
+        color: t($bg-oposite);
+      }
+      @include respond('phone') {
+        padding: 10px 0;
+      }
+      &:hover {
+        color: $medium-gray;
+      }
+      &:first-child {
+        @include theme() {
+          border-right: 1px solid t($bg-oposite);
+        }
+        @include respond('phone') {
+          @include theme() {
+            border-right: none;
+            border-bottom: 1px solid t($bg-oposite);
+          }
+        }
+      }
+    }
+  }
+  &-insta {
+    margin-bottom: 26px;
+    path {
+      @include theme() {
+        fill: t($bg-oposite);
+      }
+    }  
+    &:hover {
+      path {
+        fill: url(#insta-gradient);
+      }
+    }
+  }
+  &-youtube {
+    margin-bottom: 26px;
+    @include respond('phone') {
+      margin-bottom: 10px;
+    }
+    path {
+      @include theme() {
+        fill: t($bg-oposite);
+      }
+    }    
+    &:hover {
+      path {
+        fill: #FF0000;
+      }
+    }
+  }
+}
+
+.navbar-open-btn, .navbar-close-btn {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 42px;
+  cursor: pointer;
+  box-sizing: content-box !important;
+  path {
+    @include theme() {
+      fill: t($bg-oposite);
+    }
+  } 
+}
+
+.navbar-close-btn {
+  padding: 48px 0 25px !important;
+  path {
+    @include theme() {
+      fill: t($bg);
+    }
+  }  
+}
+
+.navbar-links {
+  display: flex;
+  margin-top: 15px;
+  align-items: center;
+  transform: rotate(90deg);
+  .navbar-link {
+    white-space: nowrap;
+    transform: rotate(180deg);
+    text-decoration: none;
+    text-align: center;
+    padding: 15px;
+    font-size: $fsbody;
+    width: 100%;
+    @include theme() {
+      color: t($text-secondary);
+    }
+    @include respond('phone') {
+      padding: 0;
+      margin: 0 20px;
+    }
+    @media (max-height: 700px) {
+      font-size: $fss;
+      margin: 0 10px;
+    }
+    &:last-child {
+      font-weight: 800;
+      font-size: $fsm;
+      color: #ffff;
+      margin: 0 20%;
+      width: fit-content;
+      @include theme() {
+        color: t($bg);
+      }
+      @media (max-height: 700px) {
+        font-size: 16px;
+        margin: 0 10px;
+      }
+    }
+  }
+}

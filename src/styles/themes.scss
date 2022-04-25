@@ -1,0 +1,29 @@
+$logo: 'logo';
+$bg: 'bg';
+$bg-oposite: 'bg-oposite';
+$text: 'text';
+$text-secondary: 'text-secondary';
+$text-hover: 'text-hover';
+$border: 'border';
+
+$themes: (
+  default: (
+    logo: url(""),
+    color--white: #ffff,
+    text: $dark-black,
+    text-secondary: $dark-gray,
+    text-hover: $medium-gray,
+    border: $dark-black,
+    bg: #fff,
+    bg-oposite: $light-black
+  ),
+  dark: (
+    logo: url(""),
+    text: #fff,
+    text-secondary: $light-gray,
+    text-hover: $medium-gray,
+    border: $dark-black,
+    bg: $light-black,
+    bg-oposite: #fff
+  ),
+);

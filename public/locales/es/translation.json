@@ -1,0 +1,88 @@
+{
+  "navbar": {
+    "home": "inicio",
+    "services": "servicios",
+    "about": "sobre mi",
+    "work": "trabajos",
+    "reviews": "opiniones",
+    "contact": "contacto",
+    "EN": "EN",
+    "ES": "ES"
+  },
+  "header": {
+    "title": "PRODUCTOR DE ROCK Y METAL, BARCELONA (ESPAÑA)"
+  },
+  "home": {
+    "title-line1": "DANI",
+    "title-line2": "SALAT",
+    "title-year": "DESDE 2015",
+    "text-1": "Hay muchos estudios que pueden conseguir un buen sonido; yo ayudo a bandas de rock y metal a definir una visión para sus proyectos, creando algo único.",
+    "text-2": "No puedo garantizar el éxito, pero sí que vamos a producir la mejor música que podemos hacer.",
+    "text-3": "Spoiler, va a sonar que flipas",
+    "contact-btn": "contacta ya!"
+  },
+  "services": {
+    "title": "Servicios",
+    "service-1": {
+      "title": "Producción",
+      "text": "Al hacer música es difícil expresar emociones y a la vez ser objetivos. Mi trabajo es definir una visión única para cada banda y tomar las decisiones difíciles, musicales y de sonido, para que el proyecto sea un éxito. Es fácil pasar desapercibido en Spotify. Si crees en tu música, merece ser escuchada."
+    },
+    "service-2": {
+      "title": "Mezcla",
+      "text": "Las producciones DIY corren el riesgo de sonar a maqueta. Creo que los músicos tienen que saber autoproducirse y tener una visión, pero es difícil conseguir resultados, y necesitas alguien que sepa cómo darle impacto y energía al sonido. Si no has empezado aún, puedo aconsejarte durante el proceso para tomar las mejores decisiones."
+    }
+  },
+  "about": {
+    "title": "Sobre mi",
+    "text-1": "Llevo haciendo música y tocando en bandas desde que tengo recuerdo, y sé lo difícil que es que la gente te tome en serio como artista y se interese en tu música. Desde que empecé a producir hace pocos años, más allá del sonido, mi principal obsesión ha sido aprender cómo coño hacer para ayudar a las bandas a avanzar en sus carreras.",
+    "text-2": "La música es mucho más que sonar bien. Hay que escribir buena música, tocarla bien, tener una visión, crear merch llamativo, videoclips interesantes, buscar bolos, promocionarse bien, etc. Es intimidante y mi objetivo es poder aportar a las bandas en cada paso para tener el mejor producto posible.",
+    "text-3": "Cada día se suben a Spotify 60 mil canciones (no, no es un error), y es muy fácil ser un número más. Quiero trabajar con bandas con ganas de cambiar la industria, mejorar con cada CD, hablar de temas importantes y, sobre todo, hacer que el esfuerzo, la música y el arte valgan la pena."
+  },
+  "work": {
+    "title": "Work",
+    "tracklist": "Tracklist",
+    "production": "Producción",
+    "mix": "Mezcla",
+    "master": "Master",
+    "text-1": "¿Quieres escuchar otros trabajos en los que he participado?",
+    "text-2": "¿Otros estilos de música?",
+    "text-3": "Vamos a hablar o escucha mi playlist en Spotify"
+  },
+  "reviews": {
+    "title": "Reviews",
+    "card-1": {
+      "name": "Chez",
+      "review": "Grabar con Dani es un auténtico placer. De las mejores virtudes que tiene es su gran formación técnica con grandes productores internacionales, lo que te hace aprender unas técnicas y unas formas mucho más optimizadas que no encuentras en otros productores nacionales. Otro aspecto a remarcar es que con él jamás te irás del estudio sin haber aprendido algo. The Fox 196 estamos muy orgullosos de su trabajo y de compartir la pasión con la que vive la música.",
+      "band": "The Fox 196"
+    },
+    "card-2": {
+      "name": "Chander",
+      "review": "He trabajado con Dani en varios ocasiones y aún a día de hoy no deja de sorprenderme lo mucho que he aprendido durante todo el proceso de grabación. No puedes trabajar con él y salir del estudio siendo el mismo músico. Sabe entender y aprovechar al máximo cada detalle de la producción, tanto en lo técnico como en lo emocional.",
+      "band": "Fuzz Forward"
+    },
+    "card-3": {
+      "name": "Edu",
+      "review": "Grabar con Dani es una muy buena experiencia, como si hubiera una conexión musical de toda la vida, mucho profesionalismo y pasión por lo que hace, todas las ideas que uno imagina las trae al mundo real y hace que tu producción tenga una consistencia muy sólida.",
+      "band": "Paulet"
+    },
+    "card-4": {
+      "name": "Marc",
+      "review": "Grabar con Dani ha supuesto para mi un aprendizaje musical brutal. Aprender a abrir la mente en base a composicion musical, he mejorado mi tecnica de tocar la guitarra con sus consejos, pero lo mas importante, es lo abierto y coherente que es al hablar con el sobre tus temas! Él te dara sus consejos pero al final con su ayuda el tema acaba sonando incluso mejor!",
+      "band": "Holly Dolls"
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "hero": "¿Quieres trabajar juntos? Cuéntame más sobre tu proyecto",
+    "header": "Mándame un mensaje y me pondré en contacto contigo para conocerte a ti, tu proyecto y tus objetivos, y definir qué puedo aportar a tu música.",
+    "form": {
+      "name": "Tu nombre",
+      "email": "Tu email",
+      "message": "Tu mensaje Message",
+      "privacy": "He leído y acepto la Política de Privacidad",
+      "submit-btn": "Enviar mensaje"
+    },
+    "location": "Sabadell, Barcelona",
+    "email": "danisalat@gmail.com"
+  }
+}

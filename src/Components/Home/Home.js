@@ -4,21 +4,17 @@ import { useState } from 'react';
 import { useTranslation } from "react-i18next";
 import Header from '../Header/Header';
 import bgImg from "../../assets/images/dani.png";
+import InView from 'react-intersection-observer';
 
 
-function Home() {
+function Home({InView}) {
   const { t, i18n } = useTranslation();
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
   }
-  const [ darkTheme, setDarkTheme ] = useState(false);
-
-  const changeToDarkTheme = () => {
-    setDarkTheme(true);
-  }
 
   return (
-    <section className={`home section ${!darkTheme ? "theme--default" : "theme--dark"}`}>
+    <section className={`home section ${!InView ? "theme--default" : "theme--dark"}`}>
       <Header/>
       <div className='home-container'>
         <img src={bgImg} className='home-bg-img'/>

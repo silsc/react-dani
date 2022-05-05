@@ -10,7 +10,7 @@ import { ReactComponent as Insta } from '../../assets/icons/insta.svg';
 import { ReactComponent as Youtube } from '../../assets/icons/youtube.svg';
 
 
-export default function Navbar({theme}) {
+export default function Navbar({inView}) {
   const [ showNavbar, setshowNavbar ] = useState(false);
   const { t, i18n } = useTranslation();
   const changeLanguage = (language) => {
@@ -25,9 +25,8 @@ export default function Navbar({theme}) {
     setshowNavbar(false);
   }
 
-
   return (
-    <div className={`${!theme ? "theme--default" : "theme--dark"}`}>
+    <div className={`${ !inView ? "theme--default" : "theme--dark"}`}>
       <nav className={`navbar ${!showNavbar ? "" : "hidden"}`}>
         <Hamburger className='navbar-open-btn' onClick={() => openModal()}/>
         <div className='navbar-bottom'>

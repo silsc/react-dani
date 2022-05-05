@@ -1,20 +1,28 @@
-import React, { Suspense } from 'react';
-import { BrowserRouter } from "react-router-dom";
+import React, { Suspense, useEffect } from 'react';
+import {createRoot} from 'react-dom/client';
+import { Routes ,Route, BrowserRouter } from "react-router-dom";
 import ReactDOM from 'react-dom';
 import App from './App';
+import Policy from './Components/Policy/Policy';
+
 // import reportWebVitals from './reportWebVitals';
 import './i18n';
 import "../src/index.css";
 
-ReactDOM.render(
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
+
+root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Suspense fallback={<div>Loading...</div>}>
-        <App />
+        <Routes>
+          <Route exact path="/" element={<App/>}/>
+          <Route path="/policy" element={<Policy/>}/>
+        </Routes>
       </Suspense>
     </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

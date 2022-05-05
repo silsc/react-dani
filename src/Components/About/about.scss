@@ -1,8 +1,16 @@
 @import '../../styles/index.scss';
 
 .about {
+  .header {
+    @include respond('ipad') {
+      display: none;
+    }
+  }
   &-container {
     display: flex;
+    @include respond('ipad') {
+      flex-direction: column;
+    }
   }
   &-content {
     width: 40%;
@@ -11,7 +19,7 @@
       width: 55%;
     }
     @include respond('ipad') {
-      width: 60%;
+      width: 100%;
     }
   }
   &-title {
@@ -21,6 +29,12 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
+    @include theme() {
+      color: t($text);
+    }
+    @include respond('ipad') {
+      font-size: 16px;
+    }
   }
   &-imgs {
     background-color: $light-gray;
@@ -33,8 +47,9 @@
       width: 35vw;
     }
     @include respond('ipad') {
-      width: 30vw;
-      height: 100%;
+      position: relative;
+      width: 100%;
+      height: 300px;
     }
   }
   &-img1, &-img2 {
@@ -45,6 +60,10 @@
     @include respond('ipad-pro') {
       width: 65%;
     }
+    @include respond('ipad') {
+      position: relative;
+      width: 100%;
+    }
   }
   &-img1 {
     top: 12vh;
@@ -53,12 +72,22 @@
     @include respond('ipad-pro') {
       left: -2vw;
     }
+    @include respond('ipad') {
+      top: 0px;
+      left: 0;
+      width: 100%;
+      height: 300px;
+      z-index: 0;
+    }
   }
   &-img2 {
     bottom: 12vh;
     right: 5vw;
     @include respond('ipad-pro') {
       right: 2vw;
+    }
+    @include respond('ipad') {
+      display: none;
     }
   }
 }

@@ -1,20 +1,18 @@
 import './services.scss';
-import { useState } from 'react';
+import React,{ useState, useEffect } from 'react';
 import { useTranslation } from "react-i18next";
+import { useInView } from "react-intersection-observer";
 import Header from '../Header/Header';
 
-function Services() {
+
+const Services = React.forwardRef((props, ref) => {
   const { t, i18n } = useTranslation();
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
   }
-  const [ darkTheme, setDarkTheme ] = useState(false)
-  const changeToDarkTheme = () => {
-    setDarkTheme(false);
-  }
-
+  
   return (
-    <section className={`services section ${!darkTheme ? "theme--default" : "theme--dark"}`}>
+    <section ref={ref} className={`services section ${ props.inView ? "theme--dark" : "theme--default"}`}>
       <Header/>
       <h2 className='services-title title'>{t("services.title")}</h2>
       <div className='services-card'>
@@ -27,6 +25,6 @@ function Services() {
       </div>
     </section>
   );
-}
+})
 
 export default Services;

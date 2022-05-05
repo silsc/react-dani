@@ -16,10 +16,15 @@
       font-size: 14px;
     }
     @include respond('phone') {
-      font-size: 10px;
+      font-size: 2vw;
     }
   }
   &-logo {
     align-self: center;
+    @include respond('ipad') {
+      position: fixed;
+      top: 15px;
+      right: 10px;
+    }
   }
 }

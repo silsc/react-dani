@@ -1,10 +1,14 @@
 @import '../../styles/index.scss';
 
 .services {
+  .header {
+    @include respond('ipad') {
+      display: none;
+    }
+  }
   &-title {
     @include theme() {
       color: t($text);
-      background: t($bg);
     }
   }
   &-card {
@@ -12,9 +16,20 @@
     &--title {
       font-family: $cairo;
       font-size: 24px;
+      @include theme() {
+        color: t($text);
+      }
     }
     &--text {
-      
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+      @include theme() {
+        color: t($text);
+      }
+      @include respond('ipad') {
+        font-size: 16px;
+      }
     }
   } 
 }

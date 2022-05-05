@@ -1,6 +1,7 @@
 @import '../../styles/index.scss';
 
 .home {
+  margin-top: 0 !important;
   &-container {
     width: 100vw;
     height: 100vh;
@@ -8,6 +9,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @media (max-height: 500px) {
+      height: 100%;
+    }
   }
   &-bg-img {
     position: absolute;
@@ -43,7 +47,10 @@
   &-container {
     height: 40vh;
     @include respond('phone') {
-      height: 20vh;
+      height: 25vh;
+    }
+    @media (max-height: 500px) {
+      height: 300px;
     }
   }
   &-line1, &-line2 {
@@ -51,9 +58,13 @@
     position: absolute;
     font-size: 13vw;
     margin: 0;
+    @include respond('ipad') {
+      font-size: 20vw;
+    }
     @include respond('phone') {
       font-size: 19vw;
     }
+    
   }
   &-line1 {
     top: 12vh;
@@ -69,7 +80,9 @@
     @include respond('phone') {
       right: 35vw;
     }
-    
+    @media (max-height: 500px) {
+      top: 100px;
+    }
   }
   &-line2 {
     top: 35vh;
@@ -82,6 +95,10 @@
     }
     @include respond('phone') {
       right: 3vw;
+      top: 32vh;
+    }
+    @media (max-height: 500px) {
+      top: 200px;
     }
   }
   &-year {
@@ -90,5 +107,8 @@
     top: 24vh;
     right: 70vw;
     font-size: 1.2vw;
+    @include respond('ipad') {
+      display: none;
+    }
   }
 }

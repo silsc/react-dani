@@ -5,19 +5,14 @@ import { useTranslation } from "react-i18next";
 import Header from '../Header/Header';
 import bgImg from "../../assets/images/dani.png";
 
-function About() {
+function About({inView}) {
   const { t, i18n } = useTranslation();
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
   }
-  const [ darkTheme, setDarkTheme ] = useState(false)
-  const changeToDarkTheme = () => {
-    setDarkTheme(false);
-  }
-
 
   return (
-    <section className={`about section ${!darkTheme ? "theme--default" : "theme--dark"}`}>
+    <section className={`about section ${!inView ? "theme--default" : "theme--dark"}`}>
       <Header/>
       <div className='about-container'>
         <div className='about-content'>

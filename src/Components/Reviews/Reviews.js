@@ -2,7 +2,11 @@ import './reviews.scss';
 import { useState } from 'react';
 import { useTranslation } from "react-i18next";
 import Header from '../Header/Header';
-import bgImg from "../../assets/images/dani.png";
+import chanderImg from "../../assets/images/chander.jpeg";
+import eduImg from "../../assets/images/edu.jpeg";
+import dezImg from "../../assets/images/dez.jpeg";
+import marcImg from "../../assets/images/marc.jpeg";
+
 
 function Reviews() {
   const { t, i18n } = useTranslation();
@@ -18,22 +22,26 @@ function Reviews() {
     {
       name: t("reviews.card-1.name"),
       text: t("reviews.card-1.review"),
-      band: t("reviews.card-1.band")
+      band: t("reviews.card-1.band"),
+      image: dezImg
     },
     {
       name: t("reviews.card-2.name"),
       text: t("reviews.card-2.review"),
-      band: t("reviews.card-2.band")
+      band: t("reviews.card-2.band"),
+      image: chanderImg
     },
     {
       name: t("reviews.card-3.name"),
       text: t("reviews.card-3.review"),
-      band: t("reviews.card-3.band")
+      band: t("reviews.card-3.band"),
+      image: eduImg
     },
     {
       name: t("reviews.card-4.name"),
       text: t("reviews.card-4.review"),
-      band: t("reviews.card-4.band")
+      band: t("reviews.card-4.band"),
+      image: marcImg
     },
 
   ];
@@ -88,7 +96,7 @@ function Reviews() {
                 onTouchStart={touchStartEvent => handleTouchStart(touchStartEvent)}
                 onTouchMove={touchMoveEvent =>handleTouchMove(touchMoveEvent)}
                 onTouchEnd={() => handleTouchEnd(index)}>
-                <img src={bgImg} className='testimonial-img'/>
+                <img src={testimonial.image} className='testimonial-img'/>
                 <div className="testimonial-container">
                   <p className="testimonial-text">{testimonial.text}</p>
                   <h1 className="testimonial-name">{testimonial.name}</h1>

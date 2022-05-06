@@ -3,7 +3,7 @@ import './home.scss';
 import { useState } from 'react';
 import { useTranslation } from "react-i18next";
 import Header from '../Header/Header';
-import bgImg from "../../assets/images/dani.png";
+import bgImg from "../../assets/images/home.jpg";
 import InView from 'react-intersection-observer';
 
 

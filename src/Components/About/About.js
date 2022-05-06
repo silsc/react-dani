@@ -3,7 +3,8 @@ import './about.scss';
 import { useState } from 'react';
 import { useTranslation } from "react-i18next";
 import Header from '../Header/Header';
-import bgImg from "../../assets/images/dani.png";
+import aboutImg1 from "../../assets/images/about-1.png";
+import aboutImg2 from "../../assets/images/about-2.png";
 
 function About({inView}) {
   const { t, i18n } = useTranslation();
@@ -22,8 +23,8 @@ function About({inView}) {
           <p className='about-text'>{t("about.text-3")}</p>
         </div>
         <div className='about-imgs'>
-          <img src={bgImg} className='about-img1'/>
-          <img src={bgImg} className='about-img2'/>
+          <img src={aboutImg1} className='about-img1'/>
+          <img src={aboutImg2} className='about-img2'/>
         </div>
       </div>
       

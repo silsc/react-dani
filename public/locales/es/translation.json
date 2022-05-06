@@ -73,13 +73,14 @@
   },
   "contact": {
     "title": "Contacto",
-    "hero": "¿Quieres trabajar juntos? Cuéntame más sobre tu proyecto",
+    "hero": "¿Quieres que trabajemos juntos? Cuéntame más sobre tu proyecto",
     "header": "Mándame un mensaje y me pondré en contacto contigo para conocerte a ti, tu proyecto y tus objetivos, y definir qué puedo aportar a tu música.",
     "form": {
       "name": "Tu nombre",
       "email": "Tu email",
       "message": "Tu mensaje Message",
-      "privacy": "He leído y acepto la Política de Privacidad",
+      "privacy-1": "He leído y acepto la",
+      "privacy-2": " Política de Privacidad",
       "submit-btn": "Enviar mensaje"
     },
     "location": "Sabadell, Barcelona",

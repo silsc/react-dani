@@ -1,1 +1,96 @@
-@import '../../styles/index.scss'
+@import '../../styles/index.scss';
+
+.contact {
+  .header {
+    @include respond('ipad') {
+      display: none;
+    }
+  }
+  &-container {
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-evenly;
+    height: 90%;
+    @include respond('ipad') {
+      flex-direction: column;
+    }
+  }
+  &-info {
+      width: 90%;
+      margin-right: 50px;
+      align-self: center;
+      @include theme() {
+        color: t($text);
+      }
+      @include respond('ipad') {
+        width: 100%;
+        padding: 30px;
+      }
+      &--hero {
+        font-weight: 900;
+        font-size: 55px;
+        line-height: 90px;
+        font-family: $cairo;
+        margin: 0;
+        margin-bottom: 5%;
+        @include respond('ipad-pro') {
+          font-size: 45px;
+          line-height: 50px;
+          margin-top: 5%;
+          align-self: center;
+        }
+      }
+      &--email, &--location {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 28px;
+        .svg {
+          margin-right: 2%;
+        }
+      }
+      &--email {
+        .contact-info--text {
+          cursor: pointer;
+        }
+      }
+  }
+  &-form {
+    background: $light-black;
+    padding: 10px 50px;
+    @include respond('ipad-pro') {
+      padding: 10px 30px;
+    }
+    @include respond('ipad') {
+      margin-top: 30px;
+      padding: 50px 30px;
+    }
+    @include respond('phone') {
+      padding: 20px 20px;
+    }
+    &--title {
+      line-height: 50px;
+      @include theme() {
+        color: t($text);
+      }
+    }
+    &--header {
+      width: 70%;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+      color: #fff;
+      margin-top: 0;
+      @include respond('ipad-pro') {
+        width: 80%;
+        font-size: 16px;
+      }
+      @include respond('ipad') {
+        width: 90%;
+        font-size: 16px;
+      }
+    }
+    
+}
+}

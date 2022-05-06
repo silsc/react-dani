@@ -81,8 +81,10 @@
       "name": "Your name",
       "email": "Your email",
       "message": "Your Message",
-      "privacy": "I've read and accept the Privacy Policy",
-      "submit-btn": "Send message"
+      "privacy-1": "I've read and accept the",
+      "privacy-2": " Privacy Policy",
+      "submit-btn": "Send message",
+      "succes-msg": "Thanks for your message!"
     },
     "location": "Sabadell, Barcelona",
     "email": "danisalat@gmail.com"

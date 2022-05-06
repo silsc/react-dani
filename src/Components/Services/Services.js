@@ -12,7 +12,7 @@ const Services = React.forwardRef((props, ref) => {
   }
   
   return (
-    <section ref={ref} className={`services section ${ props.inView ? "theme--dark" : "theme--default"}`}>
+    <section ref={ref} className={`services section ${ props.inView ? "theme--dark" : "theme--default"}`} id="services">
       <Header/>
       <h2 className='services-title title'>{t("services.title")}</h2>
       <div className='services-card'>

@@ -69,7 +69,7 @@ function Reviews() {
   }
 
   return (
-    <section className={`services section ${!darkTheme ? "theme--default" : "theme--dark"}`}>
+    <section className={`reviews section ${!darkTheme ? "theme--default" : "theme--dark"}`} id="reviews">
       <Header/>
       <h2 className='reviews-title title'>{t("reviews.title")}</h2>
       <div className="slider">

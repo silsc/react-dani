@@ -46,10 +46,18 @@
   @include respond('ipad') {
     width: 85%;
   }
+  &:hover {
+    .testimonial-img {
+      filter: none;
+    }
+  }
   &-img {
     width: 35%;
     height: 100%;
     object-fit: cover;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
   }
   &-container {
     padding: 20px 30px;

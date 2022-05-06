@@ -56,6 +56,6 @@ body {
   }
   @include respond('phone') {
     padding: 0 10px;
-    margin-left: 70px;
+    margin-left: 60px;
   }
 }

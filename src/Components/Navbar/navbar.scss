@@ -160,11 +160,9 @@
     }
     @include respond('phone') {
       padding: 0;
-      margin: 0 20px;
     }
     @media (max-height: 700px) {
       font-size: $fss;
-      margin: 0 10px;
     }
     &:last-child {
       font-weight: 800;

@@ -14,7 +14,7 @@ function Home({InView}) {
   }
 
   return (
-    <section className={`home section ${!InView ? "theme--default" : "theme--dark"}`}>
+    <section className={`home section ${!InView ? "theme--default" : "theme--dark"}`} id="home">
       <Header/>
       <div className='home-container'>
         <img src={bgImg} className='home-bg-img'/>

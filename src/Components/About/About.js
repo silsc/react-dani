@@ -12,7 +12,7 @@ function About({inView}) {
   }
 
   return (
-    <section className={`about section ${!inView ? "theme--default" : "theme--dark"}`}>
+    <section className={`about section ${!inView ? "theme--default" : "theme--dark"}`} id="about">
       <Header/>
       <div className='about-container'>
         <div className='about-content'>

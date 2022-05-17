@@ -39,7 +39,7 @@
       @include respond('phone') {
         font-size: $fss;
       }
-      &:last-child {
+      &--black{
         font-weight: 700;
       }
     }
@@ -106,19 +106,6 @@
     
     @media (max-height: 500px) {
       top: 200px;
-    }
-  }
-  &-year {
-    transform: rotate(-90deg);
-    position: absolute;
-    top: 24vh;
-    right: 70vw;
-    font-size: 1.2vw;
-    @include respond('ipad') {
-      display: none;
-    }
-    @include theme() {
-      color: t($text);
     }
   }
 }

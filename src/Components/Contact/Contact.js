@@ -2,6 +2,7 @@ import React, { Component }  from 'react';
 import './contact.scss';
 // import { useState } from 'react';
 import { useTranslation } from "react-i18next";
+import { Fade } from "react-awesome-reveal";
 import Header from '../Header/Header';
 import Form from '../Form/Form';
 import contactImg from '../../assets/images/contact.png';
@@ -27,24 +28,29 @@ const Contact = React.forwardRef((props, ref) => {
       <Header/>
       <div className='contact-container'>
         <div className='contact-info'>
-          <h1 className='contact-info--hero only'>{t("contact.hero")}</h1>
-          <div className='contact-info--location'>
-            <Location className='svg'/>
-            <p className='contact-info--text'>{t("contact.location")}</p>
-          </div>
-          <div className='contact-info--email'>
-            <Email className='svg'/>
-            <p className='contact-info--text' onClick={() => window.location = 'mailto:yourmail@gmail.com'}>{t("contact.email")}</p>
-
-          </div>
+          <Fade>
+            <h1 className='contact-info--hero only'>{t("contact.hero")}</h1>
+          </Fade>
+          <Fade cascade>
+            <div className='contact-info--location'>
+              <Location className='svg'/>
+              <p className='contact-info--text'>{t("contact.location")}</p>
+            </div>
+            <div className='contact-info--email'>
+              <Email className='svg'/>
+              <p className='contact-info--text' onClick={() => window.location = 'mailto:yourmail@gmail.com'}>{t("contact.email")}</p>
+            </div>
+          </Fade>
         </div>
-        <div className='contact-form'>
-          <h2 className='contact-form--title title'>{t("contact.title")}</h2>
-          <p className='contact-form--header'>{t("contact.header")}
-          </p>
-          <Form></Form>
-        </div>
+        <Fade cascade delay={300}>
 
+          <div className='contact-form'>
+            <h2 className='contact-form--title title'>{t("contact.title")}</h2>
+            <p className='contact-form--header'>{t("contact.header")}
+            </p>
+            <Form></Form>
+          </div>
+        </Fade>
       </div>
       
       

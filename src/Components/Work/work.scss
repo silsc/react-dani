@@ -1,0 +1,75 @@
+@import '../../styles/index.scss';
+
+.work {
+    display: flex;
+    align-items: center;
+  .header {
+    position: absolute;
+    width: 95%;
+    top: 0;
+    @include respond('phone') {
+      display: none;
+    }
+  }
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @include respond('ipad-pro') {
+      flex-direction: column;    
+    }
+  }
+  &-info {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: 100vh;
+    position: relative;
+    right: -40px;
+    top: 0;
+    width: 45.8%;
+    padding: 42px;
+    @include respond('ipad-pro') {
+      position: relative; 
+      height: 100%;
+      width: 100%;
+      right: 0px;
+      margin-top: 50px;
+      padding: 50px 30px;
+    }
+  }
+  &-title {
+    transform: rotate(-90deg);
+    font-family: $cairo;
+    font-weight: 700;
+    font-size: 96px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    @include respond('ipad-pro') {
+      font-size: 75px;  
+      right: -50px;
+      bottom: -30px;
+    }
+  }
+  &-spotify {
+    display: flex;
+    align-items: center;
+    p {
+      padding-right: 10px;
+    }
+    &:last-child {
+      svg {
+        cursor: pointer;
+        &:hover {
+          path {
+            fill: #1BD760;
+            cursor: pointer;
+          } 
+        }
+      }
+      z-index: 1;
+    }
+  }
+}

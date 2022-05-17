@@ -5,6 +5,7 @@
   height: 66vh;
   @include respond('ipad') {
     height: 500px;
+    margin-bottom: 50px;
   }
   @include respond('phone') {
     height: 70vh;

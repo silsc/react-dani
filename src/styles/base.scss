@@ -11,7 +11,7 @@
 body {
   margin: 0;
   font-family: $roboto;
-  transition: all 1.5s ease;
+  transition: all 0.5s ease;
   @include theme() {
     background: t($bg);
   }
@@ -47,7 +47,7 @@ body {
   padding: 0 40px;
   overflow: hidden;
   margin-top: 1px;
-  @include respond('ipad') {
+  @include respond('ipad-pro') {
     padding: 0 20px;
     margin-left: 100px;
     scroll-snap-align: none;
@@ -56,6 +56,6 @@ body {
   }
   @include respond('phone') {
     padding: 0 10px;
-    margin-left: 70px;
+    margin-left: 60px;
   }
 }

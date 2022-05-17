@@ -1,4 +1,4 @@
-import React, { Component }  from 'react';
+import React  from 'react';
 import './navbar.scss';
 import { useState } from 'react';
 import { useTranslation } from "react-i18next";

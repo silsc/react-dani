@@ -7,6 +7,7 @@ import Services from './Components/Services/Services';
 import About from './Components/About/About';
 import Reviews from './Components/Reviews/Reviews';
 import Contact from './Components/Contact/Contact';
+import Work from './Components/Work/Work';
 
 const App = () => {
   const [inView, setInView] = useState();
@@ -29,6 +30,12 @@ const App = () => {
       </InView>
 
       <About inView={inView} id="section-3"/>
+
+      <InView as="div" onChange={setInView}>
+            {({ ref, inView }) => (
+              <Work ref={ref} inView={inView} delay={500} id="section-5" />
+            )}
+      </InView>
       
       <Reviews id="section-4"/>
 

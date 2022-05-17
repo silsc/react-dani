@@ -53,7 +53,7 @@
   "reviews": {
     "title": "Reviews",
     "card-1": {
-      "name": "Chez",
+      "name": "Dez",
       "review": "Recording with Dani is a pure pleasure. One of his best virtues is his great technical training with international producers, which lets you know different techniques and more optimized methods you don't find in other local studios. Another thing to point out is that you won't leave the studio without learning something. We (The Fox 196) are proud of his work and sharing the passion he has for music.",
       "band": "The Fox 196"
     },
@@ -75,7 +75,7 @@
   },
   "contact": {
     "title": "Contact",
-    "hero": "Do you want to work together? Let me know more about your project",
+    "hero": "Do you want to work with me? Let me know more about your project",
     "header": "Shoot me a message and I'll get in contact with you to know you, your project and your goals, and explain what I can add to your music.",
     "form": {
       "name": "Your name",

@@ -1,7 +1,7 @@
 import React, { Component }  from 'react';
 import './home.scss';
 import { useState } from 'react';
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import { Fade } from "react-awesome-reveal";
 import Header from '../Header/Header';
 import bgImg from "../../assets/images/home.jpg";
@@ -21,10 +21,11 @@ function Home({InView}) {
         <img src={bgImg} className='home-bg-img'/>
         <div className='home-title-container'>
           <Fade triggerOnce>
-            <h1 className='home-title-line1'>{t("home.title.line1")}</h1>
+          <h1 className='home-title-line1'>{t("home.title.line1")}</h1>
           </Fade>
           <Fade delay={200} triggerOnce>
-            <h1 className='home-title-line2'>{t("home.title.line2")}</h1>
+            <h1 className='home-title-line2'>
+            <Trans i18nKey="home.title.line2" components={{oposite: <span className='oposite' />}}/></h1>
           </Fade>
         </div>
         <div className='home-text-container'>

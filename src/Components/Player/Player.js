@@ -4,17 +4,24 @@ import { ReactComponent as PlayBtn } from '../../assets/icons/play.svg';
 import { ReactComponent as PrevBtn } from '../../assets/icons/prev.svg';
 import { ReactComponent as NextBtn } from '../../assets/icons/next.svg';
 import { ReactComponent as PauseBtn } from '../../assets/icons/pause.svg';
-
+import audio1 from '../../assets/audios/audio1.wav';
+import audio1Img from '../../assets/images/audio1.png';
+import audio2 from '../../assets/audios/audio2.wav';
+import audio2Img from '../../assets/images/audio2.png';
+import audio3 from '../../assets/audios/audio3.wav';
+import audio3Img from '../../assets/images/audio3.png';
+import audio4 from '../../assets/audios/audio4.wav';
+import audio4Img from '../../assets/images/audio4.png';
 
 export default class Player extends React.Component {
   state = {
     index: 3,
     currentTime: '0:00',
     musicList: [
-      {name:'Nice piano and ukulele', author: 'Royalty', img: 'https://www.bensound.com/bensound-img/buddy.jpg', audio:'https://www.bensound.com/bensound-music/bensound-buddy.mp3', duration: '2:02', type: "Production"}, 
-      {name:'Gentle acoustic', author: 'Acoustic', img: 'https://www.bensound.com/bensound-img/sunny.jpg', audio:'https://www.bensound.com//bensound-music/bensound-sunny.mp3', duration: '2:20', type: "production"},
-      {name:'Corporate motivational', author: 'Corporate', img: 'https://www.bensound.com/bensound-img/energy.jpg', audio:'https://www.bensound.com/bensound-music/bensound-energy.mp3', duration: '2:59', type: "Production"},
-      {name:'Slow cinematic', author: 'Royalty', img: 'https://www.bensound.com/bensound-img/slowmotion.jpg', audio:'https://www.bensound.com/bensound-music/bensound-slowmotion.mp3', duration: '3:26', type: "Production"}
+      {name:'Shout to Forget', author: 'Fuzz Forward', img: audio1Img, audio: audio1 , duration: '0:48', type: "Production"}, 
+      {name:'La Realidad', author: 'The Fox 196', img: audio2Img, audio: audio2, duration: '0:30', type: "production"},
+      {name:'Pensant del Revés', author: 'Fornax', img: audio3Img, audio: audio3, duration: '1:00', type: "Production"},
+      {name:'Follow', author: 'Melting State', img: audio4Img, audio: audio4, duration: '0:40', type: "Production"}
     ],
     pause: false,
   };
@@ -195,7 +202,7 @@ nextSong = () => {
 
             <div ref={ref => this.timelineRef = ref} id="timeline">
               <div ref={ref => this.playheadRef = ref} id="playhead"></div>
-              <div ref={ref => this.hoverPlayheadRef = ref} class="hover-playhead" data-content="0:00"></div>
+              <div ref={ref => this.hoverPlayheadRef = ref}  data-content="0:00"></div>
             </div>
            </div>
           

@@ -6,6 +6,7 @@
   box-sizing: border-box !important;
   text-align: left;
   cursor: auto;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -25,6 +26,14 @@ body {
   display: none;
 }
 
+.oposite {
+  @include theme() {
+    color: t($bg);
+  }
+  @include respond('ipad') {
+      color: white !important;
+    }
+}
 .title {
   font-family: $cairo;
   font-style: normal;

@@ -42,8 +42,7 @@ const Contact = React.forwardRef((props, ref) => {
             </div>
           </Fade>
         </div>
-        <Fade cascade delay={300}>
-
+        <Fade cascade delay={300} className="contact-form--container">
           <div className='contact-form'>
             <h2 className='contact-form--title title'>{t("contact.title")}</h2>
             <p className='contact-form--header'>{t("contact.header")}

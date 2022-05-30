@@ -57,6 +57,9 @@
       }
   }
   &-form {
+    &--container {
+      align-self: center;
+    }
     background: $light-black;
     padding: 10px 50px;
     @include respond('ipad-pro') {

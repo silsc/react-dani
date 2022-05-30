@@ -65,7 +65,7 @@
     align-self: center;
   }
   &-text {
-    font-size: 18px;
+    font-size: 16px;
     @include respond('ipad') {
       font-size: 14px;
     }

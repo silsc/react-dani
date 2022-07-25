@@ -62,16 +62,13 @@ function Reviews() {
   function handleTouchEnd(index) {
       if (touchStart - touchEnd > 0) {
         const nextEl =  document.getElementById(`t-${index + 2}`);
-        console.log(nextEl);
         setCheck(true)
         nextEl.checked = setCheck;
         ;
       }
 
       if (touchStart - touchEnd < -1) {
-        console.log(index);
         const prevEl = document.getElementById(`t-${index}`);
-        console.log(prevEl);
         setCheck(true)
         prevEl.checked = setCheck;
       }
@@ -86,8 +83,8 @@ function Reviews() {
       <Fade delay={300} >
         <div className="slider">
           <input type="radio" name="testimonial" id="t-1" />
-          <input type="radio" name="testimonial" id="t-2" />
-          <input type="radio" name="testimonial" id="t-3" defaultChecked />
+          <input type="radio" name="testimonial" id="t-2" defaultChecked/>
+          <input type="radio" name="testimonial" id="t-3" />
           <input type="radio" name="testimonial" id="t-4" />
           <input type="radio" name="testimonial" id="t-5" />  
             <div className="testimonials">

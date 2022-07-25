@@ -12,6 +12,9 @@
     @media (max-height: 500px) {
       height: 100%;
     }
+    @include respond('phone') {
+      padding: 10px;
+    }
   }
   &-bg-img {
     position: absolute;

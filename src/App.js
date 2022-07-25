@@ -18,32 +18,24 @@ const App = () => {
   });
   
   return ( 
-    <div className={`App ${!inView ? "theme--default" : "theme--dark"}`} onScroll={() => console.log('Inview:', inView)} >
+    <div className={`App ${!inView ? "theme--default" : "theme--dark"}`} >
       <Navbar inView={inView} />
       
       <Home/>
       
-      <InView as="div" onChange={setInView}>
-            {({ ref, inView }) => (
-              <Services ref={ref} inView={inView} delay={500} id="section-2" />
-            )}
-      </InView>
+      <Services inView={inView} delay={500} id="section-2" setInView={setInView}/>
 
       <About inView={inView} id="section-3"/>
 
       <InView as="div" onChange={setInView}>
-            {({ ref, inView }) => (
-              <Work ref={ref} inView={inView} delay={500} id="section-5" />
-            )}
+        {({ ref, inView }) => (
+          <Work ref={ref} inView={inView} delay={500} id="section-5" />
+        )}
       </InView>
       
       <Reviews id="section-4"/>
 
-      <InView as="div" onChange={setInView}>
-            {({ ref, inView }) => (
-              <Contact ref={ref} inView={inView} delay={500} id="section-5" />
-            )}
-      </InView>
+      <Contact  inView={inView} delay={500} id="section-5" setInView={setInView}/>
 
     </div>
   );

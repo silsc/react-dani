@@ -1,5 +1,10 @@
 @import '../../styles/index.scss';
 
+.reviews {
+  @include respond('phone') {
+    padding: 10px !important;
+  }
+}
 .slider {
   width: 100%;
   height: 66vh;

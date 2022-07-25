@@ -92,12 +92,17 @@
       transition: all 0.5s ease;
     }  
     &:hover, &:active {
+      svg {
+        cursor: pointer;
+      }
       path {
         fill: url(#insta-gradient);
+        cursor: pointer;
       }
     }
   }
   &-youtube {
+    cursor: pointer;
     margin-bottom: 26px;
     @include respond('phone') {
       margin-bottom: 10px;
@@ -109,8 +114,12 @@
       transition: all 0.5s ease;
     }    
     &:hover {
+      svg {
+        cursor: pointer;
+      }
       path {
         fill: #FF0000;
+        cursor: pointer;
       }
     }
   }
@@ -128,6 +137,7 @@
       fill: t($bg-oposite);
     }
     transition: all 0.5s ease;
+    cursor: pointer;
   } 
 }
 
@@ -147,6 +157,7 @@
   align-items: center;
   transform: rotate(90deg);
   .navbar-link {
+    cursor: pointer;
     white-space: nowrap;
     transform: rotate(180deg);
     text-decoration: none;

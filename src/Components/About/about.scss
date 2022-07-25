@@ -1,6 +1,9 @@
 @import '../../styles/index.scss';
 
 .about {
+  @include respond('phone') {
+    padding: 10px !important;
+  }
   .header {
     @include respond('ipad') {
       display: none;

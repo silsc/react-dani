@@ -3,6 +3,7 @@ import './contact.scss';
 // import { useState } from 'react';
 import { useTranslation } from "react-i18next";
 import { Fade } from "react-awesome-reveal";
+import { useInView, InView } from "react-intersection-observer";
 import Header from '../Header/Header';
 import Form from '../Form/Form';
 import contactImg from '../../assets/images/contact.png';
@@ -24,7 +25,7 @@ const Contact = React.forwardRef((props, ref) => {
   }
 
   return (
-    <section ref={ref} className={`contact section ${ props.inView ? "theme--dark" : "theme--default"}`} id="contact" style={bgStyle}>
+    <section className={`contact section ${ props.inView ? "theme--dark" : "theme--default"}`} id="contact" style={bgStyle}>
       <Header/>
       <div className='contact-container'>
         <div className='contact-info'>
@@ -32,14 +33,20 @@ const Contact = React.forwardRef((props, ref) => {
             <h1 className='contact-info--hero only'>{t("contact.hero")}</h1>
           </Fade>
           <Fade cascade>
-            <div className='contact-info--location'>
-              <Location className='svg'/>
-              <p className='contact-info--text'>{t("contact.location")}</p>
-            </div>
-            <div className='contact-info--email'>
-              <Email className='svg'/>
-              <p className='contact-info--text' onClick={() => window.location = 'mailto:yourmail@gmail.com'}>{t("contact.email")}</p>
-            </div>
+            <InView as="div" onChange={props.setInView}>
+              {({ ref, inView }) => ( 
+                <>
+                <div className='contact-info--location' ref={ref}>
+                  <Location className='svg'/>
+                  <p className='contact-info--text'>{t("contact.location")}</p>
+                </div>
+                <div className='contact-info--email'>
+                  <Email className='svg'/>
+                  <p className='contact-info--text' onClick={() => window.location = 'mailto:yourmail@gmail.com'}>{t("contact.email")}</p>
+                </div>
+                </>
+              )}
+            </InView> 
           </Fade>
         </div>
         <Fade cascade delay={300} className="contact-form--container">

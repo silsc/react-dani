@@ -92,12 +92,17 @@
       transition: all 0.5s ease;
     }  
     &:hover, &:active {
+      svg {
+        cursor: pointer;
+      }
       path {
         fill: url(#insta-gradient);
+        cursor: pointer;
       }
     }
   }
   &-youtube {
+    cursor: pointer;
     margin-bottom: 26px;
     @include respond('phone') {
       margin-bottom: 10px;
@@ -109,8 +114,12 @@
       transition: all 0.5s ease;
     }    
     &:hover {
+      svg {
+        cursor: pointer;
+      }
       path {
         fill: #FF0000;
+        cursor: pointer;
       }
     }
   }
@@ -128,6 +137,7 @@
       fill: t($bg-oposite);
     }
     transition: all 0.5s ease;
+    cursor: pointer;
   } 
 }
 
@@ -146,7 +156,11 @@
   margin-top: 15px;
   align-items: center;
   transform: rotate(90deg);
+  @include respond('phone') {
+    margin-top: 0px;
+  }
   .navbar-link {
+    cursor: pointer;
     white-space: nowrap;
     transform: rotate(180deg);
     text-decoration: none;
@@ -159,7 +173,8 @@
       color: t($text-secondary);
     }
     @include respond('phone') {
-      padding: 0;
+      padding: 50% 0;  
+      margin: 10px;      
     }
     @media (max-height: 700px) {
       font-size: $fss;

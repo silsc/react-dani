@@ -6,11 +6,14 @@
   padding: 20px 20px 0 0px;
   position: relative;
   z-index: 1;
+  @include respond('phone') {
+    padding: 20px 20px 0 10px;
+  }
   &-title {
     align-self: center;
     color: $dark-gray;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 21px;
     @include respond('ipad') {
       font-size: 14px;

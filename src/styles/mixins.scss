@@ -36,11 +36,3 @@
 @function t($key) {
   @return map-get($theme-map, $key);
 }
-
-
-// EXAMPLE
-//.base {
-  // @include theme() {
-  //   color: t($text);
-  //   background: t($bg);
-  // }

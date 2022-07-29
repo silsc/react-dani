@@ -1,5 +1,11 @@
 @import '../../styles/index.scss';
 
+
+.home.section {
+  @include respond('phone') {
+    height: 100vh !important;
+  }
+}
 .home {
   margin-top: 0 !important;
   &-container {
@@ -11,6 +17,9 @@
     justify-content: center;
     @media (max-height: 500px) {
       height: 100%;
+    }
+    @include respond('phone') {
+      padding: 10px;
     }
   }
   &-bg-img {

@@ -31,7 +31,7 @@ const Work = React.forwardRef((props, ref) => {
           <p>Other music styles maybe?</p>
 
           <div className='work-spotify'>
-            <p>Contact me or listen <span onClick={() => window.location = 'https://open.spotify.com/playlist/2nwVcowWfYhXXqkmVgGVNK?si=586a412f544a44e7&nd=1, "_blank"'}>my playlist on Spotify </span></p>
+            <p>Contact me or listen <span className='cursor spotify-green bold' onClick={() => window.location = 'https://open.spotify.com/playlist/2nwVcowWfYhXXqkmVgGVNK?si=586a412f544a44e7&nd=1, "_blank"'}>my playlist on Spotify </span></p>
             <Spotify onClick={() => window.location = 'https://open.spotify.com/playlist/2nwVcowWfYhXXqkmVgGVNK?si=586a412f544a44e7&nd=1', "_blank"}></Spotify>
           </div>
         </Fade>

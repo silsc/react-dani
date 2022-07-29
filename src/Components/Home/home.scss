@@ -1,5 +1,11 @@
 @import '../../styles/index.scss';
 
+
+.home.section {
+  @include respond('phone') {
+    height: 100vh !important;
+  }
+}
 .home {
   margin-top: 0 !important;
   &-container {

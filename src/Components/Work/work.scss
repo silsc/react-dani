@@ -56,12 +56,22 @@
   &-spotify {
     display: flex;
     align-items: center;
+    @include respond('phone') {
+      flex-direction: column;
+      align-items: flex-start;
+    }
     p {
       padding-right: 10px;
     }
     &:last-child {
       svg {
         cursor: pointer;
+        path {
+          @include respond('phone') {
+            fill: #1BD760;
+          }
+        } 
+        
         &:hover {
           path {
             fill: #1BD760;

@@ -156,6 +156,9 @@
   margin-top: 15px;
   align-items: center;
   transform: rotate(90deg);
+  @include respond('phone') {
+    margin-top: 0px;
+  }
   .navbar-link {
     cursor: pointer;
     white-space: nowrap;
@@ -170,7 +173,8 @@
       color: t($text-secondary);
     }
     @include respond('phone') {
-      padding: 0;
+      padding: 50% 0;  
+      margin: 10px;      
     }
     @media (max-height: 700px) {
       font-size: $fss;

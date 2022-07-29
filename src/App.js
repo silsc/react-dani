@@ -9,6 +9,7 @@ import Reviews from './Components/Reviews/Reviews';
 import Contact from './Components/Contact/Contact';
 import Work from './Components/Work/Work';
 
+
 const App = () => {
   const [inView, setInView] = useState();
 

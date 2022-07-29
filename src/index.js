@@ -4,6 +4,7 @@ import { Routes ,Route, BrowserRouter } from "react-router-dom";
 import ReactDOM from 'react-dom';
 import App from './App';
 import Policy from './Components/Policy/Policy';
+import ReactGA from 'react-ga';
 
 // import reportWebVitals from './reportWebVitals';
 import './i18n';
@@ -11,6 +12,9 @@ import "../src/index.css";
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
+
+ReactGA.initialize(`${process.env.REACT_APP_GA_KEY}`);
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 root.render(
   <React.StrictMode>

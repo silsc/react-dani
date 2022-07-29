@@ -14,6 +14,13 @@
       color: t($text);
     }
   }
+  &-cards{
+    display: inline-flex;
+    gap: 52px;
+    @include respond('ipad-pro') {
+      display: block;
+    }
+  }
   &-card {
     margin-bottom: 50px;
     &--title {

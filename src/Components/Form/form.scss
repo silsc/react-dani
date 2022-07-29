@@ -69,5 +69,8 @@
     &:hover {
       background: $dark-gray;
     }
+    @include respond('ipad') {
+      width: 80%;
+    }
   }
 }

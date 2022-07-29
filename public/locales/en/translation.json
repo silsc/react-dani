@@ -17,27 +17,32 @@
       "line1": "DANI",
       "line2": "SA<oposite>LAT</oposite>"
     },
-    "title-year": "FROM 2015",
     "text-1": "There are plenty of studios that can achieve a great sound. I help rock and metal bands define a vision for their projects, creating something unique.",
-    "text-2": "I can’t guarantee success, but I can guarantee we’ll produce the best music we can.",
-    "text-3": "Spoiler, it will sound amazing",
-    "contact-btn": "contact now"
+    "text-2": "Spoiler, it will sound amazing",
+    "contact-btn": "Contact now!"
   },
   "services": {
     "title": "Services",
     "service-1": {
       "title": "Production",
-      "text": "When making music it's difficult to share your feelings and stay objective at the same time. My work is to define a unique vision for every band and make the hard decisions, both musical and sonically, for the project to be successful. It's easy to be ignored on Spotify. If you believe in your music, it deserves to be listened to."
+      "text-1": "When making music it's difficult to share your feelings and stay objective at the same time. My work is to define a unique vision for every band and make the hard decisions, both musical and sonically, for the project to be successful. It's easy to be ignored on Spotify. If you believe in your music, it deserves to be listened to.",
+      "text-2": "When making music it's difficult to share your feelings and stay objective at the same time. My work is to define a unique vision for every band and make the hard decisions, both musical and sonically, for the project to be successful. It's easy to be ignored on Spotify. If you believe in your music, it deserves to be listened to."
     },
     "service-2": {
       "title": "Mixing",
-      "text": "DIY productions risk sounding like a demo. I believe musicians need to know how to produce themselves and have a vision, but it’s difficult to get good results, and you need someone that knows how to give the sound the necessary impact and energy. If you haven't started the project yet, I can advice during the whole process to make the right calls."
+      "text-1": "DIY productions risk sounding like a demo. I believe musicians need to know how to produce themselves and have a vision, but it’s difficult to get good results, and you need someone that knows how to give the sound the necessary impact and energy. If you haven't started the project yet, I can advice during the whole process to make the right calls.",
+      "text-2": ""
+    },
+    "service-3": {
+      "title": "Mastering",
+      "text-1": "DIY productions risk sounding like a demo. I believe musicians need to know how to produce themselves and have a vision, but it’s difficult to get good results, and you need someone that knows how to give the sound the necessary impact and energy. If you haven't started the project yet, I can advice during the whole process to make the right calls.",
+      "text-2": ""
     }
   },
   "about": {
     "title": "About",
     "text-1": "I've been writing music and playing in bands for as long as I can remember, and I know just how difficult it is for people to take you seriously as an artist and be interested in your music. Since I started producing a few years ago, besides sound, my main obsession has been to learn how the fuck I can help the bands move their careers forward.",
-    "text-2": "Music is way more than sounding great. You have to write good music, play it right, have a vision, design cool merch, interesting videoclips, finding shows, promote yourself well, etc. Its intimidating, and my goal is to help the bands in evey step of the way to create the best possible product.",
+    "text-2": "From starting a song to playing it live, the music creation process can be daunting, and my goal is to help the bands in evey step of the way to create the best possible product.",
     "text-3": "Every day over 60k songs get uploaded to Spotify (thats not a typo!) and its really easy to be ignored. I want to work with bands who want to change the industry, improve with every album, talk real and important matters and, above all, make the effort, music and art worth it."
   },
   "work": {
@@ -48,7 +53,9 @@
     "master": "Master",
     "text-1": "Do you want to listen to some more of my projects?",
     "text-2": "Other music styles maybe?",
-    "text-3": "Contact me or listen my playlist on Spotify"
+    "text-3": "or listen ",
+    "cta-1": "Contact me",
+    "cta-2": "my playlist on Spotify"
   },
   "reviews": {
     "title": "Reviews",

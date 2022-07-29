@@ -5,7 +5,6 @@ import { useInView, InView } from "react-intersection-observer";
 import { Fade } from "react-awesome-reveal";
 import Header from '../Header/Header';
 
-
 const Services = React.forwardRef((props, ref ) => {
   const { t, i18n } = useTranslation();
   const changeLanguage = (language) => {
@@ -18,22 +17,39 @@ const Services = React.forwardRef((props, ref ) => {
       <Fade>
         <h2 className='services-title title'>{t("services.title")}</h2>
       </Fade>
-      <Fade delay={200}>
-        <div className='services-card'>
-          <h3 className='services-card--title'>{t("services.service-1.title")}</h3>
-          <p className='services-card--text'>{t("services.service-1.text")}</p>
-        </div>
-      </Fade>
-        <Fade delay={250}>
-        <InView as="div" onChange={props.setInView}>
-        {({ ref, inView }) => ( 
-          <div className='services-card' ref={ref}>
-            <h3 className='services-card--title'>{t("services.service-2.title")}</h3>
-            <p className='services-card--text'>{t("services.service-2.text")}</p>
-          </div>
-          )}
-        </InView> 
+      <div className='services-cards'>
+        <Fade delay={200}>
+          <article className='services-card'>
+            <h3 className='services-card--title'>{t("services.service-1.title")}</h3>
+            <div className='services-card--text'>
+              <p className='services-card--text-1'>{t("services.service-1.text-1")}</p>
+              <p className='services-card--text-2'>{t("services.service-1.text-2")}</p>
+            </div>
+          </article>
         </Fade>
+        <Fade delay={200}>
+          <InView as="div" onChange={props.setInView}>
+          {({ ref, inView }) => ( 
+            <article className='services-card' ref={ref}>
+              <h3 className='services-card--title'>{t("services.service-2.title")}</h3>
+              <div className='services-card--text'>
+                <p className='services-card--text-1'>{t("services.service-2.text-1")}</p>
+                <p className='services-card--text-2'>{t("services.service-2.text-2")}</p>
+              </div>
+            </article>
+            )}
+          </InView> 
+        </Fade>
+        <Fade delay={200}>
+          <article className='services-card'>
+            <h3 className='services-card--title'>{t("services.service-3.title")}</h3>
+            <div className='services-card--text'>
+              <p className='services-card--text'>{t("services.service-3.text-1")}</p>
+              <p className='services-card--text'>{t("services.service-3.text-2")}</p>
+            </div>
+          </article>
+        </Fade>
+      </div>
 
     </section>
   );

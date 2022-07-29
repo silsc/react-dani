@@ -21,6 +21,9 @@ body {
 
 .link {
   cursor: pointer;
+  text-decoration: none;
+  color: black;
+  margin-right: 5px;
 }
 
 .hidden {
@@ -79,4 +82,21 @@ body {
 
 .spotify-green {
   color: #1BD760;
+}
+
+.cta-black-btn {
+  padding: 20px 30px;
+  margin-top: 10px;
+  background-color: black;
+  color: white;
+  font-weight: 700;
+}
+
+.cta-black-btn--container {
+  display: flex;
+  justify-content: end;
+  @include respond('phone') {
+    justify-content: start;
+
+  }
 }

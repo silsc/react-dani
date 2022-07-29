@@ -50,8 +50,12 @@ function Form() {
         errors={state.errors}
       />
       <div className='policy-btn'>
-        <input type="checkbox" id="topping" name="topping" required />{t("contact.form.privacy-1")} 
-      <Link to="policy" className='link'>  {t("contact.form.privacy-2")}</Link>
+        <input type="checkbox" id="topping" name="topping" required />
+        <p>
+        {t("contact.form.privacy-1")}
+        <Link to="policy" className='link'> {t("contact.form.privacy-2")}</Link> 
+        </p>
+      
       </div>
     
 

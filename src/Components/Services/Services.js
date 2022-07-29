@@ -22,8 +22,8 @@ const Services = React.forwardRef((props, ref ) => {
           <article className='services-card'>
             <h3 className='services-card--title'>{t("services.service-1.title")}</h3>
             <div className='services-card--text'>
-              <p className='services-card--text-1'>{t("services.service-1.text-1")}</p>
-              <p className='services-card--text-2'>{t("services.service-1.text-2")}</p>
+              <p className='services-card--text'>{t("services.service-1.text-1")}</p>
+              <p className='services-card--text'>{t("services.service-1.text-2")}</p>
             </div>
           </article>
         </Fade>
@@ -33,8 +33,8 @@ const Services = React.forwardRef((props, ref ) => {
             <article className='services-card' ref={ref}>
               <h3 className='services-card--title'>{t("services.service-2.title")}</h3>
               <div className='services-card--text'>
-                <p className='services-card--text-1'>{t("services.service-2.text-1")}</p>
-                <p className='services-card--text-2'>{t("services.service-2.text-2")}</p>
+                <p className='services-card--text'>{t("services.service-2.text-1")}</p>
+                <p className='services-card--text'>{t("services.service-2.text-2")}</p>
               </div>
             </article>
             )}

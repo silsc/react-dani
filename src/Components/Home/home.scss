@@ -35,7 +35,7 @@
       width: 40%;
       margin: 30px 0;
       @include respond('phone') {
-        width: 38%;
+        width: 60%;
         margin: 0px;
       }
     }
@@ -47,6 +47,8 @@
       }
       @include respond('phone') {
         font-size: $fss;
+        width: 70%;
+
       }
       &--black{
         font-weight: 700;

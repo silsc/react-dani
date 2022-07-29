@@ -33,25 +33,23 @@ const Contact = React.forwardRef((props, ref) => {
             <h1 className='contact-info--hero only'>{t("contact.hero")}</h1>
           </Fade>
           <Fade cascade>
-            <InView as="div" onChange={props.setInView}>
-              {({ ref, inView }) => ( 
-                <>
-                <div className='contact-info--location' ref={ref}>
+                <div className='contact-info--location'>
                   <Location className='svg'/>
                   <p className='contact-info--text'>{t("contact.location")}</p>
                 </div>
                 <div className='contact-info--email'>
                   <Email className='svg'/>
                   <p className='contact-info--text' onClick={() => window.location = 'mailto:yourmail@gmail.com'}>{t("contact.email")}</p>
-                </div>
-                </>
-              )}
-            </InView> 
+                </div> 
           </Fade>
         </div>
         <Fade cascade delay={300} className="contact-form--container">
           <div className='contact-form'>
-            <h2 className='contact-form--title title'>{t("contact.title")}</h2>
+          <InView as="div" onChange={props.setInView}>
+              {({ ref, inView }) => ( 
+              <h2 className='contact-form--title title' ref={ref}>{t("contact.title")}</h2>
+            )}
+            </InView>
             <p className='contact-form--header'>{t("contact.header")}
             </p>
             <Form></Form>

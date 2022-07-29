@@ -2,6 +2,7 @@ import React, { Component }  from 'react';
 import './home.scss';
 import { useState } from 'react';
 import { useTranslation, Trans } from "react-i18next";
+import { HashLink } from 'react-router-hash-link';
 import { Fade } from "react-awesome-reveal";
 import Header from '../Header/Header';
 import bgImg from "../../assets/images/home.jpg";
@@ -31,12 +32,15 @@ function Home({InView}) {
         <div className='home-text-container'>
           <Fade delay={300} triggerOnce>
             <p className='home-text-p'>{t("home.text-1")}</p>
-            <p className='home-text-p'>{t("home.text-2")}</p>
           </Fade>
           <Fade delay={300} triggerOnce>
-          <p className='home-text-p home-text-p--black'>{t("home.text-3")}</p>
+            <p className='home-text-p home-text-p--black'>{t("home.text-2")}</p>
           </Fade>
-
+          <Fade delay={300} triggerOnce className='cta-black-btn--container'>
+            <HashLink className='cta-black-btn link' smooth to="/#contact">
+              {t("home.contact-btn")}
+            </HashLink>
+          </Fade>
         </div>
       </div>
     </section>

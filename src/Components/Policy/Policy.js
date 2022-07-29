@@ -9,7 +9,7 @@ function Policy() {
   const { t, i18n } = useTranslation();
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
-  }
+  };
   const [inView, setInView] = useState();
 
   useEffect(() => {

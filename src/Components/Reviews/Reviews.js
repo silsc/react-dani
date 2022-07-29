@@ -13,7 +13,7 @@ function Reviews() {
   const { t, i18n } = useTranslation();
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
-  }
+  };
   const [ darkTheme, setDarkTheme ] = useState(false)
   const changeToDarkTheme = () => {
     setDarkTheme(false);

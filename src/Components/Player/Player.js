@@ -4,6 +4,7 @@ import { ReactComponent as PlayBtn } from '../../assets/icons/play.svg';
 import { ReactComponent as PrevBtn } from '../../assets/icons/prev.svg';
 import { ReactComponent as NextBtn } from '../../assets/icons/next.svg';
 import { ReactComponent as PauseBtn } from '../../assets/icons/pause.svg';
+import { withTranslation } from 'react-i18next';
 import audio1 from '../../assets/audios/audio1.wav';
 import audio1Img from '../../assets/images/audio1.png';
 import audio2 from '../../assets/audios/audio2.wav';
@@ -13,12 +14,12 @@ import audio3Img from '../../assets/images/audio3.png';
 import audio4 from '../../assets/audios/audio4.wav';
 import audio4Img from '../../assets/images/audio4.png';
 
-export default class Player extends React.Component {
+class Player extends React.Component {
   state = {
     index: 3,
     currentTime: '0:00',
     musicList: [
-      {name:'Shout to Forget', author: 'Fuzz Forward', img: audio1Img, audio: audio1 , duration: '0:48', type: "Production"}, 
+      {name:'Shout to Forget', author: 'Fuzz Forward', img: audio1Img, audio: audio1 , duration: '0:48', type: this.props.t('work.mix')}, 
       {name:'La Realidad', author: 'The Fox 196', img: audio2Img, audio: audio2, duration: '0:30', type: "production"},
       {name:'Pensant del Revés', author: 'Fornax', img: audio3Img, audio: audio3, duration: '1:00', type: "Production"},
       {name:'Follow', author: 'Melting State', img: audio4Img, audio: audio4, duration: '0:40', type: "Production"}
@@ -43,82 +44,82 @@ export default class Player extends React.Component {
     this.timelineRef.removeEventListener("mouseout", this.resetTimeLine);
   }
 
-changeCurrentTime = (e) => {
-  const duration = this.playerRef.duration;
+  changeCurrentTime = (e) => {
+    const duration = this.playerRef.duration;
+    
+    const playheadWidth = this.timelineRef.offsetWidth;
+    const offsetWidht = this.timelineRef.offsetLeft;
+    const userClickWidht = e.clientX - offsetWidht;
   
-  const playheadWidth = this.timelineRef.offsetWidth;
-  const offsetWidht = this.timelineRef.offsetLeft;
-  const userClickWidht = e.clientX - offsetWidht;
- 
-  const userClickWidhtInPercent = (userClickWidht*100)/playheadWidth;
+    const userClickWidhtInPercent = (userClickWidht*100)/playheadWidth;
 
-  this.playheadRef.style.width = userClickWidhtInPercent + "%";
-  this.playerRef.currentTime = (duration * userClickWidhtInPercent)/100;
-}
-
-hoverTimeLine = (e) => {
-  const duration = this.playerRef.duration;
-  
-  const playheadWidth = this.timelineRef.offsetWidth
-  
-  const offsetWidht = this.timelineRef.offsetLeft;
-  const userClickWidht = e.clientX - offsetWidht;
-  const userClickWidhtInPercent = (userClickWidht*100)/playheadWidth;
-
-  if(userClickWidhtInPercent <= 100){
-    this.hoverPlayheadRef.style.width = userClickWidhtInPercent + "%";
-  }
-  
-  const time = (duration * userClickWidhtInPercent)/100;
-  
-  if( (time >=0) && (time <= duration)){
-    this.hoverPlayheadRef.dataset.content = this.formatTime(time);
-  }
-}
-
-resetTimeLine = () => {
-  this.hoverPlayheadRef.style.width = 0;
-}
-
-timeUpdate = () => {
-  const duration = this.playerRef.duration;
-  const timelineWidth = this.timelineRef.offsetWidth - this.playheadRef.offsetWidth;
-  const playPercent = 100 * (this.playerRef.currentTime / duration);
-	this.playheadRef.style.width = playPercent + "%";
-  const currentTime = this.formatTime(parseInt(this.playerRef.currentTime));  
-  this.setState({ 
-    currentTime 
-  });
-}
-
-formatTime = (currentTime) =>{
-  const minutes = Math.floor(currentTime / 60);
-  let seconds = Math.floor(currentTime % 60);
-
-  seconds = (seconds >= 10) ? seconds : "0" + seconds % 60;
-  
-  const formatTime = minutes + ":" +  seconds
- 
-  return formatTime;
+    this.playheadRef.style.width = userClickWidhtInPercent + "%";
+    this.playerRef.currentTime = (duration * userClickWidhtInPercent)/100;
   }
 
-updatePlayer = () =>{
-    const { musicList, index } = this.state;
-    const currentSong = musicList[index];
-    const audio = new Audio(currentSong.audio);
-    this.playerRef.load();
-}
-  
-nextSong = () => {
-    const { musicList, index, pause } = this.state;
-    this.setState({ 
-      index: (index + 1) % musicList.length
-    });
-    this.updatePlayer();
-    if(pause){
-      this.playerRef.play();
+  hoverTimeLine = (e) => {
+    const duration = this.playerRef.duration;
+    
+    const playheadWidth = this.timelineRef.offsetWidth
+    
+    const offsetWidht = this.timelineRef.offsetLeft;
+    const userClickWidht = e.clientX - offsetWidht;
+    const userClickWidhtInPercent = (userClickWidht*100)/playheadWidth;
+
+    if(userClickWidhtInPercent <= 100){
+      this.hoverPlayheadRef.style.width = userClickWidhtInPercent + "%";
     }
-};
+    
+    const time = (duration * userClickWidhtInPercent)/100;
+    
+    if( (time >=0) && (time <= duration)){
+      this.hoverPlayheadRef.dataset.content = this.formatTime(time);
+    }
+  }
+
+  resetTimeLine = () => {
+    this.hoverPlayheadRef.style.width = 0;
+  }
+
+  timeUpdate = () => {
+    const duration = this.playerRef.duration;
+    const timelineWidth = this.timelineRef.offsetWidth - this.playheadRef.offsetWidth;
+    const playPercent = 100 * (this.playerRef.currentTime / duration);
+    this.playheadRef.style.width = playPercent + "%";
+    const currentTime = this.formatTime(parseInt(this.playerRef.currentTime));  
+    this.setState({ 
+      currentTime 
+    });
+  }
+
+  formatTime = (currentTime) =>{
+    const minutes = Math.floor(currentTime / 60);
+    let seconds = Math.floor(currentTime % 60);
+
+    seconds = (seconds >= 10) ? seconds : "0" + seconds % 60;
+    
+    const formatTime = minutes + ":" +  seconds
+  
+    return formatTime;
+    }
+
+  updatePlayer = () =>{
+      const { musicList, index } = this.state;
+      const currentSong = musicList[index];
+      const audio = new Audio(currentSong.audio);
+      this.playerRef.load();
+  }
+    
+  nextSong = () => {
+      const { musicList, index, pause } = this.state;
+      this.setState({ 
+        index: (index + 1) % musicList.length
+      });
+      this.updatePlayer();
+      if(pause){
+        this.playerRef.play();
+      }
+  };
 
   prevSong = () => {
     const { musicList, index, pause } = this.state;  
@@ -164,6 +165,7 @@ nextSong = () => {
   render() {
     const { musicList, index, currentTime, pause } = this.state;
     const currentSong = musicList[index];
+    
     return (
       <div className="player">
         <div className="current-song">
@@ -235,3 +237,5 @@ nextSong = () => {
     )
   }
 }
+
+export default withTranslation()(Player)

@@ -53,6 +53,10 @@
       &--black{
         font-weight: 700;
       }
+      &--gray{
+        color: $dark-gray !important;
+        font-weight: 700;
+      }
     }
   }
 }
@@ -68,51 +72,54 @@
     }
   }
   &-line1, &-line2 {
-    text-align: right;
     position: absolute;
-    font-size: 13vw;
+    font-size: 8vw;
     margin: 0;
     @include theme() {
       color: t($text);
     }
     @include respond('ipad') {
-      font-size: 20vw;
+      font-size: 7vw;
     }
     @include respond('phone') {
-      font-size: 19vw;
+      font-size: 8vw;
     }
     
   }
   &-line1 {
-    top: 12vh;
-    right: 41vw;
+    text-align: right;
+    top: 15vh;
+    right: 44vw;
     @include respond('ipad-pro') {
       top: 17vh;
-      right: 40vw;
+      right: 44vw;
     }
     @include respond('ipad') {
-      top: 20vh;
-      right: 39vw;
+      top: 21vh;
+      right: 40vw;
     }
     @include respond('phone') {
-      right: 35vw;
+      right: 40vw;
+      top: 23vh;
+      font-size: 8vw !important;
     }
     @media (max-height: 500px) {
       top: 100px;
     }
   }
   &-line2 {
-    top: 35vh;
-    right: 19vw;
-    @include respond('ipad-pro') {
-      right: 18vw;
-    }
+    text-align: left;
+    top: 33vh;
+    right: 4vw;
+    width: 40%;
     @include respond('ipad') {
-      right: 16vw;
+      right: 3vw;
+      top: 30vh;
     }
+
     @include respond('phone') {
       right: 3vw;
-      top: 32vh;
+      top: 30vh;
     }
     
     @media (max-height: 500px) {

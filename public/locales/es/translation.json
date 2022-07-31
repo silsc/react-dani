@@ -13,9 +13,11 @@
     "title": "PRODUCTOR DE ROCK Y METAL, BARCELONA (ESPAÑA)"
   },
   "home": {
-    "title-line1": "DANI",
-    "line2": "SA<oposite>LAT</oposite>",
-    "title-year": "DESDE 2015",
+    "title": {
+      "line1": "¿Quieres sonar",
+      "line2": "<oposite> de puta madre?</oposite>"
+    },
+    "subheader": "El productor al que más le importa tu música",
     "text-1": "Hay muchos estudios que pueden conseguir un buen sonido; yo ayudo a bandas de rock y metal a definir una visión para sus proyectos, creando algo único.",
     "text-2": "Spoiler, va a sonar que flipas",
     "contact-btn": "Contacta ya!"

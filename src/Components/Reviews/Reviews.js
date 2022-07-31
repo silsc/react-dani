@@ -7,6 +7,7 @@ import chanderImg from "../../assets/images/chander.jpeg";
 import eduImg from "../../assets/images/edu.jpeg";
 import dezImg from "../../assets/images/dez.jpeg";
 import marcImg from "../../assets/images/marc.jpeg";
+import kirianImg from "../../assets/images/kirian.jpeg";
 
 
 function Reviews() {
@@ -30,21 +31,26 @@ function Reviews() {
       name: t("reviews.card-2.name"),
       text: t("reviews.card-2.review"),
       band: t("reviews.card-2.band"),
-      image: chanderImg
+      image: kirianImg
     },
     {
       name: t("reviews.card-3.name"),
       text: t("reviews.card-3.review"),
       band: t("reviews.card-3.band"),
-      image: eduImg
+      image: chanderImg
     },
     {
       name: t("reviews.card-4.name"),
       text: t("reviews.card-4.review"),
       band: t("reviews.card-4.band"),
-      image: marcImg
+      image: eduImg
     },
-
+    {
+      name: t("reviews.card-5.name"),
+      text: t("reviews.card-5.review"),
+      band: t("reviews.card-5.band"),
+      image: marcImg
+    }
   ];
 
   const [touchStart, setTouchStart] = useState(0);

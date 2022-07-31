@@ -18,7 +18,7 @@
     "title-year": "DESDE 2015",
     "text-1": "Hay muchos estudios que pueden conseguir un buen sonido; yo ayudo a bandas de rock y metal a definir una visión para sus proyectos, creando algo único.",
     "text-2": "Spoiler, va a sonar que flipas",
-    "contact-btn": "contacta ya!"
+    "contact-btn": "Contacta ya!"
   },
   "services": {
     "title": "Servicios",
@@ -64,16 +64,21 @@
       "band": "The Fox 196"
     },
     "card-2": {
+      "name": "Kirian",
+      "review": "Trabajar con él ha sido una experiencia genial [...] Hemos aprendido mucho sobre todo el proceso de pre-producción y producción, y no podríamos estar más contentos con el resultado. Que Dani os ayude en vuestro proyecto es darle un toque profesional y añadirle un valor más que sorprenderá a todos.",
+      "band": "Furi Helium"
+    },
+    "card-3": {
       "name": "Chander",
       "review": "He trabajado con Dani en varios ocasiones y aún a día de hoy no deja de sorprenderme lo mucho que he aprendido durante todo el proceso de grabación. No puedes trabajar con él y salir del estudio siendo el mismo músico. Sabe entender y aprovechar al máximo cada detalle de la producción, tanto en lo técnico como en lo emocional.",
       "band": "Fuzz Forward"
     },
-    "card-3": {
+    "card-4": {
       "name": "Edu",
       "review": "Grabar con Dani es una muy buena experiencia, como si hubiera una conexión musical de toda la vida, mucho profesionalismo y pasión por lo que hace, todas las ideas que uno imagina las trae al mundo real y hace que tu producción tenga una consistencia muy sólida.",
       "band": "Paulet"
     },
-    "card-4": {
+    "card-5": {
       "name": "Marc",
       "review": "Grabar con Dani ha supuesto para mi un aprendizaje musical brutal. Aprender a abrir la mente en base a composicion musical, he mejorado mi tecnica de tocar la guitarra con sus consejos, pero lo mas importante, es lo abierto y coherente que es al hablar con el sobre tus temas! Él te dara sus consejos pero al final con su ayuda el tema acaba sonando incluso mejor!",
       "band": "Holly Dolls"

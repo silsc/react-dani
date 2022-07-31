@@ -114,6 +114,10 @@
   opacity: 0;
   z-index: -1;
 }
+#t-2:checked ~ .testimonials label[for="t-5"] {
+  opacity: 0;
+  z-index: -1;
+}
 
 /* Second */
 #t-2:checked ~ .testimonials label[for="t-1"] {
@@ -133,6 +137,11 @@
   z-index: 2;
 }
 #t-2:checked ~ .testimonials label[for="t-4"] {
+  opacity: 0;
+  z-index: -1;
+}
+
+#t-2:checked ~ .testimonials label[for="t-5"] {
   opacity: 0;
   z-index: -1;
 }
@@ -159,6 +168,11 @@
   z-index: 2;
 }
 
+#t-3:checked ~ .testimonials label[for="t-5"] {
+  opacity: 0;
+  z-index: -1;
+}
+
 /* Fourth */
 #t-4:checked ~ .testimonials label[for="t-1"] {
   opacity: 0;
@@ -174,6 +188,37 @@
   z-index: 2;
 }
 #t-4:checked ~ .testimonials label[for="t-4"] {
+  opacity: 1;
+  z-index: 3;
+  .testimonial-img {
+    filter: none;
+  }
+}
+#t-4:checked ~ .testimonials label[for="t-5"] {
+  opacity: 0.5;
+  transform: translateX(23vw) translateZ(-20vh);
+  z-index: 2;
+}
+
+/* Fith */
+#t-5:checked ~ .testimonials label[for="t-1"] {
+  opacity: 0;
+  z-index: -1;
+}
+#t-5:checked ~ .testimonials label[for="t-2"] {
+  opacity: 0;
+  z-index: -1;
+}
+#t-5:checked ~ .testimonials label[for="t-3"] {
+  opacity: 0;
+  z-index: -1;
+}
+#t-5:checked ~ .testimonials label[for="t-4"] {
+  opacity: 0.5;
+  transform: translateX(-23vw) translateZ(-20vh);
+  z-index: 2;
+}
+#t-5:checked ~ .testimonials label[for="t-5"] {
   opacity: 1;
   z-index: 3;
   .testimonial-img {

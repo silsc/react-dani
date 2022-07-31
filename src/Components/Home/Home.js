@@ -30,6 +30,9 @@ function Home({InView}) {
           </Fade>
         </div>
         <div className='home-text-container'>
+        <Fade delay={300} triggerOnce>
+            <p className='home-text-p home-text-p--gray'>{t("home.subheader")}</p>
+          </Fade>
           <Fade delay={300} triggerOnce>
             <p className='home-text-p'>{t("home.text-1")}</p>
           </Fade>

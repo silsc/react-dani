@@ -15,22 +15,33 @@
     }
   }
   &-cards{
-    display: inline-flex;
+    display: flex;
     gap: 52px;
+    flex-basis: 100%;
     @include respond('ipad-pro') {
       display: block;
+    }
+    & > * {
+      flex: 1;
     }
   }
   &-card {
     margin-bottom: 50px;
+    @include respond('ipad-pro') {
+      margin-bottom: 90px;
+    }
     &--title {
+      text-align: center;
       font-family: $cairo;
-      font-size: 24px;
+      font-size: 40px;
+      text-shadow: 3px 5px 4px rgba(0,0,0,0.7);
       @include theme() {
         color: t($text);
       }
+
     }
     &--text {
+      text-align: justify;
       font-weight: 400;
       font-size: 16px;
       line-height: 21px;
@@ -42,4 +53,44 @@
       }
     }
   } 
+  .card-1, .card-2, .card-3 {
+    position: relative;
+  }
+
+  .card-1::before, .card-2::before, .card-3::before {
+    font-size: 50px;
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -5%;
+  }
+
+  .card-1::before {
+    content: '🎹';
+  }
+
+  .card-2::before {
+    content: '🎛';
+  }
+
+  .card-3::before {
+    content: '💽';
+  }
+
+  .text-2 {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 22px;
+    @include respond('ipad') {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  .free {
+    color: #c6ae6a
+    !important;
+  }
 }

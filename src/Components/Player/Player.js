@@ -13,16 +13,19 @@ import audio3 from '../../assets/audios/audio3.wav';
 import audio3Img from '../../assets/images/audio3.png';
 import audio4 from '../../assets/audios/audio4.wav';
 import audio4Img from '../../assets/images/audio4.png';
+import audio5 from '../../assets/audios/audio4.wav';
+import audio5Img from '../../assets/images/audio4.png';
 
 class Player extends React.Component {
   state = {
-    index: 3,
+    index: 0,
     currentTime: '0:00',
     musicList: [
-      {name:'Shout to Forget', author: 'Fuzz Forward', img: audio1Img, audio: audio1 , duration: '0:48', type: this.props.t('work.mix')}, 
-      {name:'La Realidad', author: 'The Fox 196', img: audio2Img, audio: audio2, duration: '0:30', type: "production"},
-      {name:'Pensant del Revés', author: 'Fornax', img: audio3Img, audio: audio3, duration: '1:00', type: "Production"},
-      {name:'Follow', author: 'Melting State', img: audio4Img, audio: audio4, duration: '0:40', type: "Production"}
+      {name:'La Realidad', author: 'The Fox 196', img: audio1Img, audio: audio1 , duration: '0:48', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')} `}, 
+      {name:'La Realidad', author: 'Perarni_Drums', img: audio2Img, audio: audio2 , duration: '1:20', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')} `}, 
+      {name:'Shout to Forget', author: 'Fuzz Forward', img: audio3Img, audio: audio3, duration: '0:30', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')}`},
+      {name:'Pensant del Revés', author: 'Fornax', img: audio4Img, audio: audio4, duration: '1:00', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')} `},
+      {name:'Follow', author: 'Melting State', img: audio5Img, audio: audio5, duration: '0:40', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')} `}
     ],
     pause: false,
   };

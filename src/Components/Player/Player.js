@@ -8,7 +8,7 @@ import { withTranslation } from 'react-i18next';
 import audio1 from '../../assets/audios/audio1.wav';
 import audio1Img from '../../assets/images/audio1.png';
 import audio2 from '../../assets/audios/audio2.wav';
-import audio2Img from '../../assets/images/audio2.png';
+import audio2Img from '../../assets/images/audio2.jpeg';
 import audio3 from '../../assets/audios/audio3.wav';
 import audio3Img from '../../assets/images/audio3.png';
 import audio4 from '../../assets/audios/audio4.wav';

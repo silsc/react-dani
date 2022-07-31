@@ -13,8 +13,8 @@ import audio3 from '../../assets/audios/audio3.wav';
 import audio3Img from '../../assets/images/audio3.png';
 import audio4 from '../../assets/audios/audio4.wav';
 import audio4Img from '../../assets/images/audio4.png';
-import audio5 from '../../assets/audios/audio4.wav';
-import audio5Img from '../../assets/images/audio4.png';
+import audio5 from '../../assets/audios/audio5.wav';
+import audio5Img from '../../assets/images/audio5.png';
 
 class Player extends React.Component {
   state = {

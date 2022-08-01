@@ -53,30 +53,6 @@
       }
     }
   } 
-  .card-1, .card-2, .card-3 {
-    position: relative;
-  }
-
-  .card-1::before, .card-2::before, .card-3::before {
-    font-size: 50px;
-    position: absolute;
-    z-index: -1;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -5%;
-  }
-
-  .card-1::before {
-    content: '🎹';
-  }
-
-  .card-2::before {
-    content: '🎛';
-  }
-
-  .card-3::before {
-    content: '💽';
-  }
 
   .text-2 {
     font-size: 18px;

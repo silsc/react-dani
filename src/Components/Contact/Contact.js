@@ -1,9 +1,8 @@
-import React, { Component }  from 'react';
+import React  from 'react';
 import './contact.scss';
-// import { useState } from 'react';
 import { useTranslation } from "react-i18next";
 import { Fade } from "react-awesome-reveal";
-import { useInView, InView } from "react-intersection-observer";
+import { InView } from "react-intersection-observer";
 import Header from '../Header/Header';
 import Form from '../Form/Form';
 import contactImg from '../../assets/images/contact.png';

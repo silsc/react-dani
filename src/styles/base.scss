@@ -95,9 +95,6 @@ body {
 
 .cta-black-btn--container {
   display: flex;
-  justify-content: end;
-  @include respond('phone') {
-    justify-content: start;
+  justify-content: flex-start;
 
-  }
 }

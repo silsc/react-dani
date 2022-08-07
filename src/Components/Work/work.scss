@@ -16,7 +16,7 @@
     justify-content: space-between;
     width: 100%;
     @include respond('ipad-pro') {
-      flex-direction: column;    
+      flex-direction: column;
     }
   }
   &-info {
@@ -31,7 +31,7 @@
     width: 46.8%;
     padding: 42px;
     @include respond('ipad-pro') {
-      position: relative; 
+      position: relative;
       min-height: 80vh;
       height: 100%;
       width: 100%;
@@ -49,7 +49,7 @@
     bottom: 0;
     right: 0;
     @include respond('ipad-pro') {
-      font-size: 75px;  
+      font-size: 75px;
       right: -50px;
       bottom: -30px;
     }
@@ -68,12 +68,12 @@
           @include respond('phone') {
             fill: #1BD760;
           }
-        } 
+        }
         &:hover {
           path {
             fill: #1BD760;
             cursor: pointer;
-          } 
+          }
         }
       }
     }

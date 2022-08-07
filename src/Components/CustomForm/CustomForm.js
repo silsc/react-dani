@@ -43,7 +43,7 @@ const CustomForm = ({ status, message, onValidated }) => {
         {status === "sending" && (
           <div className="alert mc__alert--sending">enviando...</div>
         )}
-        
+
         {status === "error" && (
           <div className="alert mc__alert--error" dangerouslySetInnerHTML={{ __html: message }} />
         )}
@@ -64,7 +64,7 @@ const CustomForm = ({ status, message, onValidated }) => {
           ) : null
         }
 
-        { status === 'success' ? <Link to="root" className='link-web'>Ir a la web</Link>  : 
+        { status === 'success' ? <Link to="/" className='link-web'>Ir a la web</Link>  : 
         <input className="submit-btn" type='submit' defaultValue="subscribe" disabled={validateInput([email])}
         />
         }

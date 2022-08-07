@@ -53,6 +53,32 @@ body {
   transition: all 0.5s ease;
 }
 
+.text {
+  font-family: $cairo;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120px;
+  margin: 0;
+  text-align: left;
+  @include theme() {
+    color: t($text);
+  }
+  transition: all 0.5s ease;
+}
+
+.alert {
+  font-family: $cairo;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120px;
+  margin: 0;
+  text-align: left;
+  color: red;
+  transition: all 0.5s ease;
+}
+
 .section {
   margin-left: 100px;
   height: 100vh;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef }  from 'react';
+import { InView } from 'react-intersection-observer';
 import './campaign.scss';
-import { InView } from 'react-intersection-observer'
 import Navbar from '../Navbar/Navbar';
 import { useTranslation } from "react-i18next";
 import Header from '../Header/Header';
@@ -22,8 +22,9 @@ function Campaign() {
     <>
     <Navbar inView={inView} />
 
-    <section className={`policy section`}>
+    <section className={`campaign section`}>
       <Header/>
+      <h2 className='title'>{t("campaign.header")}</h2>
       <MailchimpFormContainer />
     </section>
     </>

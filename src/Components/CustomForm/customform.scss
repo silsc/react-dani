@@ -1,0 +1,100 @@
+@import '../../styles/index.scss';
+
+.mc__form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  @include respond('ipad-pro') {
+    width: 50%;
+  }
+  @include respond('ipad') {
+    width: 60%;
+  }
+  @include respond('phone') {
+    width: 100%;
+  }
+  input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid $dark-gray;
+    height: 60px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: $light-black;
+      @include respond('ipad') {
+        color: #fff;
+      }
+    &::placeholder {
+      color: $dark-gray;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 28px;
+      font-family: $roboto;
+    }
+    &:focus {
+      outline: none;
+    }
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px $light-black inset;
+      -webkit-text-fill-color: $light-black;
+      @include respond('ipad') {
+        -webkit-text-fill-color: #fff;
+      }
+    }
+    @include respond('ipad') {
+      margin: 20px 0px;
+    }
+  }
+  input {
+    height: 60px;
+  }
+  input:focus {
+    outline: none;
+  }
+  .policy-btn {
+    display: flex;
+    align-items: center;
+    color: $dark-gray;
+    font-size: 14px;
+    line-height: 16px;
+    .link {
+      font-weight: 700;
+      color: $light-gray;
+      text-decoration: none;
+    }
+  }
+  .submit-btn {
+    margin-top: 20px;
+    background: $medium-gray;
+    color: #ffff;
+    border: none;
+    padding: 5%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      background: $dark-gray;
+    }
+  }
+  .sent {
+    color: #ffff;
+    font-size: 24px;
+  }
+  .link-web {
+    background: $medium-gray;
+    color: #ffff;
+    padding: 5%;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+}

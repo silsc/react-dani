@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import { Link } from "react-router-dom";
+import './customform.scss';
 
 
 const CustomForm = ({ status, message, onValidated }) => {
@@ -17,10 +18,8 @@ const CustomForm = ({ status, message, onValidated }) => {
     }
 
     const validateInput = values => {
-      console.log(values);
 
       if (values.some(f => f === "") || values[0].indexOf("@") === -1) {
-        console.log("hello");
           return true
       } else {
           return false
@@ -37,18 +36,16 @@ const CustomForm = ({ status, message, onValidated }) => {
 
     return (
       <form className="mc__form" onSubmit={(e) => handleSubmit(e)}>
-        <h3 className="mc__title">
-          {status === "success" ? "Enviado!" : "Dime adónde quieres que te mande la guía!"}
-        </h3>
-
+        
+        {status === "success" ? <h3 className="text sent">Enviado! </h3> : <h3 className="text">Dime adónde quieres que te mande la guía!</h3> 
+        }
+        
         {status === "sending" && (
-          <div className="mc__alert mc__alert--sending">enviando...</div>
+          <div className="alert mc__alert--sending">enviando...</div>
         )}
+        
         {status === "error" && (
-          <div className="mc__alert mc__alert--error" dangerouslySetInnerHTML={{ __html: message }} />
-        )}
-        {status === "success" && (
-          <div className="mc__alert mc__alert--success" angerouslySetInnerHTML={{ __html: message }} />
+          <div className="alert mc__alert--error" dangerouslySetInnerHTML={{ __html: message }} />
         )}
 
         {status !== "success" ? (
@@ -67,8 +64,8 @@ const CustomForm = ({ status, message, onValidated }) => {
           ) : null
         }
 
-        { status === 'success' ? <Link to="policy" className='link'>Go to website</Link>  : 
-        <input type='submit' defaultValue="subscribe" disabled={validateInput([email])}
+        { status === 'success' ? <Link to="root" className='link-web'>Ir a la web</Link>  : 
+        <input className="submit-btn" type='submit' defaultValue="subscribe" disabled={validateInput([email])}
         />
         }
 

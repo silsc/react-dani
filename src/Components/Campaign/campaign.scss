@@ -1,1 +1,11 @@
 @import '../../styles/index.scss';
+
+.campaign{
+  padding: 20px;
+  .title {
+    @include respond('phone') {
+      font-size: 54px;
+      line-height: 90px;
+    }
+  }
+}

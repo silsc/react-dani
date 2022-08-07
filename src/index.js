@@ -4,6 +4,7 @@ import { Routes ,Route, BrowserRouter } from "react-router-dom";
 import ReactDOM from 'react-dom';
 import App from './App';
 import Policy from './Components/Policy/Policy';
+import Campaign from './Components/Campaign/Campaign';
 import ReactGA from 'react-ga';
 
 // import reportWebVitals from './reportWebVitals';
@@ -23,6 +24,7 @@ root.render(
         <Routes>
           <Route exact path="/" element={<App/>}/>
           <Route path="/policy" element={<Policy/>}/>
+          <Route path="/form" element={<Campaign/>}/>
         </Routes>
       </Suspense>
     </BrowserRouter>

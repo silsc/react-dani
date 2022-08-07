@@ -1,10 +1,11 @@
-import React, {useEffect, useState} from 'react';
-import MailchimpSubscribe from "react-mailchimp-subscribe";
-import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import './customform.scss';
 
-const CustomForm = ({ status, message, onValidated }) => {
+import React, {useEffect, useState} from 'react';
+import {useTranslation} from "react-i18next";
+import MailchimpSubscribe from "react-mailchimp-subscribe";
+import {Link} from "react-router-dom";
+
+const CustomForm = ({status, message, onValidated}) => {
     const { t, i18n } = useTranslation();
     const changeLanguage = (language) => {
       i18n.changeLanguage(language);

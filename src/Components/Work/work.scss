@@ -32,6 +32,7 @@
     padding: 42px;
     @include respond('ipad-pro') {
       position: relative; 
+      min-height: 80vh;
       height: 100%;
       width: 100%;
       right: 0px;

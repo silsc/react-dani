@@ -101,5 +101,10 @@
     },
     "location": "Sabadell, Barcelona",
     "email": "danisalat@gmail.com"
+  },
+  "campaign": {
+    "header": "Guía de afinación de baterías",
+    "text": "",
+    "policy": ""
   }
 }

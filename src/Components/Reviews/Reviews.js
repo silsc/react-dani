@@ -4,21 +4,16 @@ import { useTranslation } from "react-i18next";
 import { Fade } from "react-awesome-reveal";
 import Header from '../Header/Header';
 import chanderImg from "../../assets/images/chander.jpeg";
-import eduImg from "../../assets/images/edu.jpeg";
 import dezImg from "../../assets/images/dez.jpeg";
 import marcImg from "../../assets/images/marc.jpeg";
 import kirianImg from "../../assets/images/kirian.jpeg";
+import perarniImg from "../../assets/images/perarni.jpeg";
 
 
 function Reviews() {
   const { t, i18n } = useTranslation();
-  const changeLanguage = (language) => {
-    i18n.changeLanguage(language);
-  };
+
   const [ darkTheme, setDarkTheme ] = useState(false)
-  const changeToDarkTheme = () => {
-    setDarkTheme(false);
-  }
 
   const testimonials = [
     {
@@ -43,7 +38,7 @@ function Reviews() {
       name: t("reviews.card-4.name"),
       text: t("reviews.card-4.review"),
       band: t("reviews.card-4.band"),
-      image: eduImg
+      image: perarniImg
     },
     {
       name: t("reviews.card-5.name"),

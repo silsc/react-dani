@@ -1,11 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import './customform.scss';
 
-
 const CustomForm = ({ status, message, onValidated }) => {
-
+    const { t, i18n } = useTranslation();
+    const changeLanguage = (language) => {
+      i18n.changeLanguage(language);
+    }
     const [email, setEmail] = useState('');
 
     const handleSubmit = (e) => {
@@ -63,7 +66,7 @@ const CustomForm = ({ status, message, onValidated }) => {
           </div>
           ) : null
         }
-
+        <Link to="policy" className='policy-btn'> {t("contact.form.privacy-2")}</Link> 
         { status === 'success' ? <Link to="/" className='link-web'>Ir a la web</Link>  : 
         <input className="submit-btn" type='submit' defaultValue="subscribe" disabled={validateInput([email])}
         />

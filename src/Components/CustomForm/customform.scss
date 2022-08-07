@@ -56,13 +56,13 @@
   .policy-btn {
     display: flex;
     align-items: center;
-    color: $dark-gray;
+    color: $light-black;
     font-size: 14px;
     line-height: 16px;
-    .link {
-      font-weight: 700;
-      color: $light-gray;
-      text-decoration: none;
+    cursor: pointer;
+    text-decoration: none;
+    @include respond('ipad') {
+      color: #ffff;
     }
   }
   .submit-btn {

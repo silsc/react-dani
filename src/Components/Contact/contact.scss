@@ -19,9 +19,7 @@
       width: 90%;
       margin-right: 50px;
       align-self: center;
-      @include theme() {
-        color: t($text);
-      }
+      color: #fff;
       @include respond('ipad') {
         width: 100%;
         padding: 30px;

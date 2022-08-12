@@ -24,7 +24,7 @@ root.render(
         <Routes>
           <Route exact path="/" element={<App/>}/>
           <Route path="/policy" element={<Policy/>}/>
-          <Route path="/form" element={<Campaign/>}/>
+          <Route path="/guia-bateria" element={<Campaign/>}/>
         </Routes>
       </Suspense>
     </BrowserRouter>

@@ -18,11 +18,11 @@
     border: none;
     background: transparent;
     border-bottom: 1px solid $dark-gray;
-    height: 60px;
     font-weight: 600;
     font-size: 20px;
     line-height: 28px;
     color: $light-black;
+    margin-bottom: 20px;
       @include respond('ipad') {
         color: #fff;
       }
@@ -46,9 +46,6 @@
     @include respond('ipad') {
       margin: 20px 0px;
     }
-  }
-  input {
-    height: 60px;
   }
   input:focus {
     outline: none;
@@ -82,8 +79,9 @@
     }
   }
   .sent {
-    color: #ffff;
+    color: black;
     font-size: 24px;
+    line-height: 32px;
   }
   .link-web {
     background: $medium-gray;
@@ -97,5 +95,9 @@
     cursor: pointer;
     transition: all 0.5s ease-in-out;
     text-decoration: none;
+  }
+  .text {
+    line-height: 32px;
+    padding-bottom: 20px;
   }
 }

@@ -1,25 +1,22 @@
 import './work.scss';
-import React,{ useState, useEffect } from 'react';
-import { HashLink } from 'react-router-hash-link';
-import { useTranslation } from "react-i18next";
-import { useInView } from "react-intersection-observer";
-import { Fade } from "react-awesome-reveal";
+
+import React, {useEffect, useState} from 'react';
+import {Fade} from "react-awesome-reveal";
+import {useTranslation} from "react-i18next";
+import {useInView} from "react-intersection-observer";
+import {HashLink} from 'react-router-hash-link';
+
+import {ReactComponent as Spotify} from '../../assets/icons/spotify.svg';
 import Header from '../Header/Header';
 import Player from '../Player/Player';
-import { ReactComponent as Spotify } from '../../assets/icons/spotify.svg';
-
-
 
 const Work = React.forwardRef((props, ref) => {
-  const { t, i18n } = useTranslation();
-  const changeLanguage = (language) => {
-    i18n.changeLanguage(language);
-  }
+  const {t, i18n} = useTranslation();
+  const changeLanguage = (language) => { i18n.changeLanguage(language); }
 
-  const openInNewTab = url => {
-    window.open(url, '_blank', 'noopener,noreferrer');
-  };
-  
+  const openInNewTab =
+      url => { window.open(url, '_blank', 'noopener,noreferrer'); };
+
   return (
     <section ref={ref} className={`work section ${ props.inView ? "theme--dark" : "theme--default"}`} id="work">
       <Header/>

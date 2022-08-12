@@ -40,11 +40,11 @@ const CustomForm = ({ status, message, onValidated }) => {
     return (
       <form className="mc__form" onSubmit={(e) => handleSubmit(e)}>
         
-        {status === "success" ? <h3 className="text sent">Enviado! </h3> : <h3 className="text">Dime adónde quieres que te mande la guía!</h3> 
+        {status === "success" ? <div><h3 className="text sent">{t("campaign.sent-1")}</h3><h3 className="text sent">{t("campaign.sent-2")}</h3></div> : <h3 className="text">{t("campaign.text")}</h3> 
         }
         
         {status === "sending" && (
-          <div className="alert mc__alert--sending">enviando...</div>
+          <div className="alert mc__alert--sending">{t("campaign.sending")}</div>
         )}
 
         {status === "error" && (
@@ -66,9 +66,9 @@ const CustomForm = ({ status, message, onValidated }) => {
           </div>
           ) : null
         }
-        <Link to="policy" className='policy-btn'> {t("contact.form.privacy-2")}</Link> 
-        { status === 'success' ? <Link to="/" className='link-web'>Ir a la web</Link>  : 
-        <input className="submit-btn" type='submit' defaultValue="subscribe" disabled={validateInput([email])}
+        <Link to="policy" className='policy-btn'> {t("campaign.privacy")}</Link> 
+        { status === 'success' ? <Link to="/" className='link-web'>{t("campaign.goback")}</Link>  : 
+        <input className="submit-btn" type='submit' defaultValue="submit" value={t("campaign.send")} disabled={validateInput([email])}
         />
         }
 

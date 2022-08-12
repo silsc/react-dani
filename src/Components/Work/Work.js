@@ -15,6 +15,10 @@ const Work = React.forwardRef((props, ref) => {
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
   }
+
+  const openInNewTab = url => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
   
   return (
     <section ref={ref} className={`work section ${ props.inView ? "theme--dark" : "theme--default"}`} id="work">
@@ -34,8 +38,8 @@ const Work = React.forwardRef((props, ref) => {
               <HashLink className='bold link' smooth to="/#contact">
               {t("work.cta-1")}
               </HashLink>
-              {t("work.text-3")} <span className='cursor spotify-green bold' onClick={() => window.location = 'https://open.spotify.com/playlist/2nwVcowWfYhXXqkmVgGVNK?si=586a412f544a44e7&nd=1, "_blank"'}>{t("work.cta-2")} </span></p>
-              <Spotify onClick={() => window.location = 'https://open.spotify.com/playlist/2nwVcowWfYhXXqkmVgGVNK?si=586a412f544a44e7&nd=1', "_blank"}></Spotify>
+              {t("work.text-3")} <span className='cursor spotify-green bold' onClick={() => openInNewTab('https://open.spotify.com/playlist/2nwVcowWfYhXXqkmVgGVNK?si=586a412f544a44e7&nd=1')}>{t("work.cta-2")} </span></p>
+              <Spotify onClick={() => openInNewTab('https://open.spotify.com/playlist/2nwVcowWfYhXXqkmVgGVNK?si=586a412f544a44e7&nd=1')}></Spotify>
             </div>
           </Fade>
         </div>

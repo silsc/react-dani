@@ -202,6 +202,13 @@
     "text-19": "If you have any questions about this Privacy Policy, You can contact us:"
   },
   "campaign": {
-    "header": "Guía de afinación de baterías"
+    "header": "Guía de afinación de baterías",
+    "text": "Dime adónde quieres que te mande la guía!",
+    "send": "Enviar",
+    "sending": "Enviando...",
+    "sent-1": "Gracias! Tu guía está en camino.",
+    "sent-2": "Revisa la carpeta de spam por si acaso.",
+    "privacy": "Ver la Política de Privacidad",
+    "goback": "Ir a la web"
   }
 }

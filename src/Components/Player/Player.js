@@ -8,24 +8,28 @@ import { withTranslation } from 'react-i18next';
 import audio1 from '../../assets/audios/audio1.wav';
 import audio1Img from '../../assets/images/audio1.png';
 import audio2 from '../../assets/audios/audio2.wav';
-import audio2Img from '../../assets/images/audio2.jpeg';
+import audio2Img from '../../assets/images/audio2.png';
 import audio3 from '../../assets/audios/audio3.wav';
 import audio3Img from '../../assets/images/audio3.png';
 import audio4 from '../../assets/audios/audio4.wav';
 import audio4Img from '../../assets/images/audio4.png';
 import audio5 from '../../assets/audios/audio5.wav';
 import audio5Img from '../../assets/images/audio5.png';
+import audio6 from '../../assets/audios/audio6.wav';
+import audio6Img from '../../assets/images/audio6.png';
 
 class Player extends React.Component {
   state = {
     index: 0,
     currentTime: '0:00',
     musicList: [
-      {name:'La Realidad', author: 'The Fox 196', img: audio1Img, audio: audio1 , duration: '0:48', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')} `}, 
-      {name:'El Mirall', author: 'Perarni_Drums', img: audio2Img, audio: audio2 , duration: '1:20', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')} `}, 
-      {name:'She comes', author: 'Fuzz Forward', img: audio3Img, audio: audio3, duration: '0:44', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')}`},
-      {name:'Pensant del Revés', author: 'Fornax', img: audio4Img, audio: audio4, duration: '1:00', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')} `},
-      {name:'Follow', author: 'Melting State', img: audio5Img, audio: audio5, duration: '0:40', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')} `}
+      {name:'Inherent Fate', author: 'Furi Helium', img: audio1Img, audio: audio1 , duration: '0:48', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')} `}, 
+      {name:'La Realidad', author: 'The Fox 196', img: audio2Img, audio: audio2 , duration: '1:20', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')} `}, 
+      {name:'Shadow Of Your Bliss', author: 'It Came From The Void', img: audio3Img, audio: audio3, duration: '0:44', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')}`},
+      {name:'El Mirall', author: 'Perarni_Drums', img: audio4Img, audio: audio4, duration: '1:00', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')} `},
+      {name:'She Comes', author: 'Fuzz Forward', img: audio5Img, audio: audio5, duration: '0:44', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')} `}
+      ,
+      {name:'Pensant del Revés', author: 'Fornax', img: audio6Img, audio: audio6, duration: '1:00', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')} `}
     ],
     pause: false,
   };

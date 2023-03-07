@@ -102,14 +102,24 @@
     "location": "Sabadell, Barcelona",
     "email": "danisalat@gmail.com"
   },
-  "campaign": {
+  "campaign1": {
     "header": "Guía de afinación de baterías",
-    "text": "Dime adónde quieres que te mande la guía!",
-    "send": "Enviar",
+    "text": "Aprende a afinar baterías",
+    "send": "Mándame la guía!",
     "sending": "Enviando...",
     "sent-1": "Gracias! Tu guía está en camino.",
     "sent-2": "Revisa la carpeta de spam por si acaso.",
-    "privacy": "Ver la Política de Privacidad",
+    "privacy": "Acepto la subscripción al newsletter y la Política de Privacidad",
+    "goback": "Ir a la web"
+  },
+  "campaign2": {
+    "header": "Guía de mezcla de metal",
+    "text": "Mejora tus mezclas!",
+    "send": "Mándame la guía!",
+    "sending": "Enviando...",
+    "sent-1": "Gracias! Tu guía está en camino.",
+    "sent-2": "Revisa la carpeta de spam por si acaso.",
+    "privacy": "Acepto la subscripción al newsletter y la Política de Privacidad",
     "goback": "Ir a la web"
   }
 }

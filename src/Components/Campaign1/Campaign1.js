@@ -4,9 +4,9 @@ import './campaign.scss';
 import Navbar from '../Navbar/Navbar';
 import { useTranslation } from "react-i18next";
 import Header from '../Header/Header';
-import MailchimpFormContainer from '../MailchimpFormContainer/MailchimpFormContainer';
+import Guia1Form from '../Guia1Form/Guia1Form';
 
-function Campaign() {
+function Campaign1() {
   const { t, i18n } = useTranslation();
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
@@ -25,11 +25,11 @@ function Campaign() {
     <section className={`campaign section`}>
       <Header/>
       <h2 className='title'>{t("campaign.header")}</h2>
-      <MailchimpFormContainer />
+      <Guia1Form />
     </section>
     </>
 
   );
 }
 
-export default Campaign;
+export default Campaign1;

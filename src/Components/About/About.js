@@ -3,7 +3,6 @@ import './about.scss';
 import { useState } from 'react';
 import { useTranslation } from "react-i18next";
 import { Fade } from "react-awesome-reveal";
-import Header from '../Header/Header';
 import aboutImg1 from "../../assets/images/about-1.png";
 import aboutImg2 from "../../assets/images/about-2.png";
 
@@ -14,8 +13,7 @@ function About({inView}) {
   }
 
   return (
-    <section className={`about section ${window.innerWidth >= 760 ?(!inView ? "theme--default" : "theme--dark") : "theme--dark"}`} id="about">
-      <Header/>
+    <section className={`about section ${window.innerWidth >= 760 ? (!inView ? "theme--default" : "theme--dark") : "theme--dark"}`} id="about">
       <div className='about-container'>
         <div className='about-content'>
           <Fade>
@@ -33,11 +31,10 @@ function About({inView}) {
         </div>
         
         <div className='about-imgs'>
-          <Fade cascade triggerOnce>
               <img src={aboutImg1} className='about-img1'/>
               <img src={aboutImg2} className='about-img2'/>
-          </Fade>
         </div>
+
         
       </div>
       

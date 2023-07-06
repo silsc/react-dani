@@ -28,7 +28,7 @@ const Contact = React.forwardRef((props, ref) => {
       <Header/>
       <div className='contact-container'>
         <div className='contact-info'>
-          <Fade>
+          <Fade delay={200}>
             <h1 className='contact-info--hero only'>{t("contact.hero")}</h1>
           </Fade>
           <Fade cascade>

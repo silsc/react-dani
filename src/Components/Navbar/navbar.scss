@@ -16,7 +16,7 @@
     color: t($text);
     background: t($bg);
   }
-  transition: all 0.5s ease;
+  transition: all 1.5s ease;
   @include respond('phone') {
     width: 60px;
   }
@@ -28,7 +28,7 @@
     background: t($bg);
     border-right: 1px solid t($bg-oposite);
   }
-  transition: all 0.5s ease;
+  transition: all 1.5s ease;
 }
 
 .navbar-open {
@@ -37,7 +37,7 @@
     background: t($bg-oposite);
     border-right: 1px solid t($text);
   }
-  transition: all 0.5s ease;
+  transition: all 1.5s ease;
 }
 
 .navbar-bottom {
@@ -59,7 +59,7 @@
       background: transparent;
       border: none;
       cursor: pointer;
-      transition: all 0.5s ease;
+      transition: all 1.5s ease;
       @include theme() {
         color: t($bg-oposite);
       }
@@ -70,7 +70,7 @@
         color: $medium-gray;
       }
       &:first-child {
-        transition: all 0.5s ease;
+        transition: all 1.5s ease;
         @include theme() {
           border-right: 1px solid t($bg-oposite);
         }
@@ -89,7 +89,7 @@
       @include theme() {
         fill: t($bg-oposite);
       }
-      transition: all 0.5s ease;
+      transition: all 1.5s ease;
     }  
     &:hover, &:active {
       svg {
@@ -111,7 +111,7 @@
       @include theme() {
         fill: t($bg-oposite);
       }
-      transition: all 0.5s ease;
+      transition: all 1.5s ease;
     }    
     &:hover {
       svg {
@@ -136,7 +136,7 @@
     @include theme() {
       fill: t($bg-oposite);
     }
-    transition: all 0.5s ease;
+    transition: all 1.5s ease;
     cursor: pointer;
   } 
 }
@@ -147,7 +147,7 @@
     @include theme() {
       fill: t($bg);
     }
-    transition: all 0.5s ease;
+    transition: all 1.5s ease;
   }  
 }
 
@@ -168,7 +168,7 @@
     padding: 15px;
     font-size: $fsbody;
     width: 100%;
-    transition: all 0.5s ease;
+    transition: all 1.5s ease;
     @include theme() {
       color: t($text-secondary);
     }
@@ -188,7 +188,7 @@
       @include theme() {
         color: t($bg);
       }
-      transition: all 0.5s ease;
+      transition: all 1.5s ease;
       @media (max-height: 700px) {
         font-size: 16px;
         margin: 0 10px;

@@ -77,7 +77,6 @@ function Reviews() {
 
   return (
     <section className={`reviews section ${!darkTheme ? "theme--default" : "theme--dark"}`} id="reviews">
-      <Header/>
       <Fade>
         <h2 className='reviews-title title'>{t("reviews.title")}</h2>
       </Fade>
@@ -99,11 +98,13 @@ function Reviews() {
                     onTouchMove={touchMoveEvent =>handleTouchMove(touchMoveEvent)}
                     onTouchEnd={() => handleTouchEnd(index)}>
                     <img src={testimonial.image} className='testimonial-img'/>
+                    <Fade >
                     <div className="testimonial-container">
                       <p className="testimonial-text">{testimonial.text}</p>
                       <h1 className="testimonial-name">{testimonial.name}</h1>
                       <h3 className="testimonial-band">{testimonial.band}</h3>
                     </div>
+                    </Fade>
                   </label>
                 );
               })}

@@ -13,10 +13,7 @@
     "title": "PRODUCTOR DE ROCK Y METAL, BARCELONA (ESPAÑA)"
   },
   "home": {
-    "title": {
-      "line1": "¿Quieres sonar",
-      "line2": "<oposite> de puta madre?</oposite>"
-    },
+    "title": "¿Quieres sonar de puta madre?",
     "subheader": "El productor al que más le importa tu música",
     "text-1": "Hay muchos estudios que pueden conseguir un buen sonido; yo ayudo a bandas de rock y metal a definir una visión para sus proyectos, creando algo único.",
     "text-2": "Spoiler, va a sonar que flipas",
@@ -47,16 +44,25 @@
     "text-2": "Desde que empiezas una canción hasta presentarla al público, el proceso de crear música es intimidante y mi objetivo es poder aportar a las bandas en cada paso para tener el mejor producto posible.",
     "text-3": "Cada día se suben a Spotify 60 mil canciones (no, no es un error), y es muy fácil ser un número más. Quiero trabajar con bandas con ganas de cambiar la industria, mejorar con cada CD, hablar de temas importantes y, sobre todo, hacer que el esfuerzo, la música y el arte valgan la pena."
   },
+  "estudio": {
+    "title": "El estudio",
+    "location": "Barcelona, España",
+    "text-1": "Mi estudio está en el centro de Barcelona, con una sala de grabación de más de 50 metros cuadrados y techos altos perfecta para grabar música e instrumentos acústicos, e incluso grabar a bandas completas.",
+    "text-2": "El equipo que tengo es un reflejo tanto de mis gustos personales como de la versatilidad que necesito para crear los sonidos que mis clientes quieren.",
+    "text-3": "En cada proyecto hay tiempo para probar diferentes cacharros y que el gusto y preferencias de cada banda salgan a la luz para crear una mezcla única. ",
+    "text-4": "En el local tenemos la zona de estudio, otros espacios y hasta una galería de arte y un bar. Es perfecto para que cada músico pueda sentirse cómodo, inspirado y tener un espacio para despejarse.",
+    "text-5": "A 5 minutos a pie tanto de Arc de Triomf como de Urquinaona, y con el local en el que se encuentra, es el espacio creativo perfecto para crear tu música en una de las ciudades más modernas de Europa."
+  },
   "work": {
     "title": "Work",
     "tracklist": "Tracklist",
     "production": "Producción",
     "mix": "Mezcla",
     "master": "Master",
-    "text-1": "¿Quieres escuchar otros trabajos en los que he participado?",
-    "text-2": "¿Otros estilos de música?",
+    "text-1": "Para mi es MUY IMPORTANTE dar a cada proyecto su propio sonido e identidad. Si todo sonara igual la música me parecería muy aburrida.",
+    "text-2": "Si quieres escuchar otros trabajos en los que he currado, u otros estilos de música, ",
     "text-3": "o escucha ",
-    "cta-1": "Contáctame ",
+    "cta-1": "escríbeme",
     "cta-2": "mi playlist en Spotify"
   },
   "reviews": {
@@ -99,7 +105,7 @@
       "privacy-2": " Política de Privacidad",
       "submit-btn": "Enviar mensaje"
     },
-    "location": "Sabadell, Barcelona",
+    "location": "Barcelona",
     "email": "danisalat@gmail.com"
   },
   "campaign1": {

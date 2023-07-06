@@ -13,10 +13,7 @@
     "title": "ROCK & METAL PRODUCER, BARCELONA (SPAIN)"
   },
   "home": {
-    "title": {
-      "line1": "Do you want to sound",
-      "line2": "<oposite>fucking amazing?</oposite>"
-    },
+    "title": "Do you want to sound fucking amazing?",
     "subheader": "The producer who cares the most about your music",
     "text-1": "There are plenty of studios that can achieve a great sound. I help rock and metal bands define a vision for their projects, creating something unique.",
     "text-2": "Spoiler, it will sound amazing",
@@ -46,6 +43,15 @@
     "text-1": "I've been writing music and playing in bands for as long as I can remember, and I know just how difficult it is for people to take you seriously as an artist and be interested in your music. Since I started producing a few years ago, besides sound, my main obsession has been to learn how the fuck I can help the bands move their careers forward.",
     "text-2": "From starting a song to playing it live, the music creation process can be daunting, and my goal is to help the bands in evey step of the way to create the best possible product.",
     "text-3": "Every day over 60k songs get uploaded to Spotify (thats not a typo!) and its really easy to be ignored. I want to work with bands who want to change the industry, improve with every album, talk real and important matters and, above all, make the effort, music and art worth it."
+  },
+  "estudio": {
+    "title": "The ..?",
+    "location": "Barcelona, Spain",
+    "text-1": "Mi estudio está en el centro de Barcelona, con una sala de grabación de más de 50 metros cuadrados y techos altos perfecta para grabar música e instrumentos acústicos, e incluso grabar a bandas completas.",
+    "text-2": "El equipo que tengo es un reflejo tanto de mis gustos personales como de la versatilidad que necesito para crear los sonidos que mis clientes quieren.",
+    "text-3": "En cada proyecto hay tiempo para probar diferentes cacharros y que el gusto y preferencias de cada banda salgan a la luz para crear una mezcla única. ",
+    "text-4": "En el local tenemos la zona de estudio, otros espacios y hasta una galería de arte y un bar. Es perfecto para que cada músico pueda sentirse cómodo, inspirado y tener un espacio para despejarse.",
+    "text-5": "A 5 minutos a pie tanto de Arc de Triomf como de Urquinaona, y con el local en el que se encuentra, es el espacio creativo perfecto para crear tu música en una de las ciudades más modernas de Europa."
   },
   "work": {
     "title": "Work",
@@ -100,7 +106,7 @@
       "submit-btn": "Send message",
       "succes-msg": "Thanks for your message!"
     },
-    "location": "Sabadell, Barcelona",
+    "location": "Barcelona",
     "email": "danisalat@gmail.com"
   },
   "policy": {

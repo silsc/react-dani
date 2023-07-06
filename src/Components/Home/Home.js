@@ -7,7 +7,7 @@ import { Fade } from "react-awesome-reveal";
 import Header from '../Header/Header';
 import bgImg from "../../assets/images/home.jpg";
 import InView from 'react-intersection-observer';
-
+import ContactBtn from '../ContactBtn/ContactBtn';
 
 function Home({InView}) {
   const { t, i18n } = useTranslation();
@@ -19,16 +19,9 @@ function Home({InView}) {
     <section className={`home section ${!InView ? "theme--default" : "theme--dark"}`} id="home">
       <Header/>
       <div className='home-container'>
-        <img src={bgImg} className='home-bg-img'/>
-        <div className='home-title-container'>
-          <Fade triggerOnce>
-          <h1 className='home-title-line1'>{t("home.title.line1")}</h1>
-          </Fade>
-          <Fade delay={200} triggerOnce>
-            <h1 className='home-title-line2'>
-            <Trans i18nKey="home.title.line2" components={{oposite: <span className='oposite' />}}/></h1>
-          </Fade>
-        </div>
+        <Fade triggerOnce>
+          <h1 className='home-title'>{t("home.title")}</h1>
+        </Fade>
         <div className='home-text-container'>
         <Fade delay={300} triggerOnce>
             <p className='home-text-p home-text-p--gray'>{t("home.subheader")}</p>
@@ -39,13 +32,10 @@ function Home({InView}) {
           <Fade delay={300} triggerOnce>
             <p className='home-text-p home-text-p--black'>{t("home.text-2")}</p>
           </Fade>
-          <Fade delay={300} triggerOnce className='cta-black-btn--container'>
-            <HashLink className='cta-black-btn link' smooth to="/#contact">
-              {t("home.contact-btn")}
-            </HashLink>
-          </Fade>
+          <ContactBtn/>
         </div>
       </div>
+      <img src={bgImg} className='home-bg-img'/>
     </section>
   );
 }

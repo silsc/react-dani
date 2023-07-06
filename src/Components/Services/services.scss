@@ -1,53 +1,65 @@
 @import '../../styles/index.scss';
 
 .services {
-  @include respond('phone') {
-    padding: 10px !important;
-  }
-  .header {
+  &.section {
+    padding: 50px;
+    @include respond('ipad-pro') {
+      padding: 0px 50px;
+    }
     @include respond('ipad') {
-      display: none;
+      padding: 0px 30px;
+    }
+    @include respond('phone') {
+      padding: 0px 20px;
     }
   }
   &-title {
+    text-align: center;
     @include theme() {
       color: t($text);
     }
   }
   &-cards{
-    display: flex;
-    gap: 52px;
-    flex-basis: 100%;
-    @include respond('ipad-pro') {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 15px;
+    @include respond('phone') {
       display: block;
     }
-    & > * {
-      flex: 1;
+    svg {
+      align-self: end;
+      line {
+        @include theme() {
+          stroke: t($title);
+        }
+      }
+      &:nth-of-type(2) {
+        justify-self: end;
+      }
     }
   }
   &-card {
-    margin-bottom: 50px;
-    @include respond('ipad-pro') {
-      margin-bottom: 90px;
+    &-wrapper {
+      background-color: $light-gray;
+      padding: 20px 50px 50px;
+      margin: 15px;
     }
     &--title {
       text-align: center;
       font-family: $cairo;
-      font-size: 40px;
-      text-shadow: 3px 5px 4px rgba(0,0,0,0.7);
+      font-size: 24px;
       @include theme() {
-        color: t($text);
+        color: black;
       }
 
     }
     &--text {
-      text-align: justify;
+      text-align: center;
       font-weight: 400;
       font-size: 16px;
       line-height: 21px;
-      @include theme() {
-        color: t($text);
-      }
+      color: $dark-gray;
       @include respond('ipad') {
         font-size: 16px;
       }
@@ -68,5 +80,10 @@
   .free {
     color: #c6ae6a
     !important;
+  }
+  &-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

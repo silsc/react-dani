@@ -9,6 +9,7 @@ import estudioImg2 from "../../assets/images/about-2.png";
 import estudioImg3 from "../../assets/images/about-1.png";
 import estudioImg4 from "../../assets/images/about-2.png";
 import ContactBtn from '../ContactBtn/ContactBtn';
+import { ReactComponent as Logo } from "../../assets/images/logo-gray.svg";
 
 function Estudio({inView}) {
   const { t, i18n } = useTranslation();
@@ -20,6 +21,8 @@ function Estudio({inView}) {
     <section className={`estudio section ${window.innerWidth >= 760 ? (!inView ? "theme--default" : "theme--dark") : "theme--dark"}`} id="estudio">
       <div className='estudio-container'>
         <div className='estudio-content'>
+          <Logo className='estudio-logo' />
+
           <Fade>
             <h2 className='estudio-title title'>{t("estudio.title")}</h2>
           </Fade>

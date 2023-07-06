@@ -39,6 +39,9 @@
       margin-top: 0px;
       padding: 50px 30px;
     }
+    @include respond('ipad') {
+      padding: 50px 30px 140px;
+    }
   }
   
   &-title {

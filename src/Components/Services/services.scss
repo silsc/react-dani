@@ -24,8 +24,9 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 15px;
-    @include respond('phone') {
-      display: block;
+    @include respond('ipad') {
+      display: flex;
+      flex-direction: column;
     }
     svg {
       align-self: end;
@@ -37,6 +38,9 @@
       &:nth-of-type(2) {
         justify-self: end;
       }
+      @include respond('ipad') {
+        display: none;
+      }
     }
   }
   &-card {
@@ -44,6 +48,9 @@
       background-color: $light-gray;
       padding: 20px 50px 50px;
       margin: 15px;
+      @include respond('phone') {
+        margin: 0 0 20px;
+      }
     }
     &--title {
       text-align: center;
@@ -85,5 +92,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include respond('ipad') {
+      order: 8;
+    }
   }
 }

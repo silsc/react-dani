@@ -51,11 +51,11 @@
     }
   }
   &-text {
-    font-weight: 600;    
+    font-weight: 400;    
     font-size: 16px;
     line-height: 21px;
     @include theme() {
-      color: t($text);
+      color: t($title);
     }
     @include respond('ipad') {
       font-size: 16px;
@@ -73,11 +73,14 @@
       width: 300px;
     }
     width: 300px;
-    @include respond('ipad') {
+    @include respond('ipad-pro') {
       width: 40vw !important;
     }
+    @include respond('ipad') {
+      width: 36vw !important;
+    }
     @include respond('phone') {
-      width: 35vw !important;
+      width: 38vw !important;
     }
     
   }

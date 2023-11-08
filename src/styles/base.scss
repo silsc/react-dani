@@ -7,6 +7,7 @@
   @include respond('phone') {
     padding: 0;
     margin-left: 60px;
+    overflow-x: hidden;
   }
 }
 
@@ -49,6 +50,16 @@ body {
     }
 }
 
+.bold {
+  font-weight: 700;
+}
+.dark {
+  font-weight: 700;
+  @include theme() {
+    color: t($title);
+  }
+}
+
 .title {
   font-family: $cairo;
   font-style: normal;
@@ -65,13 +76,13 @@ body {
 .text {
   font-family: $cairo;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 20px;
   line-height: 120px;
   margin: 0;
   text-align: left;
   @include theme() {
-    color: t($text);
+    color: t($title);
   }
   transition: all 0.5s ease;
 }
@@ -122,7 +133,7 @@ body {
   color: black;
   border: 1px solid #000;
   font-weight: 700;
-  border-radius: 30px;
+  border-radius: 10px;
   &:hover {
     background-color: black;
     color: white;

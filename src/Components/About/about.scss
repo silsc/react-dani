@@ -20,7 +20,7 @@
     }
   }
   &-content {
-    width: 45%;
+    width: 50%;
     align-self: center;
     margin: 70px 0;
     padding: 0 55px 0 0;
@@ -33,11 +33,11 @@
     }
   }
   &-text {
-    font-weight: 600;
+    font-weight: 400;
     font-size: 16px;
     line-height: 21px;
     @include theme() {
-      color: t($text);
+      color: t($title);
     }
     @include respond('ipad') {
       font-size: 16px;
@@ -45,7 +45,7 @@
   }
   &-imgs {
     position: relative;
-    width: 50%;
+    width: 45%;
     @include respond('ipad') {
       width: 100%;
     }

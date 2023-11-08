@@ -6,22 +6,25 @@
 
   }
   &-bg-img {
-   width: 100%;
-   height: 400px;
-   object-fit: cover;
-   @include respond('phone') {
-    height: 52vh;
-  }
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+    @include respond('phone') {
+      height: 52vh;
+    }
   }
   &-text {
     &-container {
       padding-bottom: 53px;
-      width: 40%;
+      width: 50%;
       margin: auto;
       display: flex;
       flex-direction: column;
       align-items: center;
-      @include respond('ipad') {
+      @include respond('ipad-pro') {
         width: 100%;
         padding: 0 30px 53px;
       }
@@ -30,16 +33,24 @@
       }
     }
     &-p {
-      text-align: center;
-      font-size: $fsbody;
-      @include theme() {
-        color: t($text);
-      }
-      @include respond('phone') {
-        font-size: $fss;
+      p {
+        text-align: center;
+        font-size: $fsbody;
+        @include theme() {
+          color: t($title);
+        }
+        @include respond('phone') {
+          font-size: $fss;
+        }
       }
       &--black{
         font-weight: 700;
+        @include theme() {
+          color: t($title);
+        }
+        @include respond('phone') {
+          text-align: center;
+        }
       }
       &--gray{
         color: $dark-gray !important;
@@ -58,13 +69,23 @@
     @include theme() {
       color: t($title);
     }
-    @include respond('ipad') {
+    @include respond('ipad-pro') {
       font-size: 7vw;
       line-height: 7vw;
     }
     @include respond('phone') {
       font-size: 8vw;
       padding-top: 30px;
+    }
+  }
+  &-subtitle {
+    text-align: center;
+    font-size: $fsm;
+    @include theme() {
+      color: t($text);
+    }
+    @include respond('phone') {
+      font-size: $fsbody;
     }
   }
 }

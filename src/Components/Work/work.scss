@@ -52,6 +52,7 @@
     position: absolute;
     bottom: 20px;
     right: 0;
+    color: $dark-gray;
     @include respond('ipad-pro') {
       font-size: 75px;  
       right: -50px;

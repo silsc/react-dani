@@ -15,7 +15,7 @@
       padding: 30px;
     }
     @include respond('phone') {
-      padding: 20px;
+      padding: 0;
     }
   }
   &-container {
@@ -35,6 +35,11 @@
       @include respond('ipad') {
         width: 100%;
         padding: 30px;
+        margin-right: 0px;
+      }
+      @include respond('phone') {
+        width: 100%;
+        padding: 10px;
         margin-right: 0px;
       }
       &--hero {

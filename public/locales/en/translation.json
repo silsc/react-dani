@@ -13,45 +13,50 @@
     "title": "ROCK & METAL PRODUCER, BARCELONA (SPAIN)"
   },
   "home": {
-    "title": "Do you want to sound fucking amazing?",
-    "subheader": "The producer who cares the most about your music",
-    "text-1": "There are plenty of studios that can achieve a great sound. I help rock and metal bands define a vision for their projects, creating something unique.",
-    "text-2": "Spoiler, it will sound amazing",
-    "contact-btn": "Contact now!"
+    "title": "MODERN SOUND, BUT REAL",
+    "subheader": "I like music with impact, identity and soul",
+    "text-1": {
+      "line-1": "If you want to sound like everyone else, <bold>stop reading.</bold>",
+      "line-2": "If you want it to seem like a robot made it, <bold>stop reading.</bold>",
+      "line-3": "If you want to half-ass stuff, <bold>stop reading.</bold>"
+    },
+    "text-2": "If you want to create something unique, I want to work with you.",
+    "contact-btn": "CONTACT ME"
   },
   "services": {
     "title": "Services",
     "service-1": {
       "title": "Production",
-      "text-1": "You need your music to sound cool and for people to listen to it, but above all you need to feel proud of your creations. It’s hard to stay objective with your own songs.",
-      "text-2": "My work as a producer is to help bands define their vision and sound, and make the necessary decisions for the project to be successful. I’m the producer who cares the most about your music."
+      "text-1": "The goal is to make the music as good as possible. We need to touch up the songs and make sure they communicate the project’s vision. There’s nothing better for that than and outside & expert opinion. At this stage, <strong>egos are left at the door.</strong>"
     },
     "service-2": {
-      "title": "Mixing",
-      "text-1": "Have you ever listened to a self-produced band and thought they sound like crap? If you’ve ever tried to mix, you know how hard it is to get the impact, depth and clarity of pro mixes.",
-      "text-2": "I can take your tracks recorded in commercial or home studios and turn them into amazing mixes."
+      "title": "Recording",
+      "text-1": "My job is to get the most out of the musician to achieve the best performance. Also, at this step we create the sound of the project. Mediocre doesn’t cut it, OK doesn’t cut it, only excellence does. We come here to put in the effort, and <strong>you’ll walk out a better musician.</strong>"
     },
     "service-3": {
+      "title": "Mixing",
+      "text-1": "This is not just making shit sound cool or every instrument heard. We need to give the music the emotional impact it deserves, and every project its own identity. And, unlike other producers, <strong>I care about the band’s taste.</strong>"
+    },
+    "service-4": {
       "title": "Mastering",
-      "text-1": "In a world where music is consumed as playlists, it’s important that your music sounds competitive against other songs in regards to volume, brightness, and general impact.",
-      "text-2": "Let me help you in the last step of the process bringing an extra pair of ears, objectivity and experience so your mixes are competitive.",
-      "text-3": "FREE MIX CRITIQUE!"
+      "text-1": "Mastering is essential for the music to compete in the current market. Songs need to sound loud, albums need to flow, and vinyl has very specific requirements. <strong>The last step for the music to come alive.</strong>"
     }
   },
   "about": {
     "title": "About",
-    "text-1": "I've been writing music and playing in bands for as long as I can remember, and I know just how difficult it is for people to take you seriously as an artist and be interested in your music. Since I started producing a few years ago, besides sound, my main obsession has been to learn how the fuck I can help the bands move their careers forward.",
-    "text-2": "From starting a song to playing it live, the music creation process can be daunting, and my goal is to help the bands in evey step of the way to create the best possible product.",
-    "text-3": "Every day over 60k songs get uploaded to Spotify (thats not a typo!) and its really easy to be ignored. I want to work with bands who want to change the industry, improve with every album, talk real and important matters and, above all, make the effort, music and art worth it."
+    "text-1": "Mi work is something I take VERY seriously and I am convinced <dark>there’s no one that gets as involved as I do in the projects they work on.</dark>",
+    "text-2": "From pre-production to well after release, I’m interested in knowing the bands, their vision and goals, and help them make better music, improve as musicians, and achieve their goals.",
+    "text-3": "I’ve said before I look for a MODERN BUT REAL SOUND. I like music with real instruments and the energy of a performance, and I couldn’t care less about music styles, type of instruments, how “serious” a project is or whatever methods we need to use to achieve that vision.",
+    "text-4": "<dark>If you’re passionate about your music, I want to work with you.</dark>"
   },
   "estudio": {
-    "title": "The ..?",
+    "title": "Studio",
     "location": "Barcelona, Spain",
-    "text-1": "Mi estudio está en el centro de Barcelona, con una sala de grabación de más de 50 metros cuadrados y techos altos perfecta para grabar música e instrumentos acústicos, e incluso grabar a bandas completas.",
-    "text-2": "El equipo que tengo es un reflejo tanto de mis gustos personales como de la versatilidad que necesito para crear los sonidos que mis clientes quieren.",
-    "text-3": "En cada proyecto hay tiempo para probar diferentes cacharros y que el gusto y preferencias de cada banda salgan a la luz para crear una mezcla única. ",
-    "text-4": "En el local tenemos la zona de estudio, otros espacios y hasta una galería de arte y un bar. Es perfecto para que cada músico pueda sentirse cómodo, inspirado y tener un espacio para despejarse.",
-    "text-5": "A 5 minutos a pie tanto de Arc de Triomf como de Urquinaona, y con el local en el que se encuentra, es el espacio creativo perfecto para crear tu música en una de las ciudades más modernas de Europa."
+    "text-1": "My studio is located downtown in Barcelona, with a recording room over 50 square metres in size and with high ceilings that’s perfect to record music, acoustic instruments and even full bands.",
+    "text-2": "My gear is a reflection of both my personal taste and the versatility I need to create the sounds my clients want.",
+    "text-3": "During every project there’s time to try different stuff and for the taste and preference of each band to shine through, creating a unique sonic picture.",
+    "text-4": "In the premises we have the studio, other spaces and even an art gallery and a bar. It’s perfect for every musician to feel comfortable, inspired, and have its own space to chill.",
+    "text-5": "Only 5 minutes walking from both Arc de Triomf and Urquinaona Square, it’s the perfect creative environment to record music in one of the more modern cities in Europe."
   },
   "work": {
     "title": "Work",
@@ -59,10 +64,10 @@
     "production": "Production",
     "mix": "Mix",
     "master": "Master",
-    "text-1": "Do you want to listen to some more of my projects?",
-    "text-2": "Other music styles maybe?",
+    "text-1": "It is VERY IMPORTANT to me to give every project its own sound and identity. If everything sounded the same music would make me bored.",
+    "text-2": "If you want to listen to more of my work or other music styles, ",
     "text-3": "or listen ",
-    "cta-1": "Contact me",
+    "cta-1": "contact me",
     "cta-2": "my playlist on Spotify"
   },
   "reviews": {
@@ -96,7 +101,7 @@
   "contact": {
     "title": "Contact",
     "hero": "Do you want to work with me? Let me know more about your project",
-    "header": "Shoot me a message and I'll get in contact with you to know you, your project and your goals, and explain what I can add to your music.",
+    "header": "If you believe we could make a great team, contact me to talk about your record, visit the studio and start creating something unique.",
     "form": {
       "name": "Your name",
       "email": "Your email",

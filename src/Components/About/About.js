@@ -1,7 +1,7 @@
 import React, { Component }  from 'react';
 import './about.scss';
 import { useState } from 'react';
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import { Fade } from "react-awesome-reveal";
 import aboutImg1 from "../../assets/images/about-1.png";
 import aboutImg2 from "../../assets/images/about-2.png";
@@ -20,13 +20,17 @@ function About({inView}) {
             <h2 className='about-title title'>{t("about.title")}</h2>
           </Fade>
           <Fade delay={200}>
-            <p className='about-text'>{t("about.text-1")}</p>
+            <p className='about-text'><Trans i18nKey="about.text-1" components={{dark: <span className='dark' />}}/></p>
           </Fade>
           <Fade delay={250}>
             <p className='about-text'>{t("about.text-2")}</p>
           </Fade>
           <Fade delay={300}>
             <p className='about-text'>{t("about.text-3")}</p>
+          </Fade>
+          <Fade delay={300}>
+            <p className='about-text'>
+            <Trans i18nKey="about.text-4" components={{dark: <span className='dark' />}}/></p>
           </Fade>
         </div>
         

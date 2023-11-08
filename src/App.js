@@ -32,9 +32,9 @@ const App = () => {
           )}
         </InView>
 
-        <Estudio inView={inView} id="section-6"/>
-
         <Services inView={inView} id="section-2" />
+
+        <Estudio inView={inView} id="section-6"/>
 
         <About inView={inView} id="section-3"/>
 

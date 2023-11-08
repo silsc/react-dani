@@ -24,10 +24,15 @@ function Home({InView}) {
         </Fade>
         <div className='home-text-container'>
         <Fade delay={300} triggerOnce>
-            <p className='home-text-p home-text-p--gray'>{t("home.subheader")}</p>
+            <p className='home-subtitle home-text-p--gray'>{t("home.subheader")}</p>
           </Fade>
           <Fade delay={300} triggerOnce>
-            <p className='home-text-p'>{t("home.text-1")}</p>
+            <div className='home-text-p'>
+              <p ><Trans i18nKey="home.text-1.line-1" components={{bold: <span className='bold' />}}/></p>
+              <p ><Trans i18nKey="home.text-1.line-2" components={{bold: <span className='bold' />}}/></p>
+              <p ><Trans i18nKey="home.text-1.line-3" components={{bold: <span className='bold' />}}/></p>
+            </div>
+
           </Fade>
           <Fade delay={300} triggerOnce>
             <p className='home-text-p home-text-p--black'>{t("home.text-2")}</p>
@@ -35,7 +40,7 @@ function Home({InView}) {
           <ContactBtn/>
         </div>
       </div>
-      <img src={bgImg} className='home-bg-img'/>
+      <div className='home-bg-img' style={{ backgroundImage: `url(${bgImg})` }}></div>
     </section>
   );
 }

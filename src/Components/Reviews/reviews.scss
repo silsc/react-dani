@@ -1,24 +1,34 @@
 @import '../../styles/index.scss';
 
-.reviews.section {
-  @include respond('ipad-pro') {
-    padding-bottom: 20px;
-  }
-}
+
 .reviews {
-  @include respond('phone') {
-    padding: 10px !important;
+  &.section {
+    padding: 50px;
+    @include respond('ipad-pro') {
+      padding: 50px;
+    }
+    @include respond('ipad') {
+      padding: 30px;
+    }
+    @include respond('phone') {
+      padding: 20px;
+    }
+  }
+  &-title.title {
+    text-align: center !important;
+    margin-bottom: 16px;
   }
 }
+
 .slider {
   width: 100%;
-  height: 66vh;
+  height: 500px;
   @include respond('ipad') {
     height: 500px;
     margin-bottom: 50px;
   }
   @include respond('phone') {
-    height: 70vh;
+    height: 100%;
   }
   input {
     display: none;
@@ -30,7 +40,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  min-height: 50vh;
+  min-height: 500px;
   perspective: 1000px;
   overflow: hidden;
   height: 100%;
@@ -39,12 +49,18 @@
     min-height: 500px;
     margin: 20px 0;
   }
+  @include respond('phone') {
+    height: 100%;
+    min-height: 500px;
+    margin: 20px 0;
+    flex-direction: column;
+  }
 }
 .testimonial {
   top: 0;
   position: absolute;
   box-sizing: border-box;
-  background-color: $medium-gray;
+  background-color: $light-gray;
   width: 50%;
   height: 100%;
   text-align: center;
@@ -52,10 +68,17 @@
   -webkit-transform-style: preserve-3d;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   user-select: none;
+  align-items: center;
   cursor: pointer;
   display: flex;
+  overflow: hidden;
   @include respond('ipad') {
     width: 85%;
+  }
+  @include respond('phone') {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
   }
   &:hover {
     .testimonial-img {
@@ -68,14 +91,21 @@
     object-fit: cover;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
-    transition: all 0.5s ease;
+    @include respond('phone') {
+      height: auto;
+      filter: none;
+      align-self: stretch;
+      object-fit: cover;
+    }
+    transition: none;
   }
   &-container {
     padding: 20px 30px;
     align-self: center;
     @include respond('ipad') {
-      padding: 10px;
+      padding: 20px;
     }
+    transition: none;
   }
   &-text {
     font-size: 16px;
@@ -88,140 +118,425 @@
     margin: 10px 0;
   }
   &-band {
-    color: #ffff;
+    color: $dark-gray;
     text-align: right;
   }
+  &-text, &-name, &-band {
+  }
 }
+
 
 /* First */
 #t-1:checked ~ .testimonials label[for="t-1"] {
   opacity: 1;
   z-index: 4;
-  .testimonial-img {
-    filter: none;
+  .testimonial {
+    &-text, &-name, &-band {
+      animation: opacity 1s linear;
+    }
+    &-img {
+      filter: none;
+      transition: width 0.5s ease-in;
+    }
+  }
+  @include respond('phone') {
+    transform: none;
+    opacity: 1;
+    z-index: 1;
   }
 }
 #t-1:checked ~ .testimonials label[for="t-2"] {
   opacity: 0.5;
-  transform: translateX(23vw) translateZ(-20vh);
+  transform: translateX(25vw) translateZ(-20vh);
   z-index: 3;
+  .testimonial {
+    &-container {
+      width: 0;
+      padding: 0;
+    }
+    &-img {
+      width: 100%;    
+    }
+    &-text, &-name, &-band {
+      opacity: 0;
+      transition: opacity .5s ease;
+    }
+  }
+  @include respond('phone') {
+    transform: none;
+    opacity: 1;
+  }
 }
 #t-1:checked ~ .testimonials label[for="t-3"] {
   opacity: 0;
   z-index: -1;
+  @include respond('phone') {
+    transform: none;
+    opacity: 1;
+    z-index: 1;
+  }
 }
 #t-1:checked ~ .testimonials label[for="t-4"] {
   opacity: 0;
   z-index: -1;
+  @include respond('phone') {
+    transform: none;
+    opacity: 1;
+    z-index: 1;
+  }
 }
-#t-2:checked ~ .testimonials label[for="t-5"] {
+#t-1:checked ~ .testimonials label[for="t-5"] {
   opacity: 0;
   z-index: -1;
+  @include respond('phone') {
+    transform: none;
+    opacity: 1;
+    z-index: 1;
+  }
 }
 
 /* Second */
 #t-2:checked ~ .testimonials label[for="t-1"] {
   opacity: 0.5;
-  transform: translateX(-23vw) translateZ(-20vh);
+  transform: translateX(-25vw) translateZ(-20vh);
+  .testimonial {
+    &-container {
+      width: 0;
+      padding: 0;
+      @include respond('phone') {
+        width: auto;
+        padding: 20px;
+      }
+    }
+    &-img {
+      width: 100%;  
+      @include respond('phone') {
+        width: 35%;
+        object-fit: cover;
+        transition: none;
+      }  
+    }
+    &-text, &-name, &-band {
+      opacity: 0;
+      transition: opacity .5s ease;
+      @include respond('phone') {
+        opacity: 1;
+      } 
+    }
+  }
+  @include respond('phone') {
+    transform: none;
+    opacity: 1;
+    z-index: 1;
+  }
 }
 #t-2:checked ~ .testimonials label[for="t-2"] {
   opacity: 1 !important;
   z-index: 3;
-  .testimonial-img {
-    filter: none;
+  .testimonial {
+    &-text, &-name, &-band {
+      animation: opacity 1s linear;
+    }
+    &-img {
+      filter: none;
+      transition: width 0.5s ease-in;
+    }
+  }
+  @include respond('phone') {
+    transform: none;
+    opacity: 1;
+    z-index: 1;
   }
 }
 #t-2:checked ~ .testimonials label[for="t-3"] {
   opacity: 0.5;
-  transform: translateX(23vw) translateZ(-10vh);
+  transform: translateX(25vw) translateZ(-10vh);
   z-index: 2;
+  .testimonial {
+    &-container {
+      width: 0;
+      padding: 0;
+      @include respond('phone') {
+        width: auto;
+        padding: 20px;
+      }
+    }
+    &-img {
+      width: 100%; 
+      @include respond('phone') {
+        width: 35%;
+        object-fit: cover;
+        transition: none;
+      }     
+    }
+    &-text, &-name, &-band {
+      opacity: 0;
+      transition: opacity .5s ease;
+      @include respond('phone') {
+        opacity: 1;
+      } 
+    }
+  }
+  @include respond('phone') {
+    transform: none;
+    opacity: 1;
+    z-index: 1;
+  }
 }
 #t-2:checked ~ .testimonials label[for="t-4"] {
   opacity: 0;
   z-index: -1;
+  @include respond('phone') {
+    transform: none;
+    opacity: 1;
+    z-index: 1;
+  }
 }
 
 #t-2:checked ~ .testimonials label[for="t-5"] {
   opacity: 0;
   z-index: -1;
+  @include respond('phone') {
+    transform: none;
+    opacity: 1;
+    z-index: 1;
+  }
 }
 
 /* Third */
 #t-3:checked ~ .testimonials label[for="t-1"] {
   opacity: 0;
   z-index: -1;
+  @include respond('phone') {
+    transform: none;
+    opacity: 1;
+    z-index: 1;
+  }
 }
 #t-3:checked ~ .testimonials label[for="t-2"] {
   opacity: 0.5;
-  transform: translateX(-23vw) translateZ(-20vh);
+  transform: translateX(-25vw) translateZ(-20vh);
+  @include respond('phone') {
+    transform: none;
+    opacity: 1;
+    z-index: 1;
+  }
+  .testimonial {
+    &-container {
+      width: 0;
+      padding: 0;
+    }
+    &-img {
+      width: 100%;    }
+    &-text, &-name, &-band {
+      opacity: 0
+    }
+  }
 }
 #t-3:checked ~ .testimonials label[for="t-3"] {
   opacity: 1;
   z-index: 3;
-  .testimonial-img {
-    filter: none;
+  .testimonial {
+    &-text, &-name, &-band {
+      animation: opacity 1s linear;
+    }
+    &-img {
+      filter: none;
+      transition: width 0.5s ease-in;
+    }
+  }
+  @include respond('phone') {
+    transform: none;
+    opacity: 1;
+    z-index: 1;
   }
 }
 #t-3:checked ~ .testimonials label[for="t-4"] {
   opacity: 0.5;
-  transform: translateX(23vw) translateZ(-20vh);
+  transform: translateX(25vw) translateZ(-20vh);
   z-index: 2;
+  @include respond('phone') {
+    transform: none;
+    opacity: 1;
+    z-index: 1;
+  }
+  .testimonial {
+    &-container {
+      width: 0;
+      padding: 0;
+    }
+    &-img {
+      width: 100%;    }
+    &-text, &-name, &-band {
+      opacity: 0
+    }
+  }
 }
-
 #t-3:checked ~ .testimonials label[for="t-5"] {
   opacity: 0;
   z-index: -1;
+  @include respond('phone') {
+    transform: none;
+    opacity: 1;
+    z-index: 1;
+  }
 }
 
 /* Fourth */
 #t-4:checked ~ .testimonials label[for="t-1"] {
   opacity: 0;
   z-index: -1;
+  @include respond('phone') {
+    transform: none;
+    opacity: 1;
+    z-index: 1;
+  }
 }
 #t-4:checked ~ .testimonials label[for="t-2"] {
   opacity: 0;
   z-index: -1;
+  @include respond('phone') {
+    transform: none;
+    opacity: 1;
+    z-index: 1;
+  }
 }
 #t-4:checked ~ .testimonials label[for="t-3"] {
   opacity: 0.5;
-  transform: translateX(-23vw) translateZ(-20vh);
+  transform: translateX(-25vw) translateZ(-20vh);
   z-index: 2;
+  @include respond('phone') {
+    transform: none;
+    opacity: 1;
+    z-index: 1;
+  }
+  .testimonial {
+    &-container {
+      width: 0;
+      padding: 0;
+    }
+    &-img {
+      width: 100%;    }
+    &-text, &-name, &-band {
+      opacity: 0;
+      transition: opacity .5s ease;
+    }
+  }
 }
 #t-4:checked ~ .testimonials label[for="t-4"] {
   opacity: 1;
   z-index: 3;
-  .testimonial-img {
-    filter: none;
+  .testimonial {
+    &-text, &-name, &-band {
+      animation: opacity 1s linear;
+    }
+    &-img {
+      filter: none;
+      transition: width 0.5s ease-in;
+    }
+  }
+  @include respond('phone') {
+    transform: none;
+    opacity: 1;
+    z-index: 1;
   }
 }
 #t-4:checked ~ .testimonials label[for="t-5"] {
   opacity: 0.5;
-  transform: translateX(23vw) translateZ(-20vh);
+  transform: translateX(25vw) translateZ(-20vh);
   z-index: 2;
+  @include respond('phone') {
+    transform: none;
+    opacity: 1;
+    z-index: 1;
+  }
+  .testimonial {
+
+    &-container {
+      width: 0;
+      padding: 0;
+    }
+    &-img {
+      width: 100%;    }
+    &-text, &-name, &-band {
+      opacity: 0;
+      transition: opacity .5s ease;
+    }
+  }
 }
 
 /* Fith */
 #t-5:checked ~ .testimonials label[for="t-1"] {
   opacity: 0;
   z-index: -1;
+  @include respond('phone') {
+    transform: none;
+    opacity: 1;
+    z-index: 1;
+  }
 }
 #t-5:checked ~ .testimonials label[for="t-2"] {
   opacity: 0;
   z-index: -1;
+  @include respond('phone') {
+    transform: none;
+    opacity: 1;
+    z-index: 1;
+  }
 }
 #t-5:checked ~ .testimonials label[for="t-3"] {
   opacity: 0;
   z-index: -1;
+  @include respond('phone') {
+    transform: none;
+    opacity: 1;
+    z-index: 1;
+  }
 }
 #t-5:checked ~ .testimonials label[for="t-4"] {
   opacity: 0.5;
-  transform: translateX(-23vw) translateZ(-20vh);
+  transform: translateX(-25vw) translateZ(-20vh);
   z-index: 2;
+  @include respond('phone') {
+    transform: none;
+    opacity: 1;
+    z-index: 1;
+  }
+  .testimonial {
+    &-container {
+      width: 0;
+      padding: 0;
+    }
+    &-img {
+      width: 100%;    }
+    &-text, &-name, &-band {
+      opacity: 0;
+      transition: opacity .5s ease;
+    }
+  }
 }
 #t-5:checked ~ .testimonials label[for="t-5"] {
   opacity: 1;
   z-index: 3;
-  .testimonial-img {
-    filter: none;
+  .testimonial {
+    &-text, &-name, &-band {
+      animation: opacity 1s linear;
+    }
+    &-img {
+      filter: none;
+      transition: width 0.5s ease-in;
+    }
   }
+  @include respond('phone') {
+    transform: none;
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+
+@keyframes opacity {
+  0%   {opacity: 0;}
+  50%   {opacity: 0;}
+  100% {opacity: 1;}
 }

@@ -2,6 +2,15 @@
 @import './themes.scss';
 @import './mixins.scss';
 
+.container {
+  margin-left: 100px;
+  @include respond('phone') {
+    padding: 0;
+    margin-left: 60px;
+    overflow-x: hidden;
+  }
+}
+
 * {
   box-sizing: border-box !important;
   text-align: left;
@@ -13,7 +22,7 @@
 body {
   margin: 0;
   font-family: $roboto;
-  transition: all 0.5s ease;
+  transition: all 1.5s ease;
   @include theme() {
     background: t($bg);
   }
@@ -32,6 +41,7 @@ body {
 
 .oposite {
   text-shadow: 2px 4px 3px rgba(0,0,0,0.5);
+  transition: all 1.5s ease;
   @include theme() {
     color: t($bg);
   }
@@ -39,6 +49,17 @@ body {
       color: white !important;
     }
 }
+
+.bold {
+  font-weight: 700;
+}
+.dark {
+  font-weight: 700;
+  @include theme() {
+    color: t($title);
+  }
+}
+
 .title {
   font-family: $cairo;
   font-style: normal;
@@ -46,11 +67,10 @@ body {
   font-size: 64px;
   line-height: 120px;
   margin: 0;
-  text-align: left;
   @include theme() {
-    color: t($text);
+    color: t($title);
   }
-  transition: all 0.5s ease;
+  transition: all 1.5s ease;
 }
 
 .text {
@@ -62,7 +82,7 @@ body {
   margin: 0;
   text-align: left;
   @include theme() {
-    color: t($text);
+    color: t($title);
   }
   transition: all 0.5s ease;
 }
@@ -80,22 +100,17 @@ body {
 }
 
 .section {
-  margin-left: 100px;
-  height: 100vh;
+  min-height: 100%;
   position: relative;
-  padding: 0 40px;
-  overflow: hidden;
-  margin-top: 1px;
-  @include respond('ipad-pro') {
-    padding: 0 20px;
-    margin-left: 100px;
-    scroll-snap-align: none;
-    height: auto;
-    margin-top: 0px;
+  @include respond('large') {
+    width: 1200px;
+    margin: auto;
   }
-  @include respond('phone') {
-    padding: 0;
-    margin-left: 60px;
+  @include respond('ipad') {
+    width: 100%;
+  }
+  @include respond('ipad-pro') {
+    margin-top: 20px;
   }
 }
 
@@ -111,16 +126,23 @@ body {
   color: #1BD760;
 }
 
-.cta-black-btn {
+.cta-btn {
   padding: 20px 30px;
   margin-top: 10px;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
+  border: 1px solid #000;
   font-weight: 700;
+  border-radius: 10px;
+  &:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+  }
 }
 
-.cta-black-btn--container {
+.cta-btn--container {
   display: flex;
   justify-content: flex-start;
-
+  margin: 0;
 }

@@ -1,58 +1,105 @@
 @import '../../styles/index.scss';
 
 .services {
-  @include respond('phone') {
-    padding: 10px !important;
-  }
-  .header {
+  &.section {
+    padding: 50px;
+    @include respond('ipad-pro') {
+      padding: 0px 50px;
+    }
     @include respond('ipad') {
-      display: none;
+      padding: 0px 30px;
+    }
+    @include respond('phone') {
+      padding: 0px 20px;
     }
   }
   &-title {
+    text-align: center;
     @include theme() {
       color: t($text);
     }
   }
   &-cards{
-    display: flex;
-    gap: 52px;
-    flex-basis: 100%;
-    @include respond('ipad-pro') {
-      display: block;
+    display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    // grid-template-rows: repeat(9, 1fr);
+    // grid-column-gap: 15px;
+    @include respond('ipad') {
+      display: flex;
+      flex-direction: column;
     }
-    & > * {
-      flex: 1;
+    svg {
+      align-self: end;
+      margin: 20px 0;
+      line {
+        @include theme() {
+          stroke: t($title);
+        }
+      }
+      &:nth-of-type(2) {
+        justify-self: end;
+      }
+      @include respond('ipad') {
+        display: none;
+      }
     }
   }
   &-card {
-    margin-bottom: 50px;
-    @include respond('ipad-pro') {
-      margin-bottom: 90px;
+    &-wrapper {
+      background-color: $light-gray;
+      padding: 20px 50px 50px;
+      margin: 15px;
+      @include respond('phone') {
+        padding: 10px 30px 30px;
+        margin: 0 0 20px;
+      }
     }
     &--title {
       text-align: center;
       font-family: $cairo;
-      font-size: 40px;
-      text-shadow: 3px 5px 4px rgba(0,0,0,0.7);
+      font-size: 24px;
       @include theme() {
-        color: t($text);
+        color: black;
       }
 
     }
     &--text {
-      text-align: justify;
+      text-align: center;
       font-weight: 400;
       font-size: 16px;
       line-height: 21px;
-      @include theme() {
-        color: t($text);
-      }
       @include respond('ipad') {
         font-size: 16px;
       }
     }
   } 
+
+  .card {
+    &-1 {
+      grid-area: 1 / 1 / 4 / 2;
+    }
+    &-2 {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+    &-3 {
+      grid-area: 4 / 1 / 5 / 2;
+    }
+    &-4 {
+      grid-area: 3 / 2 / 6 / 3; 
+    }
+    &-5 {
+      grid-area: 5 / 1 / 8 / 2;
+    }
+    &-6 {
+      grid-area: 6 / 2 / 7 / 3;
+    }
+    &-7 {
+      grid-area: 8 / 1 / 10 / 2;
+    }
+    &-8 {
+      grid-area: 7 / 2 / 10 / 3;
+    }
+  }
 
   .text-2 {
     font-size: 18px;
@@ -68,5 +115,14 @@
   .free {
     color: #c6ae6a
     !important;
+  }
+  &-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    @include respond('ipad') {
+      order: 8;
+    }
   }
 }

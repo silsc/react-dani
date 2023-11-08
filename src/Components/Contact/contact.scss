@@ -6,6 +6,18 @@
       display: none;
     }
   }
+  &.section {
+    padding: 50px;
+    @include respond('ipad-pro') {
+      padding: 50px;
+    }
+    @include respond('ipad') {
+      padding: 30px;
+    }
+    @include respond('phone') {
+      padding: 0;
+    }
+  }
   &-container {
     padding: 20px 10px;
     display: flex;
@@ -25,10 +37,15 @@
         padding: 30px;
         margin-right: 0px;
       }
+      @include respond('phone') {
+        width: 100%;
+        padding: 10px;
+        margin-right: 0px;
+      }
       &--hero {
         font-weight: 900;
-        font-size: 55px;
-        line-height: 90px;
+        font-size: 50px;
+        line-height: 60px;
         font-family: $cairo;
         margin: 0;
         margin-bottom: 5%;
@@ -37,6 +54,10 @@
           line-height: 50px;
           margin-top: 5%;
           align-self: center;
+        }
+        @include respond('phone') {
+          font-size: 32px;
+          line-height: 32px;
         }
       }
       &--email, &--location {
@@ -62,7 +83,7 @@
       align-self: center;
     }
     background: $light-black;
-    padding: 10px 50px;
+    padding: 30px 50px;
     @include respond('ipad-pro') {
       padding: 10px 30px;
     }
@@ -73,15 +94,13 @@
     @include respond('phone') {
       padding: 20px 20px;
     }
-    &--title {
-      line-height: 50px;
-      @include theme() {
-        color: t($text);
-      }
+    &--title.title {
+      line-height: 64px;
+      padding-bottom: 10px;
     }
     &--header {
       width: 80%;
-      font-weight: 400;
+      font-weight: 500;
       font-size: 16px;
       line-height: 21px;
       color: #fff;

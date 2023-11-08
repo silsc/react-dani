@@ -4,12 +4,15 @@
     "private": true,
     "dependencies": {
         "@formspree/react": "^2.2.4",
+        "@react-spring/parallax": "^9.7.2",
+        "@react-spring/web": "^9.7.2",
         "@testing-library/jest-dom": "^5.16.4",
         "@testing-library/react": "^13.0.1",
         "@testing-library/user-event": "^13.5.0",
         "i18next": "^21.6.16",
         "i18next-browser-languagedetector": "^6.1.4",
         "i18next-http-backend": "^1.4.0",
+        "photoswipe": "^5.3.7",
         "react": "^18.0.0",
         "react-awesome-reveal": "^3.8.1",
         "react-dom": "^18.0.0",
@@ -20,6 +23,7 @@
         "react-router-dom": "^6.3.0",
         "react-router-hash-link": "^2.4.3",
         "react-scripts": "5.0.1",
+        "react-scroll-parallax": "^3.4.2",
         "react-simple-captcha": "^9.0.0",
         "sass": "^1.50.0",
         "web-vitals": "^2.1.4"

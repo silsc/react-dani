@@ -2,6 +2,7 @@ $logo: 'logo';
 $bg: 'bg';
 $bg-oposite: 'bg-oposite';
 $text: 'text';
+$title: 'title';
 $text-secondary: 'text-secondary';
 $text-hover: 'text-hover';
 $border: 'border';
@@ -10,8 +11,9 @@ $themes: (
   default: (
     logo: url(""),
     color--white: #ffff,
-    text: $dark-black,
-    text-secondary: $dark-gray,
+    title: $dark-black,
+    text: $dark-gray,
+    text-secondary: $dark-black,
     text-hover: $medium-gray,
     border: $dark-black,
     bg: #fff,
@@ -20,6 +22,7 @@ $themes: (
   dark: (
     logo: url(""),
     text: #fff,
+    title: #fff,
     text-secondary: $light-gray,
     text-hover: $medium-gray,
     border: $dark-black,

@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Home from './Components/Home/Home';
 import Services from './Components/Services/Services';
 import About from './Components/About/About';
+import Estudio from './Components/Estudio/Estudio';
 import Reviews from './Components/Reviews/Reviews';
 import Contact from './Components/Contact/Contact';
 import Work from './Components/Work/Work';
@@ -21,22 +22,26 @@ const App = () => {
   return ( 
     <div className={`App ${!inView ? "theme--default" : "theme--dark"}`} >
       <Navbar inView={inView} />
-      
-      <Home/>
-      
-      <Services inView={inView} delay={500} id="section-2" setInView={setInView}/>
+      <div class="container">
 
-      <About inView={inView} id="section-3"/>
+        <Home/>
+        
+        <InView as="div" onChange={setInView}>
+          {({ ref, inView }) => (
+            <Work ref={ref} inView={inView} id="section-5" className="child"/>
+          )}
+        </InView>
 
-      <InView as="div" onChange={setInView}>
-        {({ ref, inView }) => (
-          <Work ref={ref} inView={inView} delay={500} id="section-5" />
-        )}
-      </InView>
-      
-      <Reviews id="section-4"/>
+        <Services inView={inView} id="section-2" />
 
-      <Contact  inView={inView} delay={500} id="section-5" setInView={setInView}/>
+        <Estudio inView={inView} id="section-6"/>
+
+        <About inView={inView} id="section-3"/>
+
+        <Reviews id="section-4"/>
+
+        <Contact inView={inView} id="section-5" setInView={setInView}/>
+      </div>
 
     </div>
   );

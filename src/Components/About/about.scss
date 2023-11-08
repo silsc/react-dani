@@ -1,12 +1,16 @@
 @import '../../styles/index.scss';
 
 .about {
-  @include respond('phone') {
-    padding: 10px !important;
-  }
-  .header {
+  &.section {
+    padding: 50px;
+    @include respond('ipad-pro') {
+      padding: 0px 50px;
+    }
     @include respond('ipad') {
-      display: none;
+      padding: 0px 30px;
+    }
+    @include respond('phone') {
+      padding: 0px 20px;
     }
   }
   &-container {
@@ -16,52 +20,43 @@
     }
   }
   &-content {
-    width: 40%;
+    width: 50%;
     align-self: center;
+    margin: 70px 0;
+    padding: 0 55px 0 0;
     @include respond('ipad-pro') {
       width: 55%;
     }
     @include respond('ipad') {
       width: 100%;
+      padding: 0 0 30px 0;
     }
-  }
-  &-title {
-
   }
   &-text {
     font-weight: 400;
     font-size: 16px;
     line-height: 21px;
     @include theme() {
-      color: t($text);
+      color: t($title);
     }
     @include respond('ipad') {
       font-size: 16px;
     }
   }
   &-imgs {
-    background-color: $light-gray;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 40vw;
-    height: 100vh;
-    @include respond('ipad-pro') {
-      width: 35vw;
-    }
+    position: relative;
+    width: 45%;
     @include respond('ipad') {
-      position: relative;
       width: 100%;
-      height: 300px;
     }
   }
   &-img1, &-img2 {
-    width: 50%;
-    height: 50%;
+    height: 350px;
     position: absolute;
     object-fit: cover;
+    width: 280px;
     @include respond('ipad-pro') {
-      width: 65%;
+      width: 200px;
     }
     @include respond('ipad') {
       position: relative;
@@ -69,26 +64,21 @@
     }
   }
   &-img1 {
-    top: 12vh;
-    left: -3vw;
+    bottom: 30px;
+    right: 30px;
     z-index: 1;
-    @include respond('ipad-pro') {
-      left: -2vw;
-    }
     @include respond('ipad') {
-      top: 0px;
-      left: 0;
+      top: auto;
+      left: auto;
+      right: auto;
       width: 100%;
       height: 300px;
       z-index: 0;
     }
   }
   &-img2 {
-    bottom: 12vh;
-    right: 5vw;
-    @include respond('ipad-pro') {
-      right: 2vw;
-    }
+    top: 50px;
+    left: 30px;
     @include respond('ipad') {
       display: none;
     }

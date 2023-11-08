@@ -3,18 +3,23 @@
 $transition: .3s all ease;
 
 .player{
+    right: 40px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 5px;
+    padding: 0;
     color: #fff;
-    font-weight: 100;
+    font-weight: 400;
     overflow: hidden;
     height: 100%;
     margin-top: 10vh;
-    width: 46vw;
     @include respond('ipad-pro') {
+      position: relative; 
+      height: 100%;
       width: 100%;
+      right: 0px;
+      margin-top: 30px;
+      padding: 0px 0px 10px;
     }
     .current-song{
       display: flex;
@@ -22,6 +27,7 @@ $transition: .3s all ease;
       padding: 20px 0px;
       color: #ffff;
       width: 100%;
+      font-weight: 700;
       @include respond('phone') {
         flex-direction: column;
         width: 100%;

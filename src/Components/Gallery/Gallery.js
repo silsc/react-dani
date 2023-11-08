@@ -33,8 +33,8 @@ function Gallery({inView, images, galleryID, tag}) {
         <Fade delay={200 + (index*100)} className={'estudio-' + image.tag} >
         <a
           href={image.name}
-          data-pswp-width="500"
-          data-pswp-height="500"
+          data-pswp-width={image.heigh}
+          data-pswp-height={image.width}
           key={galleryID + '-' + index}
           target="_blank"
           rel="noreferrer"

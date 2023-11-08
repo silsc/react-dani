@@ -5,7 +5,7 @@ import { useTranslation, Trans } from "react-i18next";
 import { HashLink } from 'react-router-hash-link';
 import { Fade } from "react-awesome-reveal";
 import Header from '../Header/Header';
-import bgImg from "../../assets/images/home.jpg";
+import bgImg from "../../assets/images/home.png";
 import InView from 'react-intersection-observer';
 import ContactBtn from '../ContactBtn/ContactBtn';
 
@@ -41,6 +41,7 @@ function Home({InView}) {
         </div>
       </div>
       <div className='home-bg-img' style={{ backgroundImage: `url(${bgImg})` }}></div>
+      <div className='home-bg-phone' style={{ backgroundImage: `url(${bgImg})` }}></div>
     </section>
   );
 }

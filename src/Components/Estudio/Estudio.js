@@ -4,10 +4,10 @@ import { useState } from 'react';
 import { useTranslation } from "react-i18next";
 import { Fade } from "react-awesome-reveal";
 import Gallery from '../Gallery/Gallery';
-import estudioImg1 from "../../assets/images/about-1.png";
-import estudioImg2 from "../../assets/images/about-2.png";
-import estudioImg3 from "../../assets/images/about-1.png";
-import estudioImg4 from "../../assets/images/about-2.png";
+import estudioImg1 from "../../assets/images/estudio-1.png";
+import estudioImg2 from "../../assets/images/estudio-2.png";
+import estudioImg3 from "../../assets/images/estudio-3.png";
+import estudioImg4 from "../../assets/images/estudio-4.png";
 import ContactBtn from '../ContactBtn/ContactBtn';
 import { ReactComponent as Logo } from "../../assets/images/logo-gray.svg";
 
@@ -56,26 +56,26 @@ function Estudio({inView}) {
           images={[
             {
               name: estudioImg1,
-              width: 1875,
-              height: 2500,
+              width: 4864,
+              height: 3648,
               tag: 'img1',
             },
             {
               name: estudioImg2,
-              width: 1669,
-              height: 2500,
+              width: 4705,
+              height: 3152,
               tag: 'img2',
             },
             {
               name: estudioImg3,
-              width: 2500,
-              height: 1666,
+              width: 4799,
+              height: 3199,
               tag: 'img3',
             },
             {
               name: estudioImg4,
-              width: 2500,
-              height: 1666,
+              width: 4864,
+              height: 3648,
               tag: 'img4',
             },
           ]}

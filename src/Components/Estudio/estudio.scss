@@ -86,7 +86,7 @@
   }
   &-img1 {
     align-self: flex-end;    
-    height: 450px;
+    height: 100%;
     grid-area: 1 / 1 / 3 / 3;
   }
   &-img2 {
@@ -109,4 +109,9 @@
 //overriding transition all from base
 .pswp__container, .pswp__item {
   transition: none;
+}
+
+.pswp__img {
+  object-fit: contain;
+  cursor: auto !important;
 }

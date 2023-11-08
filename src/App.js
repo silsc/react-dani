@@ -15,8 +15,8 @@ const App = () => {
   const [inView, setInView] = useState();
 
   useEffect(() => {
-    document.documentElement.classList.add(`${window.innerWidth >= 760 ?(!inView ? "theme--default" : "theme--dark") : "theme--dark" }`)
-    return () => { document.documentElement.classList.remove(`${window.innerWidth >= 760 ?(!inView ? "theme--default" : "theme--dark") : "theme--dark" }`) }
+    document.documentElement.classList.add(`${window.innerWidth >= 760 && window.innerWidth <= 1300 ?(!inView ? "theme--default" : "theme--dark") : "theme--dark" }`)
+    return () => { document.documentElement.classList.remove(`${window.innerWidth >= 760 && window.innerWidth <= 1300 ?(!inView ? "theme--default" : "theme--dark") : "theme--dark" }`) }
   });
   
   return ( 

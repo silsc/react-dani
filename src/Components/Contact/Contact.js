@@ -14,6 +14,7 @@ const bgStyle = {
   backgroundImage: 'url(' + contactImg + ')',
   backgroundPosition: 'center',
   backgroundSize: 'cover',
+  filter: 'grayscale(100%)',
 };
 
 

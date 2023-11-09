@@ -5,8 +5,8 @@ import { Fade } from "react-awesome-reveal";
 import Header from '../Header/Header';
 import chanderImg from "../../assets/images/chander.jpeg";
 import dezImg from "../../assets/images/dez.jpeg";
-import marcImg from "../../assets/images/marc.jpeg";
-import kirianImg from "../../assets/images/kirian.jpeg";
+import marcImg from "../../assets/images/marc.png";
+import kirianImg from "../../assets/images/kirian.png";
 import perarniImg from "../../assets/images/perarni.jpeg";
 
 

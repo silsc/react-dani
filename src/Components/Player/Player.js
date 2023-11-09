@@ -23,13 +23,12 @@ class Player extends React.Component {
     index: 0,
     currentTime: '0:00',
     musicList: [
-      {name:'Inherent Fate', author: 'Furi Helium', img: audio1Img, audio: audio1 , duration: '0:48', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')} `}, 
-      {name:'La Realidad', author: 'The Fox 196', img: audio2Img, audio: audio2 , duration: '1:20', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')} `}, 
-      {name:'Shadow Of Your Bliss', author: 'It Came From The Void', img: audio3Img, audio: audio3, duration: '0:44', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')}`},
-      {name:'El Mirall', author: 'Perarni_Drums', img: audio4Img, audio: audio4, duration: '1:00', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')} `},
-      {name:'She Comes', author: 'Fuzz Forward', img: audio5Img, audio: audio5, duration: '0:44', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')} `}
-      ,
-      {name:'Pensant del Revés', author: 'Fornax', img: audio6Img, audio: audio6, duration: '1:00', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')} `}
+      {name:'La Realidad', author: 'The Fox 196', img: audio1Img, audio: audio1 , duration: '0:48', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')} `}, 
+      {name:'Intoxicate', author: 'Fuzz Forward', img: audio2Img, audio: audio2 , duration: '0:39', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')} `},
+      {name:'The Inherent Fate', author: 'Furi Helium', img: audio3Img, audio: audio3 , duration: '0:51', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')} `}, 
+      {name:'Shadow Of Your Bliss', author: 'It Came From The Void', img: audio4Img, audio: audio4, duration: '0:42', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')}`},
+      {name:'Et busco', author: 'Perarni_Drums', img: audio5Img, audio: audio5, duration: '0:36', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')} `},
+      {name:'La Pizza del Divendres', author: 'Fornax', img: audio6Img, audio: audio6, duration: '0:43', type: `${this.props.t('work.production')} / ${this.props.t('work.mix')} / ${this.props.t('work.master')} `}
     ],
     pause: false,
   };

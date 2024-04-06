@@ -132,5 +132,38 @@
     "sent-2": "Revisa la carpeta de spam por si acaso.",
     "privacy": "Acepto la subscripción al newsletter y la Política de Privacidad",
     "goback": "Ir a la web"
+  },
+  "campaign3": {
+    "header": "Cómo PREPARAR El Disco Del Año",
+    "subheader": "Guía Gratis:",
+    "btn": "Consigue la guía gratis",
+    "info": {
+      "subheader": "¿QUIERES SACAR EL DISCO DEL AÑO?",
+      "title": "Un gran disco no es algo que vaya a salir sin querer, hay que crearlo a propósito.",
+      "text": "En esta guía quiero resolver tus dudas, guiarte hacia el camino correcto y enseñarte la mentalidad adecuada para crear el mejor disco posible.",
+      "benefits": {
+        "title1": "Single vs Album",
+        "text1": "¿Quieres conocer cuál es la mejor estrategia para publicar tu música? ¿Está muerto el formato CD?",
+        "title2": "Prepararte para estudio",
+        "text2": "Comparto una gran cantidad de consejos para prepararte para grabar, tanto de mentalidad como para instrumentos concretos.",
+        "title3": "Cuántas ideas, canciones y tiempo necesitas",
+        "text3": "Preparar un disco es muchísimo trabajo. Si tienes dudas sobre cuánto tiempo, esfuerzo y dinero le tienes que dedicar, este libro es para ti.",
+        "title4": "Cómo elegir productor",
+        "text4": "Si estás preparado para trabajar con un profesional, tu elección puede significar el éxito o el fracaso.. Aquí comparto consejos sobre qué buscar."
+      }
+    },
+    "form": {
+      "title": "¿A dónde quieres que te envíe la guía?",
+      "name": "Tu nombre",
+      "email": "Tu email",
+      "privacy-1": "He leído y acepto la",
+      "privacy-2": " Política de Privacidad",
+      "submit-btn": "Quiero Preparar el Disco del Año"
+    },
+    "sending": "Enviando...",
+    "sent-1": "Gracias! Ya estás un paso más cerca de Preparar el Disco del Año.",
+    "sent-2": "Revisa la carpeta de spam por si acaso.",
+    "privacy": "Acepto la subscripción al newsletter y la Política de Privacidad",
+    "goback": "Ir a la web"
   }
 }

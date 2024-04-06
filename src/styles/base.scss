@@ -138,11 +138,14 @@ body {
     background-color: black;
     color: white;
     border: 1px solid white;
+    cursor: pointer;
   }
 }
+
 
 .cta-btn--container {
   display: flex;
   justify-content: flex-start;
   margin: 0;
+  cursor: pointer;
 }

@@ -1,0 +1,176 @@
+@import '../../styles/index.scss';
+
+.campaign3{
+  &--btn {
+    align-self: center;
+    z-index: 1;
+    &-inner {
+      background-color: #EAC61D;
+      color: white;
+      border: none;
+      font-size: large;
+      &:hover {
+        border: none;
+      }
+    }
+  }
+  &--hero {
+    position: relative;
+    &-container {
+      margin: auto;
+      width: 800px;
+      display: flex;
+      flex-direction: column;
+      height: 95vh;
+      @include respond('ipad-pro') {
+        padding: 0 50px;
+        width: 100%;
+      }
+      @include respond('phone') {
+        padding: 0 20px;
+        width: 100%;
+      }
+    }
+    &-triangulo {
+      z-index: 1;
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 0 50vw 57px 50vw;
+      border-color: transparent transparent #ffff transparent;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      @include respond('ipad-pro') {
+        border-width: 0 50vw 57px 50vw;
+      }
+    }
+    &-overlay {
+      position: absolute;
+      z-index: 0;
+      left: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      backdrop-filter: blur(8px) brightness(90%);
+    }
+    &-subtitle {
+      z-index: 1;
+      color: white;
+      margin: 20px 0 0;
+    }
+    &-title {
+      z-index: 1;
+      color: white;
+      font-size: 80px;
+      margin: 20px 0;
+      @include respond('ipad') {
+        font-size: 50px;
+        margin: 30px 0;
+        line-height: 50px;
+      }
+      @include respond('phone') {
+        font-size: 40px;
+        margin: 30px 0;
+        line-height: 40px;
+      }
+    }
+    &-video {
+      z-index: 1;
+      width: 50vw;
+      height: 40vh;
+      align-self: center;
+      @include respond('ipad-pro') {
+        width: 100%;
+      }
+    }
+  }
+  &--info {
+    padding: 60px 0;
+    margin: auto;
+    width: 1000px;
+    display: flex;
+    @include respond('ipad-pro') {
+      padding: 60px 50px;
+      width: 100%;
+    }
+    @include respond('ipad') {
+      padding: 30px 30px;
+      flex-direction: column;
+    }
+    &-container {
+      display: flex;
+      flex-direction: column;
+    }
+    &-header {
+      margin-right: 50px;
+      width: 40%;
+      @include respond('ipad') {
+        width: 100%;
+        margin-right: 0px;
+      }
+      &-title {
+      }
+      &-subtitle {
+        color: $dark-gray;
+      }
+      &-text {
+        
+      }
+    }
+    &-benefits {
+      width: 53%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 30px;
+      @include respond('ipad') {
+        width: 100%;
+      }
+      @include respond('phone') {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      &-benefit {
+        .benefit {
+          &--title {
+            font-size: 24px;
+          }
+          &--text {
+            
+          }
+        }
+      }
+    }
+    &-title {
+      @include respond('phone') {
+        font-size: 54px;
+        line-height: 90px;
+      }
+    }
+  }
+  &--form {
+    &-img {
+      width: 100%;
+      height: 40vh;
+      object-fit: cover;
+    }
+  }
+  &--footer {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    p {
+      color: #ffff;
+      font-weight: 800;
+    }
+  }
+  
+}

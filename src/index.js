@@ -6,7 +6,9 @@ import App from './App';
 import Policy from './Components/Policy/Policy';
 import Campaign1 from './Components/Campaign1/Campaign1';
 import Campaign2 from './Components/Campaign2/Campaign2';
+import Campaign3 from './Components/Campaign3/Campaign3';
 import ReactGA from 'react-ga';
+
 
 // import reportWebVitals from './reportWebVitals';
 import './i18n';
@@ -27,6 +29,7 @@ root.render(
           <Route path="/policy" element={<Policy/>}/>
           <Route path="/guia-bateria" element={<Campaign1/>}/>
           <Route path="/guia-mezcla" element={<Campaign2/>}/>
+          <Route path="/comoprepararundisco" element={<Campaign3/>}/>
         </Routes>
       </Suspense>
     </BrowserRouter>

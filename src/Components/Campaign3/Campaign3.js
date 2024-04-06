@@ -1,61 +1,56 @@
-import React, { useState, useEffect, useRef }  from 'react';
 import './campaign3.scss';
-import { Link } from "react-router-dom";
+import 'react-responsive-modal/styles.css';
 
-import { useTranslation } from "react-i18next";
-import Header from '../Header/Header';
+import React, {useEffect, useRef, useState} from 'react';
+import {useTranslation} from "react-i18next";
+import {Modal} from 'react-responsive-modal';
+import {Link} from "react-router-dom";
 
 import contactImg from '../../assets/images/contact.png';
-import 'react-responsive-modal/styles.css';
-import { Modal } from 'react-responsive-modal';
 import FormImg from "../../assets/images/formImg.png";
+import Header from '../Header/Header';
 
 const bgStyle = {
-  backgroundImage: 'url(' + contactImg + ')',
-  backgroundPosition: 'center',
-  backgroundSize: 'cover',
+  backgroundImage : 'url(' + contactImg + ')',
+  backgroundPosition : 'center',
+  backgroundSize : 'cover',
 };
 
 function Campaign3() {
-  const { t, i18n } = useTranslation();
-  const changeLanguage = (language) => {
-    i18n.changeLanguage(language);
-  };
+  const {t, i18n} = useTranslation();
+  const changeLanguage = (language) => { i18n.changeLanguage(language); };
   const [open, setOpen] = useState(false);
 
   const [email, setEmail] = useState('');
-    const onCloseModal = () => setOpen(false);
-    const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
+  const onOpenModal = () => setOpen(true);
 
-    const validateInput = values => {
+  const validateInput =
+      values => {
         if (values.some(f => f === "") || values[0].indexOf("@") === -1) {
-            return true
+          return true
         } else {
-            return false
+          return false
         }
       }
 
-    const [displaySuccess, setDisplaySuccess] = useState(false);
-
+  const [displaySuccess, setDisplaySuccess] = useState(false);
 
   useEffect(() => {
-    const f = () => {
-        setDisplaySuccess(true);
-    };
+    const f = () => { setDisplaySuccess(true); };
 
     // register it on the window object
     window['ml_webform_success_13427889'] = f;
 
     const script = document.createElement('script');
-    
-    script.src = "https://groot.mailerlite.com/js/w/webforms.min.js?v2d8fb22bb5b3677f161552cd9e774127"; 
+
+    script.src =
+        "https://groot.mailerlite.com/js/w/webforms.min.js?v2d8fb22bb5b3677f161552cd9e774127";
     script.async = true;
-  
+
     document.body.appendChild(script);
 
-    return () => {
-      document.body.removeChild(script);
-    }
+    return () => { document.body.removeChild(script); }
   }, []);
 
   return (

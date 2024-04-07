@@ -21,7 +21,7 @@
       width: 800px;
       display: flex;
       flex-direction: column;
-      height: 95vh;
+      height: 93vh;
       @include respond('ipad-pro') {
         padding: 0 50px;
         width: 100%;
@@ -63,7 +63,7 @@
     &-title {
       z-index: 1;
       color: white;
-      font-size: 80px;
+      font-size: 60px;
       margin: 20px 0;
       @include respond('ipad') {
         font-size: 50px;
@@ -81,6 +81,9 @@
       width: 50vw;
       height: 40vh;
       align-self: center;
+      @include respond('large') {
+        width: 1000px;
+      }
       @include respond('ipad-pro') {
         width: 100%;
       }
@@ -172,5 +175,14 @@
       font-weight: 800;
     }
   }
-  
+  &--overlay {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    background-color: black;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+  }
 }

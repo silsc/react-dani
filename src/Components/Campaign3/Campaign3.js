@@ -1,17 +1,15 @@
 import React, { useState, useEffect, useRef }  from 'react';
 import './campaign3.scss';
 import { Link } from "react-router-dom";
-
 import { useTranslation } from "react-i18next";
 import Header from '../Header/Header';
-
-import contactImg from '../../assets/images/contact.png';
+import campaingtImg from '../../assets/images/campaingImg.jpeg';
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
 import FormImg from "../../assets/images/formImg.png";
 
 const bgStyle = {
-  backgroundImage: 'url(' + contactImg + ')',
+  backgroundImage: 'url(' + campaingtImg + ')',
   backgroundPosition: 'center',
   backgroundSize: 'cover',
 };
@@ -35,6 +33,9 @@ function Campaign3() {
         }
       }
 
+    const [showElement,setShowElement] = React.useState(true);
+
+
     const [displaySuccess, setDisplaySuccess] = useState(false);
 
 
@@ -42,6 +43,10 @@ function Campaign3() {
     const f = () => {
         setDisplaySuccess(true);
     };
+
+    setTimeout(function() {
+      setShowElement(false)
+         }, 1000);
 
     // register it on the window object
     window['ml_webform_success_13427889'] = f;
@@ -60,7 +65,7 @@ function Campaign3() {
 
   return (
     <>
-    
+    {showElement?<div className='campaign3--overlay'></div>:<></>}
     <div className={`campaign3--hero`} style={bgStyle}>
       <Header/>
       <div className={`campaign3--hero-container`}>

@@ -23,7 +23,7 @@ ReactGA.pageview(window.location.pathname + window.location.search);
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div className="loading">Loading...</div>}>
         <Routes>
           <Route exact path="/" element={<App/>}/>
           <Route path="/policy" element={<Policy/>}/>

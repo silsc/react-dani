@@ -1,66 +1,60 @@
-import React, { useState, useEffect, useRef }  from 'react';
 import './campaign3.scss';
-import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import Header from '../Header/Header';
-import campaingtImg from '../../assets/images/campaingImg.jpeg';
 import 'react-responsive-modal/styles.css';
-import { Modal } from 'react-responsive-modal';
+
+import React, {useEffect, useRef, useState} from 'react';
+import {useTranslation} from "react-i18next";
+import {Modal} from 'react-responsive-modal';
+import {Link} from "react-router-dom";
+
+import campaingtImg from '../../assets/images/campaingImg.jpeg';
 import FormImg from "../../assets/images/formImg.png";
+import Header from '../Header/Header';
 
 const bgStyle = {
-  backgroundImage: 'url(' + campaingtImg + ')',
-  backgroundPosition: 'center',
-  backgroundSize: 'cover',
+  backgroundImage : 'url(' + campaingtImg + ')',
+  backgroundPosition : 'center',
+  backgroundSize : 'cover',
 };
 
 function Campaign3() {
-  const { t, i18n } = useTranslation();
-  const changeLanguage = (language) => {
-    i18n.changeLanguage(language);
-  };
+  const {t, i18n} = useTranslation();
+  const changeLanguage = (language) => { i18n.changeLanguage(language); };
   const [open, setOpen] = useState(false);
 
   const [email, setEmail] = useState('');
-    const onCloseModal = () => setOpen(false);
-    const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
+  const onOpenModal = () => setOpen(true);
 
-    const validateInput = values => {
+  const validateInput =
+      values => {
         if (values.some(f => f === "") || values[0].indexOf("@") === -1) {
-            return true
+          return true
         } else {
-            return false
+          return false
         }
       }
 
-    const [showElement,setShowElement] = React.useState(true);
+  const [showElement, setShowElement] = React.useState(true);
 
-
-    const [displaySuccess, setDisplaySuccess] = useState(false);
-
+  const [displaySuccess, setDisplaySuccess] = useState(false);
 
   useEffect(() => {
-    const f = () => {
-        setDisplaySuccess(true);
-    };
+    const f = () => { setDisplaySuccess(true); };
 
-    setTimeout(function() {
-      setShowElement(false)
-         }, 1000);
+    setTimeout(function() { setShowElement(false) }, 1000);
 
     // register it on the window object
     window['ml_webform_success_13427889'] = f;
 
     const script = document.createElement('script');
-    
-    script.src = "https://groot.mailerlite.com/js/w/webforms.min.js?v2d8fb22bb5b3677f161552cd9e774127"; 
+
+    script.src =
+        "https://groot.mailerlite.com/js/w/webforms.min.js?v2d8fb22bb5b3677f161552cd9e774127";
     script.async = true;
-  
+
     document.body.appendChild(script);
 
-    return () => {
-      document.body.removeChild(script);
-    }
+    return () => { document.body.removeChild(script); }
   }, []);
 
   return (

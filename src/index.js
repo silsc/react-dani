@@ -1,20 +1,20 @@
-import React, { Suspense, useEffect } from 'react';
-import {createRoot} from 'react-dom/client';
-import { Routes ,Route, BrowserRouter } from "react-router-dom";
-import ReactDOM from 'react-dom';
-import App from './App';
-import Policy from './Components/Policy/Policy';
-import Campaign1 from './Components/Campaign1/Campaign1';
-import Campaign2 from './Components/Campaign2/Campaign2';
-import Campaign3 from './Components/Campaign3/Campaign3';
-import ReactGA from 'react-ga';
-
-
 // import reportWebVitals from './reportWebVitals';
-import './i18n';
+import "./i18n";
 import "../src/index.css";
 
-const rootElement = document.getElementById('root');
+import React, { Suspense, useEffect } from "react";
+import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
+import ReactGA from "react-ga";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import App from "./App";
+import Campaign1 from "./Components/Campaign1/Campaign1";
+import Campaign2 from "./Components/Campaign2/Campaign2";
+import Campaign3 from "./Components/Campaign3/Campaign3";
+import Policy from "./Components/Policy/Policy";
+
+const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
 ReactGA.initialize(`${process.env.REACT_APP_GA_KEY}`);
@@ -25,11 +25,11 @@ root.render(
     <BrowserRouter>
       <Suspense fallback={<div className="loading">Loading...</div>}>
         <Routes>
-          <Route exact path="/" element={<App/>}/>
-          <Route path="/policy" element={<Policy/>}/>
-          <Route path="/guia-bateria" element={<Campaign1/>}/>
-          <Route path="/guia-mezcla" element={<Campaign2/>}/>
-          <Route path="/comoprepararundisco" element={<Campaign3/>}/>
+          <Route exact path="/" element={<App />} />
+          <Route path="/policy" element={<Policy />} />
+          <Route path="/guia-bateria" element={<Campaign1 />} />
+          <Route path="/guia-mezcla" element={<Campaign2 />} />
+          <Route path="/comoprepararundisco" element={<Campaign3 />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

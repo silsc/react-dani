@@ -129,7 +129,7 @@ function Campaign3() {
                 
                         <img src={FormImg} alt="Logo" className="campaign3--form-img"/>
 
-                        <form className="ml-block-form" action="https://assets.mailerlite.com/jsonp/347959/forms/116524141542114399/subscribe" data-code="" method="post" target="_blank">
+                        {/* <form className="ml-block-form" action="https://assets.mailerlite.com/jsonp/347959/forms/116524141542114399/subscribe" data-code="" method="post" target="_blank">
                             <div className="ml-form-formContent">
                                 <h3>{t("campaign3.form.title")}</h3>
                                 <div class="ml-form-fieldRow ">
@@ -174,7 +174,12 @@ function Campaign3() {
 
                             
                             <input type="hidden" name="anticsrf" value="true" />
-                        </form>
+                        </form> */}
+                        <h3>Esta descarga no esta disponible en estos momentos.</h3>
+                        <h3>Si te interesa ponte en contacto conmigo.</h3>
+                        <a className='cta-btn link'  href="https://www.instagram.com/danisalat" target="_blank">
+                                {t("home.contact-btn")}
+                        </a>
                     </div>
 
                     <div className="ml-form-successBody row-success" style={ displaySuccess ? {display: "block"} : {display: "none"}}>

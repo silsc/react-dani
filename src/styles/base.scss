@@ -3,6 +3,18 @@
 @import './mixins.scss';
 
 
+.section {
+  @include respond('ipad-pro') {
+    padding: 0px 50px;
+  }
+  @include respond('ipad') {
+    padding: 0px 30px;
+  }
+  @include respond('phone') {
+    padding: 0px 20px;
+  }
+}
+
 .loading {
   z-index: 2;
   position: absolute;
@@ -156,7 +168,6 @@ body {
     cursor: pointer;
   }
 }
-
 
 .cta-btn--container {
   display: flex;

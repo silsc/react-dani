@@ -165,5 +165,9 @@
     "sent-2": "Revisa la carpeta de spam por si acaso.",
     "privacy": "Acepto la subscripción al newsletter y la Política de Privacidad",
     "goback": "Ir a la web"
+  },
+  "oferta": {
+    "header": "¿Quieres grabar música?",
+    "subheader": "Para saber cómo puedo ayudarte, mira este vídeo de 3 minutos"
   }
 }

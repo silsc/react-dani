@@ -21,12 +21,18 @@ function Campaign2() {
   return (
     <>
     <Navbar inView={inView} />
-
-    <section className={`campaign section`}>
-      <Header/>
-      <h2 className='title'>{t("campaign2.header")}</h2>
-      <Guia2Form />
-    </section>
+    <div className='container'>
+      <section className={`campaign section`}>
+        <Header/>
+        <h2 className='title'>{t("campaign2.header")}</h2>
+        {/* <Guia2Form /> */}
+        <h3>Esta descarga no esta disponible en estos momentos.</h3>
+        <h3>Si te interesa ponte en contacto conmigo.</h3>
+        <a className='cta-btn link'  href="https://www.instagram.com/danisalat" target="_blank">
+                {t("home.contact-btn")}
+        </a>
+      </section>
+    </div>
     </>
 
   );

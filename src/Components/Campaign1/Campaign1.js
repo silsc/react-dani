@@ -5,6 +5,7 @@ import Navbar from '../Navbar/Navbar';
 import { useTranslation } from "react-i18next";
 import Header from '../Header/Header';
 import Guia1Form from '../Guia1Form/Guia1Form';
+import ContactBtn from '../ContactBtn/ContactBtn';
 
 function Campaign1() {
   const { t, i18n } = useTranslation();
@@ -21,12 +22,19 @@ function Campaign1() {
   return (
     <>
     <Navbar inView={inView} />
+    <div className='container'>
+      <section className={`campaign section`}>
+        <Header/>
+        <h2 className='title'>{t("campaign1.header")}</h2>
+        {/* <Guia1Form /> */}
+        <h3>Esta descarga no esta disponible en estos momentos.</h3>
+        <h3>Si te interesa ponte en contacto conmigo.</h3>
+        <a className='cta-btn link'  href="https://www.instagram.com/danisalat" target="_blank">
+                {t("home.contact-btn")}
+        </a>
+      </section>
+    </div>
 
-    <section className={`campaign section`}>
-      <Header/>
-      <h2 className='title'>{t("campaign.header")}</h2>
-      <Guia1Form />
-    </section>
     </>
 
   );

@@ -7,6 +7,7 @@ import Policy from './Components/Policy/Policy';
 import Campaign1 from './Components/Campaign1/Campaign1';
 import Campaign2 from './Components/Campaign2/Campaign2';
 import Campaign3 from './Components/Campaign3/Campaign3';
+import Oferta from './Components/Oferta/Oferta';
 import ReactGA from 'react-ga';
 
 
@@ -30,6 +31,7 @@ root.render(
           <Route path="/guia-bateria" element={<Campaign1/>}/>
           <Route path="/guia-mezcla" element={<Campaign2/>}/>
           <Route path="/comoprepararundisco" element={<Campaign3/>}/>
+          <Route path="/ofertaotono24" element={<Oferta/>}/>
         </Routes>
       </Suspense>
     </BrowserRouter>

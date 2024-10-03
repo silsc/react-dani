@@ -180,7 +180,7 @@ function Campaign3() {
                                 <h3>{t("campaign3.form.title")}</h3>
                                 <div class="ml-form-fieldRow ">
                                     <div class="ml-field-group ml-field-name">
-                                    <input aria-label="name" type="text" class="form-control" data-inputmask="" name="fields[name]" placeholder="Nombre" autocomplete="given-name" 
+                                    <input aria-label="name" type="text" class="form-control" data-inputmask="" name="fields[name]" placeholder="Nombre" autocomplete="given-name"
                                      />
                                     </div>
                                 </div>
@@ -201,24 +201,24 @@ function Campaign3() {
                                 </div>
 
 
-                                
+
                             </div>
 
 
-                            
+
                             <input type="hidden" name="ml-submit" value="1" />
 
                             <div className="ml-form-embedSubmit">
-                                
+
                                 <button type="submit" className="primary" disabled={validateInput([email])} > {t("campaign3.form.submit-btn")}</button>
-                                
+
                                 <button disabled="disabled" style={{display: "none"}} type="button" className="loading">
                                     <div className="ml-form-embedSubmitLoad"></div>
                                     <span className="sr-only">{t("campaign3.sending")}</span>
                                 </button>
                             </div>
 
-                            
+
                             <input type="hidden" name="anticsrf" value="true" />
                         </form> */}
                 <h3>Esta descarga no esta disponible en estos momentos.</h3>

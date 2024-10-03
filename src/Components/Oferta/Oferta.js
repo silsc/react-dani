@@ -1,37 +1,35 @@
-import React, { useState, useEffect }  from 'react';
 import './oferta.scss';
-import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import Header from '../Header/Header';
+
+import React, {useEffect, useState} from 'react';
+import {InlineWidget} from "react-calendly";
+import {useTranslation} from "react-i18next";
+import {InView} from 'react-intersection-observer'
+import {Link} from "react-router-dom";
+
 import campaingtImg from '../../assets/images/campaingImg.jpeg';
+import Header from '../Header/Header';
 import Reviews from '../Reviews/Reviews';
 import Work from '../Work/Work';
-import { InView } from 'react-intersection-observer'
-
-import { InlineWidget } from "react-calendly";
-
 
 const bgStyle = {
-  backgroundImage: 'url(' + campaingtImg + ')',
-  backgroundPosition: 'center',
-  backgroundSize: 'cover',
+  backgroundImage : 'url(' + campaingtImg + ')',
+  backgroundPosition : 'center',
+  backgroundSize : 'cover',
 };
 
 function Oferta() {
-  const { t, i18n } = useTranslation();
-  const changeLanguage = (language) => {
-    i18n.changeLanguage(language);
-  };
+  const {t, i18n} = useTranslation();
+  const changeLanguage = (language) => { i18n.changeLanguage(language); };
   const [inView, setInView] = useState();
 
   useEffect(() => {
     document.documentElement.classList.add(`${window.innerWidth >= 760 && window.innerWidth <= 1300 ?(!inView ? "theme--default" : "theme--dark") : "theme--dark" }`)
-    return () => { document.documentElement.classList.remove(`${window.innerWidth >= 760 && window.innerWidth <= 1300 ?(!inView ? "theme--default" : "theme--dark") : "theme--dark" }`) }
+    return () => {
+    document.documentElement.classList.remove(`${
+        window.innerWidth >= 760 && window.innerWidth <= 1300
+            ? (!inView ? "theme--default" : "theme--dark")
+            : "theme--dark"}`) }
   });
-
-
-  
-
 
   return (
     <>

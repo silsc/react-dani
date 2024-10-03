@@ -73,7 +73,7 @@ function Campaign3() {
         <div className={`campaign3--hero-overlay`}></div>
         <h3 className='campaign3--hero-subtitle'>{t("campaign3.subheader")}</h3>
         <h1 className='campaign3--hero-title'>{t("campaign3.header")}</h1>
-        <iframe width="560" height="315" className='campaign3--hero-video' src="https://www.youtube.com/embed/8Uue_ZijE0Q?si=3nBnbJM0M797jXGA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" className='campaign3--hero-video' src="https://www.youtube.com/embed/8Uue_ZijE0Q?si=3nBnbJM0M797jXGA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <div className='campaign3--btn'>
           <div className='cta-btn--container campaign3--btn-container'>
             

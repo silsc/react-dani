@@ -83,7 +83,7 @@ function Reviews() {
       <Fade delay={300} >
         <div className="slider">
           <input type="radio" name="testimonial" id="t-1" />
-          <input type="radio" name="testimonial" id="t-2" defaultChecked/>
+          <input type="radio" name="testimonial" id="t-2" defaultChecked={ window.innerWidth >= 760 ? "true" : "false" }/>
           <input type="radio" name="testimonial" id="t-3" />
           <input type="radio" name="testimonial" id="t-4" />
           <input type="radio" name="testimonial" id="t-5" />  

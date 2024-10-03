@@ -53,6 +53,7 @@ body {
   @include theme() {
     background: t($bg);
   }
+  overflow-x: hidden;
 }
 
 .link {

@@ -15,9 +15,15 @@ const Work = React.forwardRef((props, ref) => {
     i18n.changeLanguage(language);
   }
 
+
   const openInNewTab = url => {
     window.open(url, '_blank', 'noopener,noreferrer');
   };
+
+
+  useEffect(() => {
+    console.log(window.location.pathname)
+  });
   
   return (
     <section ref={ref} className={`work section ${ props.inView ? "theme--dark" : "theme--default"}`} id="work">
@@ -30,7 +36,7 @@ const Work = React.forwardRef((props, ref) => {
             <h2 className='work-title'>{t("work.title")}</h2>
             <p>{t("work.text-1")}</p>
             <p>{t("work.text-2")}
-              <HashLink className='bold link' smooth to="/#contact">
+              <HashLink className='bold link' smooth to={window.location.pathname === "/" ? "/#contact" : ""}>
               {t("work.cta-1")}
               </HashLink>
               {t("work.text-3")} <span className='cursor spotify-green bold' onClick={() => openInNewTab('https://open.spotify.com/playlist/2nwVcowWfYhXXqkmVgGVNK?si=586a412f544a44e7&nd=1')}>{t("work.cta-2")} </span></p>

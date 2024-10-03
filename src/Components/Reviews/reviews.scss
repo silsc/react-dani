@@ -160,10 +160,10 @@
     }
     &-img {
       width: 100%;
-    
+
       @include respond('phone') {
         width: 35%;
-      }  
+      }
     }
     &-text, &-name, &-band {
       opacity: 0;
@@ -221,12 +221,12 @@
       }
     }
     &-img {
-      width: 100%;  
+      width: 100%;
       @include respond('phone') {
         width: 35%;
         object-fit: cover;
         transition: none;
-      }  
+      }
     }
     &-text, &-name, &-band {
       opacity: 0;
@@ -275,12 +275,12 @@
       }
     }
     &-img {
-      width: 100%; 
+      width: 100%;
       @include respond('phone') {
         width: 35%;
         object-fit: cover;
         transition: none;
-      }     
+      }
     }
     &-text, &-name, &-band {
       opacity: 0;
@@ -345,10 +345,10 @@
       }
     }
     &-img {
-      width: 100%;    
+      width: 100%;
       @include respond('phone') {
         width: 35%;
-      }  
+      }
     }
     &-text, &-name, &-band {
       opacity: 0;
@@ -396,10 +396,10 @@
       }
     }
     &-img {
-      width: 100%; 
+      width: 100%;
       @include respond('phone') {
         width: 35%;
-      }   
+      }
     }
     &-text, &-name, &-band {
       opacity: 0;
@@ -458,10 +458,10 @@
       }
     }
     &-img {
-      width: 100%;    
+      width: 100%;
       @include respond('phone') {
         width: 35%;
-      }  
+      }
     }
     &-text, &-name, &-band {
       opacity: 0;
@@ -510,10 +510,10 @@
       }
     }
     &-img {
-      width: 100%;    
+      width: 100%;
       @include respond('phone') {
         width: 35%;
-      }  
+      }
     }
     &-text, &-name, &-band {
       opacity: 0;
@@ -573,10 +573,10 @@
       }
     }
     &-img {
-      width: 100%;    
+      width: 100%;
       @include respond('phone') {
         width: 35%;
-      }  
+      }
     }
     &-text, &-name, &-band {
       opacity: 0;
@@ -584,7 +584,7 @@
       @include respond('phone') {
         opacity: 1;
         transition: none;
-      }  
+      }
     }
   }
 }
